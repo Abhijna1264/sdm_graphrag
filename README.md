@@ -11,7 +11,7 @@ map-reduce global answers.
 
 The LLM is Google Gemini (free tier is enough). Without an API key the whole
 pipeline still runs with offline fallbacks (regex extraction, TF-IDF,
-extractive summaries); the tests use that mode.
+extractive summaries).
 
 ## Dataset
 
@@ -118,7 +118,7 @@ cancel position bias. Full answers and verdicts go to the JSON file.
   during extraction and no claim extraction, to fit the free tier.
 - **Map step capped** at the 15 largest communities of the chosen level.
 - **Offline fallbacks** (regex extraction, TF-IDF, extractive text) exist so
-  the code runs and is testable without a key; results for the report should
+  the code runs without a key; results for the report should
   come from a Gemini-built index.
 
 ## Project layout
@@ -145,12 +145,5 @@ scripts/
 data/
   corpus/            # evaluation corpus (32 Wikipedia articles)
   questions.txt      # global evaluation questions
-  sample_corpus.txt  # tiny fictional document used by the tests
-tests/               # offline tests + fake-Gemini tests (no network needed)
-```
-
-## Tests
-
-```bash
-python -m pytest tests -v
+  sample_corpus.txt  # tiny fictional demo document
 ```
