@@ -446,6 +446,12 @@ resumable).
 | `results/eval_podcast.json` | machine-readable answers + verdicts (with a latency note) |
 | `results/build_podcast_gemini.log` | index build progress log |
 | `data/index_podcast/` | persisted index (graph, stores, communities, meta) |
+| `results/evaluate_podcast_offline.txt`, `results/eval_podcast_offline.json` | offline (no-LLM) run on the same corpus and questions |
+| `results/ask_outputs_podcast_offline.txt` | four offline `ask` runs |
+
+An offline (no-LLM) run on the same corpus and questions — regex extraction,
+TF-IDF/BM25 retrieval, extractive generation, no judge — is documented
+separately in `OFFLINE_IMPLEMENTATION.md`.
 
 ---
 

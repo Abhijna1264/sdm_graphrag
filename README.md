@@ -15,14 +15,29 @@ extractive summaries).
 
 ## Dataset
 
-`data/corpus/` holds 32 English Wikipedia articles on **space exploration**
-(Space Race, Apollo, ISS, ESA, ISRO, CNSA, SpaceX, telescopes, rovers, ...),
-each truncated to ~8,000 characters: about 65k tokens in total, sized so an
-index builds within one day of Gemini free-tier quota. Re-download with
-`python scripts/fetch_dataset.py`. Wikipedia text is licensed CC BY-SA 4.0.
+The project ships two corpora.
 
-`data/questions.txt` holds 12 global questions (themes, trends, comparisons
-across the whole corpus) of the kind the paper evaluates.
+**Reported results** use `data/podcast_corpus.txt` — the first 3 episodes of
+Microsoft's *Behind the Tech with Kevin Scott* podcast (Ep-60/61/62, 33,821
+words), with `data/podcast_questions.txt` holding 5 global questions. A
+9-episode backup (101,127 words) is kept at `data/podcast_corpus_full.txt`.
+
+**Upstream corpus:** `data/corpus/` holds 32 English Wikipedia articles on
+**space exploration** (Space Race, Apollo, ISS, ESA, ISRO, CNSA, SpaceX,
+telescopes, rovers, ...), each truncated to ~8,000 characters: about 65k tokens
+in total, sized so an index builds within one day of Gemini free-tier quota.
+Re-download with `python scripts/fetch_dataset.py`. Wikipedia text is licensed
+CC BY-SA 4.0. `data/questions.txt` holds 12 global questions (themes, trends,
+comparisons across the whole corpus) of the kind the paper evaluates.
+
+## Documentation
+
+- `PROJECT_REPORT.md` — formal write-up: objective, architecture, every module,
+  evaluation methodology, and the final results.
+- `PROJECT_EXPLAINED.md` — plain-language, step-by-step walkthrough with the
+  real numbers.
+- `OFFLINE_IMPLEMENTATION.md` — the no-LLM fallback (regex extraction, TF-IDF,
+  extractive text) and its results.
 
 ## Architecture
 
@@ -129,7 +144,7 @@ graphrag/
   ingest.py          # load .txt/.pdf (file or directory), sentence-aware chunking
   extraction.py      # Gemini entity/relation extraction (+ offline regex fallback)
   graph_store.py     # NetworkX graph: build, neighbors, shortest path, persist
-  communities.py     # hierarchical communities + bottom-up summaries
+  communities.py     # hierarchical (Louvain) communities + bottom-up summaries
   global_search.py   # map-reduce global answering over community summaries
   vector_store.py    # Gemini embedding store (baseline) + TF-IDF store
   keyword_store.py   # BM25 chunk search
@@ -139,11 +154,18 @@ graphrag/
   pipeline.py        # GraphRAGPipeline: build/save/load/ask/ask_baseline
 scripts/
   fetch_dataset.py   # download the Wikipedia corpus
-  build_index.py     # build and persist an index
+  build_index.py     # build and persist an index (--offline, --estimate)
   ask.py             # query an index
   evaluate.py        # GraphRAG vs. vector RAG evaluation
 data/
-  corpus/            # evaluation corpus (32 Wikipedia articles)
-  questions.txt      # global evaluation questions
-  sample_corpus.txt  # tiny fictional demo document
+  corpus/                 # 32 Wikipedia articles (upstream)
+  questions.txt           # 12 global questions (upstream)
+  podcast_corpus.txt      # 3-episode podcast corpus (used for results)
+  podcast_corpus_full.txt # 9-episode backup
+  podcast_questions.txt   # 5 global questions for the podcast corpus
+  sample_corpus.txt       # tiny fictional demo document
+results/                  # saved run outputs (answers, logs, eval JSON)
+PROJECT_REPORT.md         # formal report
+PROJECT_EXPLAINED.md      # plain-language walkthrough
+OFFLINE_IMPLEMENTATION.md # offline (no-LLM) mode + results
 ```
