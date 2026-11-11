@@ -1,0 +1,23 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /home/sony/myenv/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Users/Abhij/Downloads/sdm_project
+plugins: anyio-4.15.1
+collecting ... collected 14 items
+
+tests/test_pipeline.py::test_build_produces_chunks PASSED                [  7%]
+tests/test_pipeline.py::test_graph_has_entities_and_relations PASSED     [ 14%]
+tests/test_pipeline.py::test_vector_search_finds_relevant_chunk PASSED   [ 21%]
+tests/test_pipeline.py::test_keyword_search_finds_relevant_chunk PASSED  [ 28%]
+tests/test_pipeline.py::test_router_picks_graph_for_two_entity_relational_query PASSED [ 35%]
+tests/test_pipeline.py::test_router_picks_vector_for_generic_query PASSED [ 42%]
+tests/test_pipeline.py::test_ask_returns_non_empty_answer_without_ollama PASSED [ 50%]
+tests/test_pipeline.py::test_ask_hybrid_route_includes_graph_and_text PASSED [ 57%]
+tests/test_pipeline.py::test_save_and_load_round_trip PASSED             [ 64%]
+tests/test_pipeline.py::test_communities_are_hierarchical PASSED         [ 71%]
+tests/test_pipeline.py::test_router_picks_global_for_sensemaking_query PASSED [ 78%]
+tests/test_pipeline.py::test_global_answer_uses_map_reduce PASSED        [ 85%]
+tests/test_pipeline.py::test_baseline_uses_only_text_chunks PASSED       [ 92%]
+tests/test_pipeline.py::test_communities_survive_save_and_load PASSED    [100%]
+
+============================== 14 passed in 1.67s ==============================

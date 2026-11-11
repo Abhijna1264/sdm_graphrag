@@ -1,0 +1,121 @@
+{
+  "levels": [
+    2
+  ],
+  "summary": {
+    "graphrag_L2": {
+      "coverage": 0.18125,
+      "diversity": 12.2,
+      "context": 1622.6,
+      "latency": 114.2
+    },
+    "vector_rag": {
+      "coverage": 0.0765625,
+      "diversity": 7.8,
+      "context": 23756.4,
+      "latency": 10.4
+    }
+  },
+  "wins": {
+    "graphrag_L2": {
+      "comprehensiveness": {
+        "graphrag": 3,
+        "baseline": 1,
+        "tie": 1
+      },
+      "diversity": {
+        "graphrag": 3,
+        "baseline": 1,
+        "tie": 1
+      },
+      "empowerment": {
+        "graphrag": 3,
+        "baseline": 2,
+        "tie": 0
+      },
+      "directness": {
+        "graphrag": 3,
+        "baseline": 2,
+        "tie": 0
+      }
+    }
+  },
+  "questions": [
+    {
+      "question": "What are the main themes across these episodes?",
+      "answers": {
+        "graphrag_L2": "Based on the provided document collection, the main themes across these episodes encompass a wide range of technology, leadership, culture, and arts topics:\n\n*   **Corporate Leadership and Industry Executives:** Corporate leadership in general, alongside specific focuses on Dr. Lisa Su's leadership as Chair and CEO of AMD, her semiconductor career, and her MIT academic background.\n*   **Artificial Intelligence and Advanced Technologies:** The development of advanced AI technologies by OpenAI, the integration of GPT-4 into Bing, the incorporation of Copilot capabilities into the evolution of Windows, and the creation of the AI-tuned MI300 GPU. \n*   **Semiconductors, Hardware, and Computing:** AMD's technological collaborations and product offerings (CPUs and GPUs), Intel and the X86 instruction set (focusing on how Intel builds processors to run X86), Silicon Graphics' corporate expansion through acquisitions like Cray Research, and significant hardware development such as the Origin 2000 cache-coherent NUMA-machine.\n*   **Science, Energy, and Engineering:** Nuclear fusion, engineering, entrepreneurship, digital education, nonprofit work, tutorials for makerspaces, and inspiring women and people of color in STEM.\n*   **Social Impact and Cultural Phenomena:** Social impact initiatives, the unexpected societal and cultural impact of AI deployments (such as viral interactions and inspired merchandise), and artistic contrasts between traditional long-form blues singing (such as Muddy Waters) and modern structured pop songs. \n*   **Specific Entities and Mentions:** Distinct entities and events such as Dimitri Antoniadis and the sale of Affectiva's technology.",
+        "vector_rag": "Based on the provided context, the main themes explored across these episodes include:\n\n* The intersection of creativity, innovation, and technology, and how these elements influence one another and shape craft, writing, and the creative community.\n* The widespread adoption, explosion, and future impact of artificial intelligence (including generative AI and emotion AI/EQ in machines) and how it creates new jobs and changes industries.\n* The nature of craft, how change influences it, and the evolution of human skills and problem-solving.\n* The importance of sustainable, cheap, and abundant energy to fuel future ambitions, highlighted by efforts to build a nuclear fusion power plant.\n* The role of sensory input, different non-human perspectives (such as animals, aliens, and spiders in science fiction), and the 93% of human communication that is nonverbal (facial expressions, hand gestures, and vocal intonations).\n* The value of indulging one's curiosity and being fully committed to pursuing one's passions."
+      },
+      "judgements": {
+        "graphrag_L2": {
+          "comprehensiveness": "graphrag",
+          "diversity": "graphrag",
+          "empowerment": "graphrag",
+          "directness": "graphrag"
+        }
+      }
+    },
+    {
+      "question": "Give an overview of the guests and the topics they discussed.",
+      "answers": {
+        "graphrag_L2": "Based on the provided information, the podcast community features prominent figures such as engineer William Adams and Helion leader David Kirtley as guests. Together, they discuss a diverse range of themes, which include:\n\n* Corporate leadership\n* Artificial intelligence\n* Nuclear fusion\n* Social impact initiatives",
+        "vector_rag": "Based on the provided context, the guests and their discussed topics are:\n\n* **Tobi L\u00fctke:** Discussed the nature of craft and creativity, how change influences them, and how carpenters and engineers are defined more by their ability to solve problems than by specific labels.\n* **David Kirtley:** Discussed working to build the world's first nuclear fusion power plant and the importance of having a clean, abundant, and sustainable energy supply.\n* **Kevin Roose:** Discussed building good, safe, and responsible AI, providing feedback on AI, and the \"Sydney Loves Kevin\" beer.\n* **Neil deGrasse Tyson:** Discussed communicating complicated scientific concepts to the public without being condescending, and how adults (who wield resources, vote, and lead) compare to kids regarding curiosity.\n* **Bill Gates:** Discussed AI, his perspective on what the AI moment means, how it compares to the PC and Internet eras, and the early days of personal computing.\n* **Rana el Kaliouby:** Discussed emotion AI, combining IQ and EQ in machines, how nonverbal communication makes up 93% of human connection, and applications of emotion AI (such as driver monitoring in the automotive industry).\n* **William:** Discussed building a studio to provide financial resources, networks, and support for Black and women-owned businesses, learning to program using AI tools like ChatGPT and Copilot, writing code designed to be composable with AI, and the importance of clear licensing for code."
+      },
+      "judgements": {
+        "graphrag_L2": {
+          "comprehensiveness": "baseline",
+          "diversity": "baseline",
+          "empowerment": "baseline",
+          "directness": "baseline"
+        }
+      }
+    },
+    {
+      "question": "What are the most important ideas about artificial intelligence in this corpus?",
+      "answers": {
+        "graphrag_L2": "Based on the provided documents, the most important ideas about artificial intelligence in the corpus include:\n\n* **OpenAI's Advanced AI Technologies:** The development of sophisticated AI systems by OpenAI, including GPT-3, DALL-E, ChatGPT, and GPT-4.\n* **Microsoft's AI Integration and Leadership:** The integration of GPT-4 into Bing technology (which famously produced the viral \"Sydney\" persona conversation that inspired merchandise and a beer) and the incorporation of Copilot capabilities into the ongoing evolution of Windows. Additionally, Microsoft's focus on AI is highlighted through the involvement of CTO and AI executive Kevin Scott within its technology podcast network.\n* **Semiconductors and Hardware for AI:** AMD's role in producing high-performance processors and CPUs\u2014specifically the AI-tuned MI300 GPU from its compute roadmap\u2014under the leadership of CEO Dr. Lisa Su.\n* **Cultural and Societal Reach:** The unexpected cultural impact and broad societal reach demonstrated by these emerging AI systems.",
+        "vector_rag": "Based on the provided context, the most important ideas about artificial intelligence include:\n\n* **Integrating IQ and EQ:** There is a need to combine cognitive skills (IQ) with emotional and social intelligence (EQ) in machines, as 93% of human communication is nonverbal. Computer vision and machine learning can help capture this lost nonverbal data to make AI systems more relatable to humans.\n* **Empowering Creativity and Problem Solving:** Making AI models accessible, easy, and cheap to use (such as deploying large language models via APIs or natural language interfaces like DALL-E and ChatGPT) allows people's creativity to bring new products, solutions, and research insights to life. \n* **A Profound Milestone in Digital Computing:** The advent of computers that can read and write through natural language processing represents a major milestone as profound as previous digital eras (PCs, the internet, software, and mobile phones). It impacts white-collar jobs, healthcare, and scientific discovery.\n* **Lowering the Barrier to Using Machines:** Natural language interfaces allow ordinary people to get complex things done with machines without needing to be skilled programmers or wait for an IT department. English (or other natural languages) can effectively become the programming language, making queries, reports, workflows, and processes like college applications much more accessible."
+      },
+      "judgements": {
+        "graphrag_L2": {
+          "comprehensiveness": "tie",
+          "diversity": "tie",
+          "empowerment": "baseline",
+          "directness": "baseline"
+        }
+      }
+    },
+    {
+      "question": "Summarize the key people and their roles across the whole corpus.",
+      "answers": {
+        "graphrag_L2": "Based on the provided documents, the key people and their respective roles across the corpus include:\n\n* **Dr. Lisa Su:** Chair and CEO of AMD, leading the company in producing powerful CPUs, GPUs, and AI-tuned processors.\n* **Kevin Scott:** Microsoft's CTO and AI executive, co-host of the *Behind the Tech* podcast, and a former intern at Silicon Graphics.\n* **Mira Murati:** CTO of OpenAI, leading the development of advanced technologies such as GPT-3, DALL-E, ChatGPT, and GPT-4.\n* **Christina Warren:** Senior Developer Advocate at GitHub and podcast co-host on the Microsoft Leadership and Technology Podcast Network.\n* **Norm Abram:** Host of the PBS woodworking show *New Yankee Workshop*.\n* **Xyla Foxlin:** Engineer, entrepreneur, and YouTuber who founded Parihug and Beauty and the Bolt, with past experience at iRobot and Disney Imagineering R&D.\n* **Prince:** Musician who created songs using the LINN-900 drum machine.\n* **Adrian Tchaikovsky:** Author who wrote the science fiction novel *Children of Memory* and the other works in the trilogy.\n* **Kevin Roose:** New York Times journalist who interacted with Microsoft's Bing integrated technology product during a viral conversation.\n* **Dimitri Antoniadis:** Professor and PhD advisor at MIT who taught Lisa Su during her time there.\n* **William Adams:** Engineer who connects with Kevin Scott on his podcast.\n* **David Kirtley:** Helion leader who also connects with Kevin Scott on his podcast.\n* **Mark Rober:** Creator featured for highlighting the impact of digital video platforms.\n* **VanTiki and Adam Savage:** Content creators connected as peers in the creator space.\n* **Carl Sagan and Neil deGrasse Tyson:** Historical and scientific figures featured alongside Kevin Scott's podcast network.",
+        "vector_rag": "Based on the provided context, here are the key people and their roles:\n\n* **Kevin Scott:** Chief Technology Officer for Microsoft and host of the *Behind the Tech* podcast.\n* **Christina Warren:** Senior Developer Advocate at GitHub and co-host of the *Behind the Tech* podcast.\n* **Bill Gates:** A technologist, co-founder of Microsoft, and a major accelerator and pivotal role player in the personal computing and internet revolutions.\n* **Adrian Tchaikovsky:** A science fiction author (by background a zoologist and lawyer) who wrote the trilogy containing *Children of Memory* and *Children of Time*.\n* **Rana el Kaliouby:** A computer scientist and pioneer of emotion AI, as well as a co-founder of Affectiva who spun out of MIT.\n* **Kevin Roose:** A tech writer/journalist (mentioned in the context of discussing an article and a transcript involving an AI named Sydney).\n* **Neil deGrasse Tyson:** An astrophysicist and prominent science communicator.\n* **William:** A former Microsoft employee now engaged in building a studio/network, writing code, and helping black- and women-owned businesses succeed using AI and tools like Copilot (based on the final passage)."
+      },
+      "judgements": {
+        "graphrag_L2": {
+          "comprehensiveness": "graphrag",
+          "diversity": "graphrag",
+          "empowerment": "graphrag",
+          "directness": "graphrag"
+        }
+      }
+    },
+    {
+      "question": "What technologies and companies are discussed across the episodes?",
+      "answers": {
+        "graphrag_L2": "Based on the provided reports, the technologies and companies discussed across the episodes include:\n\n*   **OpenAI and Microsoft:** Associated with technologies such as GPT-3, DALL-E, ChatGPT, GPT-4, and Microsoft's Bing integrated technology, as well as Copilot, Windows, and GitHub. Artificial intelligence and nuclear fusion are also noted as key themes in relation to Microsoft.\n*   **AMD:** A US-based company that produces powerful CPUs, GPUs, high-performance processors, and the AI-tuned MI300 GPU, alongside a technology collaboration with Microsoft.\n*   **Other Companies and Institutions:** \n    *   **Silicon Graphics:** Known for acquiring Cray Research and building the Origin 2000 (an innovative and large cache-coherent NUMA-machine).\n    *   **Intel:** Built as the company that creates processors running the X86 instruction set.\n    *   **iRobot and Disney Imagineering R&D:** Mentioned in the context of Xyla Foxlin's engineering career (along with early projects like Bendyville and her flying a Cessna 140).\n    *   **IBM, Texas Instruments, and Freescale Semiconductor:** Mentioned alongside AMD.\n    *   **MIT:** An institution mentioned alongside AMD.\n    *   **Smart Eye:** Purchased Affectiva's technology.\n    *   **MTV and PBS:** Mentioned as television networks or entities.\n    *   **Apple:** Appears in the reports without extracted relations to other entities.\n*   **Other Technologies and Equipment:** \n    *   The LINN-900 drum machine.",
+        "vector_rag": "Based on the provided context, the technologies and companies discussed across the episodes include:\n\n**Technologies:**\n- AI / Generative AI / Large language models (specifically ChatGPT, GPT-3, GPT-4, DALL-E, DALL-E Labs)\n- Personal computers / The PC revolution / Microprocessors\n- The Internet revolution\n- The smartphone revolution / iPhone\n- Drum machines (including the LINN-900 and Akai MPC60)\n- Nuclear fusion power plants\n- Computer vision / Optical sensors / Machine learning (applied to automotive safety and mental health biomarkers)\n- Emotion AI / EQ technology\n\n**Companies:**\n- Microsoft\n- OpenAI\n- IBM\n- Apple\n- Shopify\n- Helion\n- Affectiva\n- Smart Eye\n- The New York Times"
+      },
+      "judgements": {
+        "graphrag_L2": {
+          "comprehensiveness": "graphrag",
+          "diversity": "graphrag",
+          "empowerment": "graphrag",
+          "directness": "graphrag"
+        }
+      }
+    }
+  ],
+  "note": "Answers/judgements reproduced from the Gemini response cache. summary[*].latency holds the cold-run latencies (seconds) measured on the original uncached evaluation; a cache-backed replay would otherwise read ~0."
+}

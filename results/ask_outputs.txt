@@ -1,0 +1,126 @@
+### Q: What are the main themes across these episodes?
+Route: global  (corpus-wide question -> map-reduce over community summaries)
+
+Community level 2 partial answers (id, title, score):
+  - L2-C4 Ben Laude, Laughter, Chopin and others: 12
+  - L2-C0 Kevin Scott, CHRISTINA WARREN, Xyla Foxlin and others: 10
+  - L2-C1 Like, Hey, Mike Volpi and others: 10
+  - L2-C2 AI, Wharton, How and others: 10
+  - L2-C3 You, Moore, Law and others: 10
+  - L2-C5 Mike, Meta, Stanford and others: 10
+  - L2-C6 Yeah, LISA SU, MIT and others: 10
+  - L2-C7 Behind the Tech, Kevin Scott Episode, Hello and others: 10
+  - L2-C8 Microsoft, GPT-4, ChatGPT and others: 10
+  - L2-C9 BehindtheTech, Kevin, One and others: 10
+  - L2-C10 Horowitz, Bach, Italian Concerto and others: 10
+  - L2-C11 MFA, California, Los Angeles and others: 10
+  - L2-C12 CTO, OpenAI, Facebook and others: 10
+  - L2-C13 What, API, Bronx and others: 10
+  - L2-C14 EE, Computer Science, E-80 and others: 10
+  - L2-C15 Aurora, Confluence, Confluent and Sonos and others: 10
+  - L2-C16 CAD, CAM, MS and others: 10
+  - L2-C18 New Yankee Workshop, PBS, TV and others: 8
+  - L2-C17 Cleveland, Cleveland Businesses Notable Women, Crain and others: 7
+  - L2-C19 Tesla, AC and Edison, DC and others: 6
+  - L2-C24 Hulu, Joost, Netflix and others: 6
+  - L2-C29 Beauty, Bolt, YouTubing: 5
+  - L2-C20 Council of Advisors, President, President Biden and others: 4
+  - L2-C22 Commodore, Istanbul, VIC-20 and others: 4
+  - L2-C28 Cray Research, Origin, Silicon Graphics: 4
+  - L2-C21 BSE, General Engineering, Case Western Reserve University and others: 3
+  - L2-C23 Marin County, Sausalito, Golden Gate Bridge and others: 3
+  - L2-C25 Martha Argerich CDs, Van Cliburn, CDs and others: 3
+  - L2-C26 CD, Noble, Barnes and others: 3
+  - L2-C43 Anatomy, Grey: 3
+  - L2-C27 Thinking Machines, CM5, National Center for Supercomputing Applications: 2
+  - L2-C30 Google, BERT, Waymo: 2
+  - L2-C31 Geoff Hinton, Covariant, University of Toronto: 2
+  - L2-C32 Wisconsin, Milwaukee, New Yorker: 2
+  - L2-C33 East Fork and Mud Tools, Akira Satake and John Britt, Namely: 2
+  - L2-C34 Yawanaw, Amazonia, Kano: 2
+  - L2-C40 IEEE, Robert N: 2
+  - L2-C46 King, Quest: 2
+  - L2-C47 Section Leader Program, TAs: 2
+  - L2-C48 Phantom Menace, Star Wars: 2
+  - L2-C55 Malaysia, NPIEs: 2
+  - L2-C59 Chris Urmson, Ended: 2
+  - L2-C61 Accenture, BCG: 2
+  - L2-C62 Josh Gans, UC Toronto: 2
+  - L2-C63 Northwestern, Rice: 2
+  - L2-C64 Vancouver, Virgin Records: 2
+  - L2-C67 NBA, NFL: 2
+  - L2-C72 Let's, Shrep: 2
+  - L2-C35 American Museum of Natural History, Hayden Planetarium: 1
+  - L2-C36 Aretha Franklin, Michael Jackson: 1
+  - L2-C37 Children of Time, Portids: 1
+  - L2-C38 Mental, Parkinson: 1
+  - L2-C39 LINN-900, Prince: 1
+  - L2-C41 Board of Directors, Industry Association: 1
+  - L2-C42 Lego Mindstorms, Little Lego Robotics Program: 1
+  - L2-C44 MakerBot, MakerBot Replicator: 1
+  - L2-C45 Cornell, Harvard: 1
+  - L2-C49 Facebook.com, MySpace: 1
+  - L2-C50 GDP, LED: 1
+  - L2-C51 North American, San Francisco: 1
+  - L2-C52 Reid, Turns: 1
+  - L2-C53 ME10, ME30: 1
+  - L2-C54 New Product Introduction Engineering, NPIE: 1
+  - L2-C56 Mosaic, Netscape: 1
+  - L2-C57 IP, TCP: 1
+  - L2-C58 Verizon and Comcast, Wall Street: 1
+  - L2-C60 AI Winter, Wikipedia: 1
+  - L2-C65 Argerich, Gouldian: 1
+  - L2-C66 Jerry Lowenthal, Juilliard: 1
+  - L2-C68 Holga, Polaroid: 1
+  - L2-C69 Hurricane Helene, US Southeast: 1
+  - L2-C70 Mother Nature, Of: 1
+  - L2-C71 Lisa Su of AMD, Your: 1
+Matched entities: are, what
+
+Answer [extractive]:
+The corpus covers 6 relevant theme(s):
+- Ben Laude, Laughter, Chopin and others: Chopin said it was the Siamese, these are the Siamese twins of the hand. There’s some great ones out there, but for the most part, what I’m doing, I kind of feel like, again, feel pretty lonely about it, like I used to when I was just practicing Chopin by myself in the 9th Grade.
+- Kevin Scott, CHRISTINA WARREN, Xyla Foxlin and others: By the way, Bob Dennard was like, you know, one of my heroes, as a young engineer, and I think what we’ve learned through this process is – you know, I often say, to my teams and others, that it’s so important to make the right bets on technology because it does take so long for it to, you know, really play out. BEN LAUDE: By the way, there’s kind of a movement that’s developing in the conservatories that I know a few pianists who are pushing for every music school to have a smaller – like, a slightly sized down instrument, the way Hoffmann ordered.
+- Like, Hey, Mike Volpi and others: Like, I think that if you look at, you know, Martha Argerich, you know, playing a Liszt piano concerto, or, you know, Yunchan Lim doing, you know, some of these beautiful things with a Chopin nocturne, or you’re watching some other, like, great feat of human performance, like Alex Honnold free soloing El Cap, or, like, I think there’s just this beautiful thing about watching human beings do things that are, like, right at the ragged edge of human performance, and then doing them in a way where they show everybody else, like, the art of the possible and, like, something new and nuanced and interesting that you’ve never seen before. Like, I think that if you look at, you know, Martha Argerich, you know, playing a Liszt piano concerto, or, you know, Yunchan Lim doing, you know, some of these beautiful things with a Chopin nocturne, or you’re watching some other, like, great feat of human performance, like Alex Honnold free soloing El Cap, or, like, I think there’s just this beautiful thing about watching human beings do things that are, like, right at the ragged edge of human performance, and then doing them in a way where they show everybody else, like, the art of the possible and, like, something new and nuanced and interesting that you’ve never seen before.
+- AI, Wharton, How and others: But I wonder, you know, maybe to give listeners an idea, you know, maybe you could sort of describe what AI has allowed you to do with a piece of art or like with the making of the art that you couldn’t do before with paint brushes or Photoshop or, you know, you know, whatever the tool set was before. So they can’t act as much as they want to, because the regulation was written for algorithmic forms of AI, where the decision was about AI decision-making, you know, in FICO scores and things like that.
+- You, Moore, Law and others: You know, we talk a lot about the data center from the standpoint of, you know, these large language models, the great work that, you know, Microsoft and OpenAI, and others are doing, and you know, in just training the largest, you know, models in the world. Even if you’re sort of assembling it piece by piece, you don’t get the same sense that you get when you’re, like building your own PC, like where you buy a motherboard and a case and a power supply and a CPU, and you like just sort of are assembling this thing physically, and you, at the end get to have, like have this working physical artifact.
+- Mike, Meta, Stanford and others: And then, you know, as we heard, you know, the more curious you are, like I think the more opportunities you create for yourself because, you know, him being at B-school is the thing that created the connection for him to go to Cisco. We already had Gopher, and a bunch of other things, and Telnet, and what was it, Usenet/NNTP, when I got there, but then, you know, the web obviously came out while I was at Stanford, and so that was just, like amazing, but on the hardware side, I agree with you.
+
+### Q: Tell me about Lisa Su
+Route: graph  (query mentions 2 known entities -> graph traversal between them)
+Matched entities: lisa, lisa su
+
+Graph facts used:
+  - No --[no youre exactly right and think]--> Lisa
+  - LISA SU --[co-occurs with]--> No
+
+Answer [extractive]:
+From the knowledge graph: No no youre exactly right and think Lisa. LISA SU co-occurs with No.
+
+### Q: What did the guests say about AI and semiconductors?
+Route: graph  (query mentions 3 known entities -> graph traversal between them)
+Matched entities: cto, did, what
+
+Graph facts used:
+  - Yeah --[well i think what was what]--> CTO
+  - Kevin Roose --[co-occurs with]--> Yeah
+  - Kevin Roose --[co-occurs with]--> Did
+  - Kevin Roose --[co-occurs with]--> Did
+  - Kevin Roose --[i hope that it has like]--> AI
+  - What --[do you think is interesting going]--> AI
+
+Answer [extractive]:
+From the knowledge graph: Yeah well i think what was what CTO. Kevin Roose co-occurs with Yeah. Kevin Roose co-occurs with Did. Kevin Roose i hope that it has like AI. What do you think is interesting going AI.
+
+### Q: What are the main themes? (baseline)
+Route: baseline  (vector RAG baseline)
+
+Text passages used:
+  - (0.224) So I think there’s actually going to probably be work there, too. CHRISTINA WARREN: And here's maybe an interesting behind the scenes tidbit for listeners here. We actually used Copilot as we were starting to put this year in review episode together. And it was able to identify some of the high level themes that came up all over with our guests this year. And that's a lot like the ways that educators like Sal Khan talk about using AI. And it's this idea of co-intelligence, which was certainly one of the themes that came up over and over again.
+  - (0.224) It was very informal. We had grown up very, very fast. The company was a couple hundred million in revenue, I want to say. And so, roles were a lot less formal than roles are today in the organization. They basically hired me because there were two technological themes that could affect their core business. They had routing, and they had two technological themes.
+  - (0.123) KEVIN SCOTT: For sure. CHRISTINA WARREN: All right, well, that is all the time that we have for today. Huge thanks to Mike Volpi for joining us. If you have anything that you would like to share, you can email us at BehindtheTech@Microsoft.com. And you can follow Behind the Tech on your favorite podcast platform, or you can check out full video episodes on YouTube. Thanks for listening.
+  - (0.122) That is all the time that we have for today. A huge thanks to Xyla Foxlin for joining us. And if you have anything that you would like to share with us, please email us anytime at BehindtheTech@microsoft.com. And you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. Thanks for listening. KEVIN SCOTT: See you next time.
+  - (0.112) BEN LAUDE: I mean, again, my father is a professor, so I grew up crawling around his lab in the mid-90s. And we had the Internet. And so, around then, I was probably playing video games with my brother. And we would get online and look up Internet, you know, sort of Resident Evil cheat codes for PlayStation, things like that. But message boards were sort of the main, at least for me, thing to do on the Internet in the late ‘90s and early 2000s. And it was around 2000 that I developed this piano obsession.
+
+Answer [extractive]:
+From the retrieved passages: So I think there’s actually going to probably be work there, too. CHRISTINA WARREN: And here's maybe an interesting behind the scenes tidbit for listeners here. We actually used Copilot as we were starting to put this year in review episode together. And it was able to identify some of the high level themes that came up all over with our guests this year. And that's a lot like the ways that educators like Sal Khan talk about using AI. And it's this idea of co-intelligence, which was certainly one of the themes that came up over and over again. It was very informal. We had grown up very, very fast. The company was a couple hundred million in revenue, I want to say. And so, roles were a lot less formal than roles are today in the organization. They basically hired me because there were two technological themes that could affect their core business. They had routing, and they had two technological themes.

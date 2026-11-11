@@ -1,0 +1,72 @@
+Route: global  (corpus-wide question -> map-reduce over community summaries)
+
+Community level 2 partial answers (id, title, score):
+  - L2-C4 CHRISTINA WARREN, Behind the Tech, MUSIC and others: 13
+  - L2-C0 Kevin Scott, Xyla Foxlin, Laughter and others: 10
+  - L2-C1 LISA SU, You, Kevin and others: 10
+  - L2-C2 Yeah, MIT, EE and others: 10
+  - L2-C3 Moore, Law, IBM and others: 10
+  - L2-C6 Like, PC, Internet and others: 10
+  - L2-C5 Kevin Roose, Bing, Minneapolis and others: 10
+  - L2-C8 ARM, X86, Look and others: 10
+  - L2-C7 Bronx, Black, New York and others: 9
+  - L2-C9 Cleveland, Cleveland Businesses Notable Women, Crain and others: 7
+  - L2-C10 New Yankee Workshop, PBS, TV and others: 7
+  - L2-C11 Kevin Scott Episode, Review KEVIN SCOTT, Xyla Foxlin XYLA FOXLIN and others: 5
+  - L2-C17 Beauty, Bolt, YouTubing: 5
+  - L2-C12 Council of Advisors, President, President Biden and others: 4
+  - L2-C16 Cray Research, Origin, Silicon Graphics: 4
+Matched entities: are, what
+
+Answer [extractive]:
+The corpus covers 15 relevant theme(s):
+- CHRISTINA WARREN, Behind the Tech, MUSIC and others: If you have anything that you would like to share with us, please email us any time at behindthetech@microsoft.com, and you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. And you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube.
+- Kevin Scott, Xyla Foxlin, Laughter and others: And yeah – XYLA FOXLIN: You have to think so out of the box because this was – I mean, this was kind of what we always said at Imagineering, but it’s like: To make someone believe in magic, you have to show them something they’ve never seen before, which means that you have to be always at like, the cutting edge of technology. KEVIN SCOTT: Where, you know, I just can’t even believe how much has happened in the past six months, much less the whole year.
+- LISA SU, You, Kevin and others: Like, when I was a little kid, and I was reading science fiction books and watching, you know, the first Star Trek series, and you know, all these optimistic science fiction movies and books that were around then, like the computers were incredibly powerful, like they - and this is before, you know, personal computers even existed, like these folks were imagining what a computer could be, and like, maybe some of the reality of, you know, what the computing revolution actually became, in a way, constrained people’s imagination, and like, I think – you know, what’s happened in the past, you know, handful of years has unconstrained people’s imagination again, and sometimes in like weird ways, but I think in mostly in incredibly optimistic ways, and like that’s exciting, because like I don’t know about you, like I’m of the firm belief that my imagination is not enough, like – LISA SU: Oh, completely. And so, it was just tremendous to be able to spend some time talking with Adrian, not just about his craft, but about what inspires him to write the things that he does, and, like, what some of his takes are, as a creative person, like a writer, about what this AI moment means for him and people practicing his craft.
+- Yeah, MIT, EE and others: I mean, I think what’s really cool about this, and what ended up being both the opportunity, but also the biggest challenge for Affectiva, you know, when we spun out of MIT, was that there are so many applications of this technology. KEVIN SCOTT: Yeah, like I think that something all of us realize at some point is, if you are in computing, it’s actually both pieces that are very important, and like, we’ll get back to this in a minute when we start talking about the work that we’ve been doing together, like Microsoft and AMD, for so many years.
+- Moore, Law, IBM and others: People have been talking about the end of Moore’s Law, and yet we – you know, we continue to – I mean, like Dennard Scaling is done, right, but we have been able to figure out how to, like economically get more and more compute, over time, and we have, you know, figured out how to put that compute to use for crazy things, like the whole mobile ecosystem, like what you can do today with PCs, like what you can do with high-performance computing for scientific workloads, and like now all this AI stuff. Today we are talking about 2 nanometer, but hey, back then, it was state-of-the-art type things, and we were thinking about, you know, how do we push the envelope on scaling, because you know, even then, people were talking about whether Moore’s Law was ending.
+- Like, PC, Internet and others: Like, “I Gotta Feeling” is not just for – what’s the version of “I Gotta Feeling” when you’re pissed? Like, it feels very much like, you know, what it’s felt like a couple of times earlier in my career, where, you know, with the PC revolution, or the Internet revolution, or the smartphone revolution, where, like, a big platform thing is happening, and that everybody is excited about it.
+- Kevin Roose, Bing, Minneapolis and others: KEVIN SCOTT: Yeah, even Tobi Lütke, who is one of my absolute favorite engineers, in addition to being the incredible entrepreneur and founder of Shopify, and I were talking about some of these ideas about the change that’s coming and how change influences the nature of craft and creativity. KEVIN ROOSE: Did you hear about the beer?
+- ARM, X86, Look and others: KEVIN SCOTT: Alpha, yeah, and you know, what ended up happening, just in terms of like where the bulk of the compute in the world went was to processors running this X86 instruction set, which you build them, LISA SU: We do build them. KEVIN SCOTT: you know, Intel builds them, and now, like we’ve got this sort of interesting world where you’ve got ARM in a bunch of places, you know, that are RISC construction set machines, and then you’ve got these GPUs, which are like an increasingly large volume of compute, and so it’s sort of interesting.
+- Bronx, Black, New York and others: Are you going to get stuck editing?” And he’s like, “Yeah, I’m actually jumping on a plane to New York, and I’m going to edit these wedding photos on the plane.” And I was like, “Oh, cool, what are you doing in New York?” And he said, “I’m watering my personal garden.” And I said, “What does that mean?” (Laughter.) And he was like, “I love photography, and I love shooting weddings. And the extent to which he has dedicated his life, not just to being a better engineer, but as a Black engineer, trying to figure out, like, how he goes and addresses some of those structural impediments to having more folks who are historically underrepresented in this field, be able to participate, like, it’s just really, really inspiring, seeing what Will has chosen to do with his life.
+- Cleveland, Cleveland Businesses Notable Women, Crain and others: She was named as one of Cleveland’s Most Interesting People 2017, Crain’s Cleveland Businesses Notable Women in Tech 2018, and 20 in their 20s in 2016, and was crowned Miss Greater Cleveland 2018 in the Miss America program. She was named as one of Cleveland’s Most Interesting People 2017, Crain’s Cleveland Businesses Notable Women in Tech 2018, and 20 in their 20s in 2016, and was crowned Miss Greater Cleveland 2018 in the Miss America program.
+- New Yankee Workshop, PBS, TV and others: And on PBS they had the New Yankee Workshop, which was this woodworking show done by this guy named Norm Abram who, like if you’re at my generation, like he’s, you know, the XYLA FOXLIN: The guy. Other locations were like, well, send me like a demo of what your show is going to be and I could put you on TV.
+- Kevin Scott Episode, Review KEVIN SCOTT, Xyla Foxlin XYLA FOXLIN and others: # Ep-60_Behind_the_Tech_Kevin_Scott_Podcast_2023_Year_in_Review Behind the Tech with Kevin Scott Episode 60 -- 2023 Year in Review KEVIN SCOTT: Hi, everyone. END # Ep-62_Behind_the_Tech_Kevin_Scott_Podcast_with_Xyla_Foxlin Behind the Tech with Kevin Scott Episode 62 -- Xyla Foxlin XYLA FOXLIN: It’s like the only job in the world that I can think of where I can learn something new every single day, like every single month.
+- Beauty, Bolt, YouTubing: She began YouTubing in college with the channel Beauty and the Bolt as a way to provide public makerspaces access to free tutorial videos. And that’s how Beauty and the Bolt, which was the first channel I worked on, was born.
+- Council of Advisors, President, President Biden and others: Noyce medal, and was appointed by President Biden to the President’s Council of Advisors on Science and Technology. Noyce medal, and was appointed by President Biden to the President’s Council of Advisors on Science and Technology.
+- Cray Research, Origin, Silicon Graphics: I – you know, I had an internship at Silicon Graphics, right after they bought Cray Research, and like working on the Origin 2000, like this big cash-coherent pneumo-machine that they built that was super innovative. This community centers on Cray Research, Origin, Silicon Graphics.
+Route: graph  (query mentions 2 known entities -> graph traversal between them)
+Matched entities: lisa, lisa su
+
+Graph facts used:
+  - Like --[my bias as a computer scientist]--> Lisa
+  - Like --[when i was a little kid]--> Star Trek
+  - Star Trek --[series and you know all these]--> LISA SU
+
+Answer [extractive]:
+From the knowledge graph: Like my bias as a computer scientist Lisa. Like when i was a little kid Star Trek. Star Trek series and you know all these LISA SU.
+Route: graph  (query mentions 4 known entities -> graph traversal between them)
+Matched entities: cto, how, lisa, lisa su
+
+Graph facts used:
+  - OpenAI --[s]--> CTO
+  - Mira Murati --[who is]--> OpenAI
+  - Mira Murati --[co-occurs with]--> You
+  - You --[actually have to think through]--> How
+  - Kevin Scott --[co-occurs with]--> How
+  - Kevin Scott --[co-occurs with]--> No
+  - No --[no youre exactly right and think]--> Lisa
+  - Like --[my bias as a computer scientist]--> Lisa
+
+Answer [extractive]:
+From the knowledge graph: OpenAI s CTO. Mira Murati who is OpenAI. Mira Murati co-occurs with You. You actually have to think through How. Kevin Scott co-occurs with How.
+Route: baseline  (vector RAG baseline)
+
+Text passages used:
+  - (0.153) That is all the time that we have for today. A huge thanks to Xyla Foxlin for joining us. And if you have anything that you would like to share with us, please email us anytime at BehindtheTech@microsoft.com. And you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. Thanks for listening. KEVIN SCOTT: See you next time.
+  - (0.138) I don’t know that we know the answer to that, but I’m excited to find out. That’s for sure. CHRISTINA WARREN: That was a whirlwind tour of our incredible 2023 guests on Behind The Tech this year. You can check out those full episodes on your favorite podcast platform, and on YouTube. So, be sure to check those out. And if you have anything that you would like to share with us, you can e-mail us anytime at behindthetech@microsoft.com.
+  - (0.117) Well, that is all we’ve got today. A big thanks to Lisa Su for joining us. If you have anything that you would like to share with us, please email us any time at behindthetech@microsoft.com, and you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. Thanks for listening. KEVIN SCOTT: See you next time. END # Ep-62_Behind_the_Tech_Kevin_Scott_Podcast_with_Xyla_Foxlin Behind the Tech with Kevin Scott Episode 62 -- Xyla Foxlin XYLA FOXLIN: It’s like the only job in the world that I can think of where I can learn something new every single day, like every single month.
+  - (0.115) It was amazing that you could build, you know, some transistors on something the size of a coin. You could look at it in the microscope. You could measure it on a test system, and you know, that’s how I got into hardware, and that’s how I got into semiconductors, actually. KEVIN SCOTT: Yeah, like I think that something all of us realize at some point is, if you are in computing, it’s actually both pieces that are very important, and like, we’ll get back to this in a minute when we start talking about the work that we’ve been doing together, like Microsoft and AMD, for so many years. But like, I want to first, like poke on this practical experience that you have because, like one of the themes that we have, talking to computer scientists and engineers is this notion that the abstraction layers that we have built up over the decades sometimes obscure some of the low-level things. Like I wonder – like I’m not a EE, and so I don’t know whether you can get that experience that you, anymore, in a Material Science program or a EE program at university, where you get that visceral feel for what it’s like to actually make a semiconductor.
+
+Answer [extractive]:
+From the retrieved passages: That is all the time that we have for today. A huge thanks to Xyla Foxlin for joining us. And if you have anything that you would like to share with us, please email us anytime at BehindtheTech@microsoft.com. And you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. Thanks for listening. KEVIN SCOTT: See you next time. I don’t know that we know the answer to that, but I’m excited to find out. That’s for sure. CHRISTINA WARREN: That was a whirlwind tour of our incredible 2023 guests on Behind The Tech this year. You can check out those full episodes on your favorite podcast platform, and on YouTube. So, be sure to check those out. And if you have anything that you would like to share with us, you can e-mail us anytime at behindthetech@microsoft.com.

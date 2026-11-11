@@ -2,5 +2,8 @@
 __pycache__/
 *.pyc
 data/index/
+data/index_podcast/
+data/index_podcast_offline/
 .DS_Store
 .cache/
+.env

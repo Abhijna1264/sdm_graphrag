@@ -1,0 +1,4 @@
+Indexed 1047 chunks from data/podcast_corpus.txt
+Knowledge graph: 963 entities, 2319 relations
+Communities: level 0: 450, level 1: 296, level 2: 266
+Index saved to data/index_podcast

@@ -1,0 +1,1202 @@
+# Ep-60_Behind_the_Tech_Kevin_Scott_Podcast_2023_Year_in_Review
+
+Behind the Tech with Kevin Scott
+Episode 60 -- 2023 Year in Review
+
+KEVIN SCOTT: Hi, everyone. Welcome to Behind the Tech. I’m your host, Kevin Scott, Chief Technology Officer for Microsoft.
+
+In this podcast, we’re going to get behind the tech. We’ll talk with some of the people who have made our modern tech world possible and understand what motivated them to create what they did. So, join me to maybe learn a little bit about the history of computing and get a few behind-the-scenes insights into what’s happening today. Stick around.
+
+[MUSIC]
+
+CHRISTINA WARREN: Hello, and welcome to Behind The Tech. I’m Senior Developer Advocate at GitHub, Christina Warren.
+
+KEVIN SCOTT: And I’m Kevin Scott.
+
+CHRISTINA WARREN: And here we are, at the end of 2023 already, and what a huge year it’s been in our world. It’s hard to believe how much has changed this past year what with like, the widespread adoption and explosion of AI into the world.
+
+KEVIN SCOTT: Yeah, it has been a crazy and big year. I sort of feel, like, we’re, like, living AI dog years, or something –
+
+CHRISTINA WARREN: (Laughter.) Yes.
+
+KEVIN SCOTT: Where, you know, I just can’t even believe how much has happened in the past six months, much less the whole year.
+
+So, you know, obviously, this is the you know, in the past 12 months, we’ve had ChatGPT released, we’ve had GPT-4 released. And then we’ve had this crazy explosion of generative AI activity across the board, from Microsoft and OpenAI, and a whole bunch of other companies. Like, it feels very much like, you know, what it’s felt like a couple of times earlier in my career, where, you know, with the PC revolution, or the Internet revolution, or the smartphone revolution, where, like, a big platform thing is happening, and that everybody is excited about it.
+
+And the smartest and most ambitious people are putting all of their energy into figuring out what this all means for them, and, like, what useful things they’re going to try to go make for other people on top of things that are newly possible. So, it’s a super exciting moment.
+
+CHRISTINA WARREN: It’s an extremely exciting moment. I’ve been describing this to people for basically a year now. It’s like, this is another iPhone moment, and that only becomes more and more true, I think, all the time.
+
+And on the podcast this year, it’s been really exciting to hear folks talk about, as you say, what’s been happening now and the stories behind, you know, the years and years of work and research that have gotten us to this place, because, of course, it feels like it’s all happening right now, but this is the buildup of a lot of hard work.
+
+KEVIN SCOTT: Yeah.
+
+CHRISTINA WARREN: So, back in the spring, you got to talk to Bill Gates, who, obviously, is a huge force. Like, I think it’s hard to express just how huge a force in technology he has been for decades.
+
+KEVIN SCOTT: Yeah, for sure. And, you know, like, obviously, Bill was one of the accelerators for the personal computing revolution.
+
+CHRISTINA WARREN: Yeah.
+
+KEVIN SCOTT: Like, he played, you know, maybe the most pivotal role there in founding Microsoft in the first place, and, you know, pushing the personal computing revolution forward, and, like, played a tremendously important role in the Internet revolution, you know, honestly. And, you know, so it was really great to spend some time chatting with him about AI and his perspective on, like, what this moment means, like, how it is similar to some of the things that he’s seen in the past.
+
+And like, obviously, Bill’s also been thinking about AI for, you know, his entire career. And so, you know, for all of us who have an interest in technology, seeing a thing that has gone from, you know, promising, but not moving as fast as all of us ambitious, people would like, to actually making some pretty big breakthroughs has been just, I think, just as exciting for him as it has been for all of us.
+
+CHRISTINA WARREN: Yeah, let’s take a listen to that conversation.
+
+KEVIN SCOTT: I wonder what your advice might be to people who are thinking about like, oh, I have this new technology that’s amazing that I can now use. Like, how should they be thinking about how to use it? Like, how should they be thinking about the urgency with which they are pursuing these new ideas? And like, how does that relate to how you thought about things in the PC era and the Internet era?
+
+BILL GATES: Yeah, so the industry starts really small where computers aren’t personal. And then through the microprocessor and bunch of companies, we get the personal computer, IBM, Apple. And Microsoft got to be very involved in the software. You know, even the BASIC interpreter on the Apple II, a very obscure fact, was something that I did for Apple. And that idea that, wow, this is a tool that, at least for editing documents, that you have to do all the writing, you know, that was pretty amazing. And then connecting those up over the Internet was amazing. And then moving the computation into the mobile phone was absolutely amazing. So once you get the PC, the Internet, the software industry and the mobile phone, the digital world is changing huge, huge parts of our activities.
+
+I was just in India seeing this – how they do payments digitally, even for government programs. It’s an amazing application of that world to help people who never would have bank accounts because the fees are just too high. It’s too complicated. And so, we continue to benefit from that foundation.
+
+I do view this, the beginning of computers that read and write, as every bit as profound as any one of those steps. And a little bit surprising because robotics has gone a little slower than I would have expected. And I don’t mean autonomous driving. I think that’s a special case that’s particularly hard because of the open-ended environment and the difficulty of safety and what safety bar people will bring to that. But even factories where you actually have huge control over the environment of what’s going on and you can make sure that no kids are running around anywhere near that factory.
+
+So a little bit people are saying, okay, these guys can over-predict, which that’s certainly correct. But here’s a case where we under-predicted that natural language and the computer’s ability to deal with that and how that affects white collar jobs, including sales, service, helping a doctor think through what to put in your health record, that I thought was many years off.
+
+And so, all the AI books, even when they talk about things that might get a lot more productive, will turn out to be wrong. And because we’re just at the start of this, you can almost call it a mania like the internet mania, but the internet mania, although it had its insanity and things that, I don’t know, sock puppets or things where you look back and say, what were we thinking, it was a very profound tool that now we take for granted. And even just for scientific discovery during the pandemic, the utility of the immediate sharing that took place there was just phenomenal. And so, this is as big a breakthrough, a milestone as I’ve seen in the whole digital computer realm, which really starts when I’m quite young.
+
+KEVIN SCOTT: Yeah, well, so I’m going to say this to you, and I’m just interested in your reaction because like, you will always tell me when an idea is dumb. But like, one of the things that I’ve been thinking for the last handful of years is that one of the big changes that’s happening because of this technology is that for 180 years, from the point that Ada Lovelace wrote the first program to harness the power of a digital machine, up until today, the way that you’d get a digital machine to do work for you is you either have to be a skilled programmer, which is like a barrier to entry that’s not easy, or you have to have a skilled programmer anticipate the needs of the user and to build a piece of software that you can then use to get the machine to do something for you.
+
+And this may be the point where we get that paradigm to change a little bit, where because you have this natural language interface and these AIs can write code and like they will be able to actuate a whole bunch of services and systems, that we sort of give ordinary people the ability to get very complicated things done with machines, without having to have like all of this expertise that you and I spent many, many years building.
+
+I don’t know whether you think that’s a dumb idea or not.
+
+BILL GATES: No, absolutely, every advance hopefully lowers the bar in terms of who can easily take advantage of it. The spreadsheet was an example of that, because even though you still have to understand these formulas, you really didn’t have to understand logic or symbols much at all. And it had the input and the output so closely connected in this grid structure that you didn’t think about the separation of those two. And that’s kind of limiting in a way to a super abstract thinker, but it was so powerful in terms of the directness; oh, that didn’t come out right, let me change it.
+
+Here, there’s a whole class of programs of taking like corporate data and presenting it or doing complex queries against, okay, have there been any sales offices where we’ve had 20% of the headcount missing, and are our sales results affected by that? You can just – now you don’t have to go to the IT department and wait in line and have them tell you, oh, that’s too hard or something.
+
+Most of these corporate learning things, whether it’s a query or a report or even a simple workflow where if something happens, you want to trigger an activity, the description in English will be the program. And when you want it to do something extra, you’ll just pull out that English, or whatever your language is, and type that in. And so, there’s a whole layer of query assistance and programing that will be accessible to any employee.
+
+And the same thing is true of, okay, I’m somewhere in the college application process and I want to know, okay, what’s my next step and what’s the threshold for these things? It’s so opaque today. So empowering people to go directly and interact, that is the theme that this is trying to enable.
+
+CHRISTINA WARREN: It was incredible to get to talk with Bill, not only about the specifics of how all of this stuff works, but also to get a sense of the big picture for this historic moment that we’re in, as you alluded to, Kevin.
+
+KEVIN SCOTT: Yeah. I mean, it has been a very long and winding road to get to where we are right now. And, you know, you said it earlier. This is, you know, may feel like, you know, all of a sudden it broke through and it was very abrupt, but it was because of decades and decades of work that, you know, just an untold number of people have been doing.
+
+But it has been really interesting, working with the folks at OpenAI. And we had this incredibly interesting conversation with Mira Murati, who is OpenAI’s CTO, about, you know, her perspective is, like, you know, sitting effectively in the hot seat of, you know, developing one of the most interesting pieces of technology that's resulted in the, you know, this breakthrough moment that we’ve had this past year.
+
+CHRISTINA WARREN: For sure. Let’s take a listen.
+
+MIRA MURATI: You know, the first time that we thought about deploying this models that were just in research territory was kind of this insane idea. It wasn’t normal back then to go deploy a large language model in the real world. And, you know, what is the business case? What is it actually going to do for people? What problems is it going to solve? Like, we didn’t really have those answers.
+But we thought, you know, if we make it accessible in such a way that it’s easy to use and it is cheap to use, it is highly optimized, you don’t need a lot of -- you don’t need to know all the bells and whistles of machine learning and just accessible, then maybe people’s creativity would just bring to life, you know, new products and solutions and we’d see how this technology could help us in the real world.
+And, of course, we had a hypothesis, but really it was just putting GPT-3 in the API the first time that we saw people interact with these large language models and the technology that we were building and that for so many years we’d just been building in the lab without, you know, this real-world contact and feedback from people out there.
+So, that was the first time. It was sort of this leap of faith that it was going to teach us something, we were going to learn something from it. And, hopefully, we could feed it back into the technology. We could bring back that knowledge, that feedback, and figure out how to use it to make the technology better, more reliable, more aligned, safer, more robust when it eventually gets deployed in the real world.
+
+And, you know, I always believe that you can’t just build this powerful technology in the lab with no contact with reality and hope that somehow it’s going to go well and that it’s going to be safe and beneficial for all. And, somehow, you do need to figure out how to bring society along both in gathering that feedback and insight, but also in adjusting society to this change.
+And the best way to do that is for people to actually interact with the technology and see for themselves, instead of, you know, telling them or just sharing scientific papers. So that was very important. And it took us, then, a couple of years to get to the point where we were not just releasing improvements to the model through the API, but in fact, the first interface that was more consumer facing that we played around with was DALL-E. DALL-E Labs, where people could just input a prompt in natural language and then you’d see these beautiful, original, amazing images come up.
+And then, you know, really for research reasons, we were experimenting with this interface of dialogue where you go back and forth with the model and ChatGPT and dialogue is such a powerful tool, you know, the idea of Socratic dialogue and how -- how people learn, you can sort of correct one another and/or ask questions, get really to deeper truth.
+And so, we thought, you know, if we put this out there, even with the existing models, we will learn a lot. We will get a lot of feedback and we can use this feedback to actually make our upcoming model that at the time was GPT-4 safer and more aligned.
+So, that was kind of the motivation. And, of course, as we saw, you know, in just a few days, it became super popular and people just loved interacting with this AI system.
+
+CHRISTINA WARREN: So, when we talk about AI and we think about this stuff, it has been so powerful and so public, the way I think that the whole world has kind of been getting to learn about an experience, the challenges of this new wave of AI. You know, kind of feel like we are in this, you know, before ChatGPT, after ChatGPT world. And that’s really been evident this year.
+
+KEVIN SCOTT: Yeah. And, you know, we had a really great opportunity on the podcast and, you know, me, personally, in my professional life, to have a bunch of really important conversations with Kevin Roose, from the New York Times.
+
+So, you know, I think journalism has this really important role to play in helping frame what’s happening right now. So, like, we’re doing part of the job, which is develop the technology and, like, try to responsibly get it deployed out to the public. But that’s a tiny little part of the job of figuring out how to get AI into the hands of the public in a reasonable way.
+
+And so, yeah, I’ve been super excited to have those conversations with journalists this year.
+
+CHRISTINA WARREN: Yeah, this conversation that you had with Kevin is actually one of my favorites this year, A, because he’s a former colleague, and B, because I really do think, as you say, journalists play a really important role in, I think, helping kind of bridge the understanding gap between what it is that is being created, and all the things that we’re working so hard on, and how the general public is going to be able to kind of understand and synthesize what all this means for them. So this is a great conversation, yeah.
+
+KEVIN SCOTT: Yeah, and for me, personally, just, you know – for me, personally, you know, it also serves this really important role of making sure that you’re not getting trapped in your own little bubble, that, you know, if you sit around and all you do is talk to your fellow technologists all day long, you can get convinced to some pretty wonky things. (Laughter.) And it’s, like, really useful to have journalists, and academics, and policymakers, and, you know, and, like, my mom in rural Central Virginia able to, like, knock you out of your bubble think. (Laughter.)
+CHRISTINA WARREN: No, I think you’re exactly right. I mean, and I think that that’s how we make sure that this is stuff that is not just useful in theory and, as you say, in our own bubbles, but it’s actually something that could be world changing. So, great conversation here.
+
+KEVIN ROOSE: We are building some of the most – we, I say we. I mean you essentially and your peers in the tech industry are building some of the most powerful technology ever created. And I think without the media, there just wouldn’t be a kind of countervailing sort of, I don’t know if it’s, you know, a force on the minds of the people building that technology or just a caution around the technology, but I’ll give you an example of what I mean. So, you know, you and I had this now infamous encounter back in February –
+KEVIN SCOTT: Yeah.
+KEVIN ROOSE: where you guys had just released Bing with this, you know, what we now know as GPT-4 running inside of it, and I had this insane conversation with Bing Chat, aka Sydney. Please don’t hurt me, Sydney.
+
+And, you know, it went on the front page, went totally viral, blew up, I’m sure, you know, your inbox, my inbox, everyone’s inbox for months.
+KEVIN SCOTT: Everybody’s inbox...
+KEVIN ROOSE: And subsequent to that, like I started hearing from, you know, just in a nutshell, if people aren’t familiar, it was a conversation that sort of lasted two hours in which Bing/Sydney, you know, confessed all these sort of dark secrets and tried to break up my marriage, and it was insane.
+And – and subsequent to that story running, I got notes from a lot of other people at tech companies saying, you know, how do we prevent our technology from doing that. Or even – I got a leaked document from another big tech company, which had a sort of roadmap for their AI product, and listed on the roadmap was like, “Do not break up Kevin Roose’s marriage.”
+And so, I really think that like that – and not to toot my own horn, this could have been anyone, but it did really like serve as a cautionary tale for other companies that are building similar technology.
+And so, I think that is what the media can and should do in moments of societal transformation and change is really hold a – you know, hold up a sign that basically tells people like, you know, you want to do this right or, you know, there will be – you know, there may be consequences for that.
+KEVIN SCOTT: Yeah, and I think that is one of the very good things that came out of that experience. And, you know, it also, I think, is a – it’s another important reason why it is I think you actually want to launch these things, you know, even if it results in something that floods your inbox, you know, for a while, is like you just sort of get the societal level conversation about, you know, what’s possible, what’s going on, like, where’s the line, like, what’s good, what’s bad.
+I mean, we haven’t chatted since that story published, and one thing that I will say is, like, I deeply appreciate the part of the writing that you did, where you publish the full transcript of the conversation. So like that level of transparency, like it just wasn’t confusing to anyone about, you know, like, what inputs into the system led to like, the things that it gave back, and like, that was super good.
+I don’t think many of the people who were coming into my inbox had read the full transcript, but I think that you’re just 100% spot on. Like, the existence of this thing has, like, helped a lot of people, like just make sure that they’re paying real attention to some very important things.
+KEVIN SCOTT: And also you know, some of this stuff is fuzzy, right, like, you know, where the line is, and like, part of what you all are helping doing is making sure that the public is paying enough attention to it, so they can weigh in and have an opinion about where the line should be.
+KEVIN ROOSE: Absolutely, I mean, it is an area where I think more public opinion is good. And right now, the number of people who are actually building this technology is like quite small, relative to the number of people who are using it, or who will soon be using it.
+And so, I just think like, the more people know about what’s going on, the better, and I think it’ll ultimately be good for the tech industry to have that kind of feedback, even if it is annoying and blows up your inbox in the moment.
+KEVIN SCOTT: Yeah, and for what it’s worth, it was like I was never annoyed about that. I was sometimes –
+KEVIN ROOSE: You were remarkably chill. I was pleasantly surprised by like, the response that, you know, you and I talked after I had had this conversation, but before I sort of published my story, and, you know, you didn’t freak out, you didn’t accuse me of lying. You know, it was a remarkably civil conversation.
+And I have appreciated that because that’s not – and I’m not just blowing smoke here, like that is not the reaction that I expected, you know, given how these things can go with other tech leaders.
+So you know, I think, you know, I’m hopeful that the response to that article has not – the lesson from that has not been that we should build in secret and should never let anyone try our stuff.
+KEVIN SCOTT: No, no, no, no, no, no, no.
+KEVIN ROOSE: I hope that it has like been sort of salutary for the whole project of building good and safe and responsible AI to like, have some feedback along the way.
+KEVIN SCOTT: One hundred percent. Like, I don’t think anybody was – like, I’m genuinely trying to think if anyone was irritated. Like everybody is sort of like, okay, this is good, lesson learned, and like, you know, we have a whole bunch of mechanism for, you know, preventing things like that from happening again. And, I mean, just – it’s all good.
+Somebody said to me at some point that, like all feedback is a gift. Like, the fact that you spent two hours trying very hard to get this thing to do unusual things, and then publish the whole transcript, and then wrote this article that helps people pay more attention to the importance of responsible AI, like all of that’s a gift, like and that’s the way you should just sort of look at it.
+
+KEVIN ROOSE: Yeah, I’ll remind, you know, tech executives of that the next time I get an angry call from a comms department. You know, Kevin Scott thinks feedback is a gift. So maybe you guys should get on board with that.
+I did also hear that you guys had Sydney swag made, and I’m a little offended that none of that has shown up in my house.
+KEVIN ROOSE: Did you hear about the beer? So this was my
+KEVIN SCOTT: I did.
+KEVIN ROOSE: my favorite thing that came out of that article was that there was a brewery in Minneapolis that – that came out with a beer called, Sydney Loves Kevin.
+KEVIN SCOTT: Yes.
+KEVIN ROOSE: And I have not tried it yet. I heard it was good. But, you know, maybe you and I can get a pint of it sometime.
+KEVIN SCOTT: We should absolutely make a road trip to Minnesota to get a pint. That would be hilarious.
+
+KEVIN SCOTT: So, you know, it’s just so exciting to me, how much technology and AI are becoming part of the mainstream conversation. It really does make me think about the episode we did with Neil deGrasse Tyson, who is one of my heroes. Like, in addition to being a brilliant astrophysicist, Neil, I think is, in my opinion, the best science communicator since Carl Sagan. And I think, you know, Neil tried to model a lot of what he’s doing after Carl. And, you know, he just does a terrific job of helping explain some incredibly complicated scientific concepts to the public, but not in a condescending way. So, I just love Neil to death.
+
+CHRISTINA WARREN: No, I do, too. He’s also one of my heroes, and I think you’re exactly right. He is definitely one of our best, if, you know, not the best, like, living science communicator that we have. And I think it’s so important that we have people like him in these moments. As you say, I think helps get us out of our bubbles a little bit, and also, I think, helps put this, again, into terms that people who might not follow along with every little thing can understand and - and get excited about, and also start to think the important questions about. So, this is a great conversation with Neil.
+
+NEIL DEGRASSE TYSON: Right, right. Well, actually, so I think much less about kids than I do about adults because kids are born curious and they retain that curiosity  middle school – so I'm not so worried about them as I am about adults, who think they're thinking rationally, and are not, and adults are in charge of the world. They wield resources, they vote, they lead. They're captains of industry. They're all the things that shape this world.
+
+So yeah, we can target children, but I'm too impatient. I don't want to wait 30 years until they're old enough to then make a difference. Whereas adults can make a difference with a signature – with a pen at the bottom of a document that puts a new legislation into effect or a new educational directives or new mission statements. So that's been my goal. Now, in terms of role model, I think the term is a little overplayed, overvalued, I should say, for the following reason.
+
+I grew up in the Bronx, New York. And if I needed another Black person who grew up in the Bronx before me, who then became an astrophysicist, to have preceded me, I would have never become an astrophysicist. So role models, inherent – as they are generally thought of – inherently require that you are not the first to do something. But suppose you have interest where you would be the first to do something, either first out of your town. Like you said, you're the first. What's your role model can't have been people in your town because none of them went to college. So – or in your family. All right?
+
+So at some point you have to say my role model is someone I have never met, and I may never meet, but I know enough about them that I want to emulate what happened in their life. And so for me, I knew this from very early. So I had an athletic role model of, you know, baseball, of course. I grew up in the Bronx where the Yankees play. So there was a Yankee that was a role model, I didn't want to be him. Just said if I played baseball, I wanted to play baseball as well as he did. All right? That's all. And I visited my local planetarium. The Hayden Planetarium. Took extra classes there. They had educators and scientists, and they had educators that had such a way with words and storytelling. I said, if I'm ever an educator, that's the kind of educator I want to be. And the scientists had such command of – and they just knew so much.
+
+And the weird thing is, I remembered thinking, I will never know this much about the universe as much as they do, meanwhile they're twice my age at least, and I'm 15 when I'm having these thoughts, okay? And not realizing that when you get a PhD, you spend a whole five, six years studying that one subject. All right? And six years before that, I was nine. So I had to get the timescales understood within me. But, so, for me, a role model at its best is assembled a la carte from different people. And that's why, if you're visible, you should always, in the back of your head, ask yourself: Am I being something that someone else might want to emulate? Because that chance is very real, whether or not you ever meet the person.
+
+And so when I see little children coming through – the Hayden Planetarium is part of the American Museum of Natural History. There's school groups that come through. Many tourists, international tourists, but also camp groups. I see little kids and they're looking bright eyed. And all I've committed is that whatever I help create there will have the impact on that next generation the way the educators and scientists had an impact on me. Then I've given back to this world.
+
+CHRISTINA WARREN: And then when we talk about how important it is to bring people into science and technology, a lot of that, I think, comes from being able to inspire them and their creative minds.
+
+KEVIN SCOTT: Yeah, there are so many structural barriers for a lot of people. And it’s really easy, I think, for folks to get confused about how much luck and good fortune is involved in, you know, all of us who have the privilege of having interesting, you know, careers, where we get to, like, have a little slice of impact on - on an industry, like, how much luck plays a role in that for us.
+
+And so, you know, William Adams, who worked for me for a while at OCTO – he’s one of the first people I hired when I came to work for Microsoft – is just an incredible human being, like, a source of inspiration for me, personally. And the extent to which he has dedicated his life, not just to being a better engineer, but as a Black engineer, trying to figure out, like, how he goes and addresses some of those structural impediments to having more folks who are historically underrepresented in this field, be able to participate, like, it’s just really, really inspiring, seeing what Will has chosen to do with his life.
+
+WILLIAM ADAMS: Yeah, well, let – let me put on my speed mouth then. The general – the general thing is, and this started back with when George Floyd was killed. I kind of really sat and thought, it’s like, okay, what am I going to do? I mean, this is not the first black man who’s ever been killed by police. He’s not going to be the last, but this is a good moment, because it was caught on 4K video. People are kind of paying attention. What am I going to do, right?
+
+And I – one thought was, well, I’ve got money, I can just kind of throw money out to people, you know – (laughter) – and – and be that kind of philanthropist. It’s like, nah, that – once your money is gone, that – that effect is gone. Well, I have 40+ years in tech, and I know that tech billionaires are kind of the top of the world right now. So, that means there’s more money in tech. Why don’t I help get more people into tech, right?
+
+So then, that led to, well, there’s lots of different models for that as well. I could invest. I could be a – an LP in someone else’s thing, or whatever. There’s lots of different ways of doing it. And I just came up with the models, like, well, what matches my skills and experience and network best?
+
+So, I came up with the studio model, right, a venture studio. And the difference between a venture studio and a plain old VC is – or an accelerator is I tell people think of Motown, right? There – I’m the Berry Gordy, right? I’m going to find the talent; I’m going to train the talent. I’m going to find Aretha Franklin; I’m going to find Michael Jackson. I’m going to help show them how to dance, stage presence, give them the record contract, put them out on – in the network and help them build their thing, right?
+Do that with software. So, it’s about creating software, creating a network, having a finance network, having resources as simple as, as soon as you start your business, you need a tax accountant, or else you’re just going to fall behind on your taxes, and you’re going to be out of business in a year. You need an admin, you know? (Laughter.) So, you need three or four programmers. You’re not going to write the code yourself.
+And when you fail, you need someone to say, that’s all right, let’s do it again, right? And this is something that typically, black and women businesses don’t have, right? They struggled to do it once. They get burned. They’re working at McDonald’s, or they’re back to general population. They don’t try again, because they’ve got obligations.
+So, the studio is intended to put a little cushion that they don’t normally have in the – in this society, such that they can have enough longevity to succeed, right? So, I’ve been doing a lot of network building. I’ve been writing tons of code, because the – the other thing that I’m telling people is, okay, AI is the thing. Two years ago, I would have told you, go out and learn you some C sharp, you know, and Web development.
+Now it’s like, no, no, no. First, you need to go play with ChatGPT. And if you’re going to write any code at all, you’re going to use copilot, right? And I’m not just saying that because I’m shilling for Microsoft. It’s like, I do it myself, and it makes me 30% more productive, at least. So, I tell them that, and the software I’m writing is about saying, how can I write code such that it’s going to be more composable when I use AI to do it, right?
+So, for example, there’s a ZIP, the ZIP file format, right, compressed files. There’s a library for that, and it has its quirks. I wrote one myself; I have my own ZIP decoder. And the interface is so simple that when I want to say, now compress that and stick it in the ZIP, it’s one function, three parameters, done, right?
+Clear licensing. I don’t have to worry about all the licensing all over the place. And that’s a difficulty when you start stitching with AI. It’s like, well, wait a minute, where did that data come from? Where did that code come from? (Laughter.) Where did – do you have the right license for that chunk of code right there?
+So, I’m creating a substrate of code that’s like, this is clear licensed, right? And here’s how you program leveraging AI, right? This is how we have to do it. This is how we’re going to 10x our abilities, right, is by deleveraging AI. You can’t just go and lock yourself in a room and think you’re going to hammer out some code, because by the time you’re done, someone else has got – AI has already done it 10x over. So, you better learn how to do it with AI, right? So, this is – this is what I’m currently engaged in.
+CHRISTINA WARREN: Yeah, honestly, William’s work, what he’s doing is so inspiring, as you say, and what he’s accomplished in his time at Microsoft and now, after Microsoft, is so impressive. And I loved that conversation between the two of you, and it’s great that we have people like him who are doing this important work, and really working to inspire the next generation.
+
+KEVIN SCOTT: Yeah, for – for sure. I mean, maybe - maybe the theme of this podcast, like the people that we talk to, are folks who are just deeply passionate about something and who are fully committed to pursuing that passion. And it’s just a great pleasure to be able to chat with so many people who have that - that mindset.
+
+And, you know, one of those conversations that we had this year was with my very favorite science fiction author right now, Adrian Tchaikovsky, who has written just really incredible, hard science fiction books. You know, he’s got a super interesting background, as many science fiction authors do. Like, he is a zoologist and lawyer, you know, by training.
+
+And, you know, I think he wrote, maybe inadvertently, like, one of the most important books on contemporary artificial intelligence, which was the third installment of a trilogy that he wrote called Children of Memory, where, of all things, pairs of corvids, you know, intelligent birds are maybe the best metaphor that I have seen for large language models, which is just an incredible, you know, thing, that that came from his imagination before large language models really were doing some of the things that they could do.
+
+And so, it was just tremendous to be able to spend some time talking with Adrian, not just about his craft, but about what inspires him to write the things that he does, and, like, what some of his takes are, as a creative person, like a writer, about what this AI moment means for him and people practicing his craft. So, like, it’s – it’s just a great conversation and – and wanted to get people a chance to listen to a little snippet of that conversation in this - in this year in review we’re doing here.
+
+ADRIAN TCHAIKOVSKY: I mean, when I’m working from the point of view of a non-human entity, whether it’s a sort of an uplifted animal, or an alien or something like that, it’s generally the start point is the input. So, you look at what senses it has, how it experiences the world around it, and that then – that gives you a very good filter through which to look at the world and interpret the things that are going on around this particular character. It gives it its own sort of set of priorities that can be quite different to human, because we’re very limited to our senses. I mean, that – our entire picture of what goes on around us is fed to us through the various ways that we sense our environment.
+
+And when those ways go wrong, or when those ways are giving us uncertain information, you can get some sort of profoundly weird and dysfunctional worldviews generating from that, which can be extremely hard to dissuade someone from, even if – even if you knew that you had a problem, which meant that, you know, you were seeing things, you were hallucinating. That doesn’t necessarily mean that the hallucinations aren’t themselves still incredibly powerful.
+
+I mean, it’s very hard not to react to a thing that your eyes are telling you is there. I mean, sleep paralysis is a perfect example of that, because most people who have it are well aware of what’s going on when it’s happening, but that doesn’t make it any less scary.
+
+KEVIN SCOTT: Yeah. I mean, I think a really good example of this are the Portids from the Children of Time, which are the spiders who are the… you know, become the protagonists of the story. And, you know, I don’t want to give too much away about the book, for folks who haven’t read it, but you basically develop this very complicated society of intelligent spiders, and, which is a really interesting premise. And, like, part of what makes them so compelling is that their sensorium is very different from humans. You want to talk about that a little bit?
+
+ADRIAN TCHAIKOVSKY: Yeah. So, I mean… I mean, weirdly enough, they are – they’re also still considerably more human than either of the two major non-human points of view presented in the next book.
+
+KEVIN SCOTT: Yep.
+
+ADRIAN TCHAIKOVSKY: Because they’re still very visual creatures, they’re land creatures. And there is a certain kind of factor in their evolution, which is going to make them more human than they might otherwise be. But at the same time, so, spiders have a whole suite of senses that we can’t really easily imagine. They have the ability to sense – sort of scents and chemicals in a way that we can’t. They have ability, especially, to sense vibration in the way that we can’t. So, they live in a world that is constantly informing them of things that we would be completely oblivious to.
+
+And so… and the way I go about this is I kind of work in sort of organic stages. Well, you know, if they’re like this, then what would their – what would their sort of early development would be, and then just building on each other at each stage to make this more and more complex society, as they go through – as the book takes them through time.
+
+And you get a society which has a lot of, for example, technology that builds on their own strengths. They can do a lot of things that we can’t quite early on, purely because they have a lot of tools, even down to just being able to spin web, which gives you the ability to make, say, watertight containers very, very early on in your society, which is a major – you know, making things like clay pots, and so forth, is a major step forwards for human society. And it’s much harder for us because we have to use fire, and we have to make them, whereas the spiders can just literally produce them from their own bodies.
+
+And so, little things like that then go on to have enormous implications to how their society develops. And it also affects the way that they’re… they conceptualize of more – of less kind of physical things. So, you have one point where there’s an effort to try and communicate a picture from one culture to another, and they run into the basic problem that when a human is coding a picture in a sort of a mathematical form, we start at the top left, or where – you know, one of the corners, depending – you know, possibly culturally dependent. And we work – work through the rows.
+
+The spiders start in the middle and spiral outward. That makes perfect sense for them, because how can you necessarily know how big the picture is going to be when you start it? You don’t know. And so, you just start and keep working until you’ve got all the picture.
+
+But it means that a lot of basic ideas, even when they have a means of communication, become very hard to communicate, because the way you’re thinking about them is very different.
+
+CHRISTINA WARREN: Yeah, I loved hearing Adrian talk about, you know, how he’s thinking about creating these species and civilizations. I still fundamentally consider myself a writer, first and foremost. And so, I love hearing about the creative process that other writers, writers more talented than me, like him, can do, and how also kind of thinking in the broader terms about how, you know, sensory input and, you know, can shape kind of everything, and how we operate, and kind of the influence, you know, art can have on science, and vice versa.
+
+KEVIN SCOTT: Yeah, another person who’s thinking about some of this stuff in a really significant way was on the podcast this year. So, and one of our most engaging conversations, the pioneer of emotion AI, Rana el Kaliouby. She believes, and I agree with her, that we’re missing out on a huge amount of data that we could be using to train our AIs to make these systems more… not human like, but more relatable to humans. We had a super interesting conversation, which we’re going to listen to right now.
+
+RANA EL KALIOUBY: Yeah, I mean, it’s exactly what your friend is saying. Like empathy and emotions are at the center of how connect and communicate as humans, and our emotional experiences drive our decision making, whether it’s a big decision or a small decision. It drives our learning, our memory. It drives this human connection.
+It’s how we build trust, it’s everything, but if you look at how we think about technology, it’s often what I call the IQ of the device. You know, take ChatGPT, right? Very smart, very intelligent, but it’s all very focused on the IQ, the cognitive skills, and I felt like it was out of balance with our emotional and social intelligence skills, and I wanted to marry the IQ and the EQ in our machines, basically.
+And so I had to go back. I’m a computer scientist by background, and I had to like study the emotion – the science of emotion, and how do we express emotions as human beings, and it turns out, 93% of how we communicate is nonverbal. It’s a combination of our facial expressions, our hand gestures, our vocal intonations, how much energy is in our voice, all of these things, and only 7% is in the actual choice of words you use.
+So I feel like there’s been a lot of emphasis on the seven percent, but the 93% has been lost in cyberspace, and so I’m kind of reclaiming that 93%, using computer vision and machine learning technologies that weren’t available, you know, 20 years ago, but now they’re ubiquitous.
+KEVIN SCOTT: Yeah, look, I think you are absolutely right. In 2016 I dialed back almost all of my social media consumption because you effectively have these machine learning systems, like particularly for businesses where their business model is engagement, so – like the more you engage with the platform, the more ads run, and the more money that you make. It is very easy to like get systems that get the engagement by triggering your amygdala and like keep you in this – and it’s very easy to be triggered by email.
+Like I, all the time, have email conversations with colleagues, where I get super agitated by the email conversation and if I just jump into a video call with them, even, like not even face to face, but you know, what we’re doing right now, like in – in seconds, like all of the stuff that I was agitated about goes away.
+So I’m just super intrigued by what you’re doing. Like how do we actually get this rolled out more broadly because I think you’re absolutely right. Like we’ve focused so much on the text and text is so rife with opportunity to get us emotionally activated in the wrong way.
+RANA EL KALIOUBY: In the wrong way, right, because there’s a lot of confusion and ambiguity where you can clarify that when you see the face or hear the voice. I mean, I think what’s really cool about this, and what ended up being both the opportunity, but also the biggest challenge for Affectiva, you know, when we spun out of MIT, was that there are so many applications of this technology.
+And so we tried to focus, but it was always this challenge of like, "Oh, my God, like there are so many cool applications," and so some that I think are really powerful. One is the automotive industry where, you know, we ended up selling to Smart Eye, and they’re very focused on bringing driver monitoring solutions to the world, and so this idea of understanding driver distraction, and you know, if you’re texting while driving.
+Well, we can tell that, using computer vision, right? Look at your eyes, your head movements, and if you have a phone in your hand, drowsiness, intoxication, even. We can – we’ve started like doing a lot of research to detect that, using cameras, you know, optical sensors. So automotive is one area.
+We can do advanced safety solutions. We can look at, like is there a child seat in the car, and an infant in it, and often – not often, but about 50 kids or so get forgotten in the car every year, and they die of heat, so that’s very fixable. We can fix that.
+Mental health is another space that I’m really fascinated by, that we know that there are facial and vocal biomarkers of mental health disease, depression, anxiety, stress, even Parkinson’s. So imagine if we – every time we hop in front of our computer, with people’s opt in, of course, we can kind of articulate your baseline, using machine learning.
+We know your baseline, and then if you start deviating from it, we can flag that to you, a loved one, or – you know, a psychiatrist. So I think there’s a lot of opportunity, but we’re missing the scale.
+
+CHRISTINA WARREN: Yeah, it’s definitely exciting to think about where we might be able to go with this idea of EQ.
+
+KEVIN SCOTT: Yeah, for sure.
+
+CHRISTINA WARREN: And so, that actually kind of makes me think about how connected to creativity so many of our guests have been, as we’ve kind of been going through this year in review. And so, let’s share a clip now from will.i.am. He talked about technology, and how it changed the music industry in a super, super interesting way.
+
+WILL.I.AM: Yeah, so imagine this is 1970, and you’re a drummer from a band that’s pretty popular. And you’re a drummer that’s coming up, and you have aspirations as a drummer. And then, like, there was a drum machine, but you weren’t really threatened by the drum machine, because it sounded like (doot-doot-doot). It didn’t really sound like drums. And then the ‘80s come around and the LINN-900, and it started sounding a little bit more realistic, but it was, like, stiff and robotic. And then Prince really, like, made some pretty awesome songs with the LINN-900.
+
+And then the Akai MPC60 drum machine came, and you could sample live drums, and put the swing on it, and it kind of sounds realistic. And then 2000 comes around, you’re like, yo, fuck these drum machines, bro. Like, all the songs on the radio are fucking drum machines.
+
+In the ‘70s, it was all human beings, tight, and you have to be super precise. And the drum machine ate up a lot of the freaking, like, drum time for - for drummers on the radio. And since then, live drums on the radio and on streaming, you don’t hear no live drums anywhere on the radio.
+
+But what happened was the drummer, a lot of them became the producer, because they were like, you know what, if this is the case, I’m going to learn this machine and I’m going to produce the role of the drummer. They made more money. They – because the drummer never got publishing anyways, because how can you what’s the publishing on drums, right?
+
+So, the drummer in the band always got the shitty end of the stick when it came to ownership of the song, because how - what part did you write? I wrote this: (drum sounds). Everybody says (drum sounds). No, I said (different drum sounds). Yep, everybody says (different drum sounds). So, when it came to the how everyone participated, the drummer was always, you know, last, and that sucks. But the drum machine and producing on computers really empowered the drummer.
+
+The same is for music, the whole entire package now, not just drums. It’s guitars, it’s bass lines, it’s freaking chord progressions, ensembles, like, orchestral. Everything of music is now going through what the drummer went through in the ‘70s to the 2000’s.
+
+Now the guy with the idea, the girl with the idea, the person with the idea, now they don’t need the whole entire studio. They don’t need a whole entire band. They just need their idea, and the machine will supercharge them. The way the drum machine and the print – and the DAW supercharged the drummer. That’s the optimistic point of it all.
+
+Then there’s, like, a bunch of negative stuff that I don’t even want to entertain, because I think what we should be doing with AI is not just to augment yesterday. Yes, it’s going to, you know, render how we used to do things kind of obsolete or create new ways of doing things that undermine, like, how we used to get paid. There’s going to be new ways that we get paid.
+
+A song is going to be a lot deeper right now. But MTV said, “Hey, no, don’t just write the song. Do a video.” That video used to be just promotion if you wanted to go and sing in a – you know, you’re from LA, but you want to tour all of America. Other locations were like, well, send me like a demo of what your show is going to be and I could put you on TV. So, they would do that promo clip that MTV hijacked and said, “These are videos.”
+
+Those are promo clips. That was never a part of what a record contract was to be. And a record contract was based on the limitation of lacquer. And even though we had technology, like mini discs and CDs, that there were no more limitations, music is still composed as if there were limited space on a disk. A song is three minutes and 33 seconds, an album is 12 songs on it just because of the RPMs 33 that it went around the record. And the tempos of every pop song was limited.
+
+So, even with, you know, with this advanced technology that we have, it’s still basing it on limited. So, that means you have to reimagine what a song is, just like they reimagined what a song was from the 1800’s when it was just theater and opera. When it came to the recording industry, they’re like, okay, okay, we’ve got to change to a different song format here.
+
+You know, “Muddy Waters, that song is too long. I need you to shorten it,” because when they would sing the blues, they would sing - there was no time limit. They would just go to a bar. You hear somebody sing, and they sung for fucking hours. A song is like a reduction of the song sequence because of a limitation of the technology.
+
+So, that means with AI and AI music, somebody has to reimagine what the fuck a song is. It’s a discussion. It’s a place for you to put your memories, a place for the song to alter, based on your mood. Like, “I Gotta Feeling” is not just for – what’s the version of “I Gotta Feeling” when you’re pissed? I just wrote the one that you’re - when you’re optimistic. “Where Is the Love?” is like when something goes wrong. What about when something is right?
+
+Like, and then there are song like “Boom Boom Pow” that are about nothing. Hey, what’s “Boom Boom Pow” about? I don’t know, nothing. Like, it’s describing the song. (Laughter.) This song is promoting the song that I wrote. What song? This one, right here, that I’m singing (laughter) which is a crazy concept of songwriting. Like, what are you going to write about? I don’t really know, though. I’m going to write about this song I’m writing. (Laughter.)
+But you have to change – it’s an opportunity to reimagine what a song is, to reimagine what it means in your life, to reimagine what it means to the world with percussion and bass. And I think we need to, like, inspire the creative community to use AI, not just for entertainment, but to reimagine the world.
+
+Tomorrow’s industries are what? Tomorrow’s jobs are what? If AI is going to replace jobs, it’s going to create new jobs. So, shouldn’t the creative community also be tasked to, like, imagine what tomorrow is with it? Are we just going to freaking pretend that we’re going to make songs forever? No, that ain’t the case. You ain’t going to be making songs forever for business, like we used to. You’re going to be making experiences with it. You’re going to be scoring moments and different ways of scoring moments, but it isn’t going to look anything like yesterday. No.
+
+CHRISTINA WARREN: All right, I really am seeing a theme here, you know, kind of seeing the intersection of creativity, and innovation and technology, and how all of these things influence one another.
+
+KEVIN SCOTT: Yeah, even Tobi Lütke, who is one of my absolute favorite engineers, in addition to being the incredible entrepreneur and founder of Shopify, and I were talking about some of these ideas about the change that’s coming and how change influences the nature of craft and creativity. We had a really fascinating conversation where we reflected on this, which you all are going to get to hear a little bit of right now.
+
+TOBI LÜTKE: Absolutely. The core of a craft is like converting something into something, right? Like, like any craft that exists is sort of a – that particular process is like people who convert wood into furniture are carpenters.
+One thing which is really inspired about these things is that they really – it’s the identity of a carpenter, that they are a carpenter. Their identity is actually that they’re a craftsperson, and that the particular craft that they are – that they’ve pursued, and that they’ve done their – they become a master in, it’s usually just their aptitude, and it’s a very common type of person, which is also really useful, because therefore some crafts exist for a moment, and then they don’t exist anymore, they’re no longer needed.
+Like the blacksmith has finally figured out what to do next. And so I think that’s – like all of this is actually really worth sort of understanding, and because – you know, like I sometimes talk to, you know, junior engineers who describe themselves as, "I’m a React front-end developer," and like, "Wow, you just put two little bits into your identity, but you really don’t need to, because – like I think you’re actually much more than that because you can solve problems extremely well."
+The rallying cry is like, people who were able to make the things that they really want with what they’ve got, like that’s sort of at the core of it, and I love that.
+
+KEVIN SCOTT: So, our last guest of the year is really looking towards the future. David Kirtley and his company, Helion, are working to build the world’s first nuclear fusion power plant, which, as the words come out of my mouth, sounds incredibly audacious. But if you really think about the biggest challenges facing us as a species, having access to not just a clean energy supply, but abundance of energy, like, where we can have way more power than we have now available to us to help us to, you know, fulfill and achieve our biggest ambitions, is super, super important.
+
+CHRISTINA WARREN: I completely agree. And I have to say, you know, audacious or not, and I think audacious is a great word for it, listening to you and David talk got me so excited about what the potential in the future could be, if these things can come to fruition. So, let’s close out now with your conversation with David.
+
+KEVIN SCOTT: But, like, I think the thing that people really miss, and, like, you probably have a better perspective on this than I do, is that starting somewhere in the 1970s, like, we just stopped using energy at the rate that we had been using it before. And – and, like, it’s actually a staggering thing to think about, you know, not – not just, like, what happens if we can take the energy that we’re consuming right now, and it’s like, more sustainable.
+
+But, like, what happens if, like, energy becomes sustainable, and cheap and abundant enough where you could use 100 times more, 1,000 times more or 10,000 times more of it than you’re using right now? What’s the impossible? So, like, talk – talk a little bit about, like, why – why energy matters?
+
+DAVID KIRTLEY: Yeah, I think about this a lot, actually, and from two perspectives. One is just recently, we’re starting to use more electricity. It’s – we’re up ticking, for the first time in a long time, where in the 1970s and ‘80s, we plateaued in a lot of ways, in terms of our energy use. I think that’s totally right.
+
+But recently, electric transportation, probably computation and AI kicks into that, too, and then – and looking at ways to solve climate change by spending electricity then goes in, and it’s starting to increase our – our demand for electricity.
+
+And the other thing I tie to in this is that the – for instance, the other thing I tie to in this is standard of living directly ties with access to electricity, low-cost electricity. So, you look at different parts of the world and standard of living, and you can say, like, okay, great, they have more electricity access. They have more standard of living, however you want to define that. But I asked the same question, what happens if we had 10 times? Does that mean our standard of living would be 10 times? What does that mean? Would we have access to cleaner access to clean water.
+
+Desalination is the classic. There’s a – there’s a trigger at the one to two cent per kilowatt hour, where if you can have electricity at that cost, then now you can desalinate water through electrolysis and other methods directly. Clean water is now cheaper than it was to actually, like, pull it out of a river and purify it. And so, suddenly, you know, you enable some of those things, which are clear.
+
+But I think through, you know, if you had, you know, the computational access, where you can have large scale servers at – at everybody’s house, you’ve got to get the – maybe the server price down. But now you can actually do really interesting things on the computation and the cooling around that.
+
+KEVIN SCOTT: Yeah. Look, I think one of the things that maybe people don’t appreciate or think about clearly enough, is maybe everything good that has ever happened in the history of humankind is humans discovering new sources of energy, and being able to put that energy to work solving problems that benefit humans.
+
+And so, in a sense, like, you actually want to be able to consume more energy. You don’t want the consumption of energy to be a bad thing, because nominally consuming more energy means you’re doing more of those useful things for humanity, you know, like, electrolysis.
+
+Like, I mean, one of the things here in the state of California is, like, we have parts of the state where you have abundant water, and you have parts of the state where you have no water. And, like, one of the reasons that California is habitable is we spend an enormous amount of energy pumping water from places where it’s abundant to places where it’s scarce. And, like, I think you’re going to have to do more of that in the future with climate change.
+
+So, you know, you really do want a world where you have cheap, abundant energy, which is why I think the problem you’re working on is – like, I think artificial intelligence is a pretty important problem. That’s the thing I spend most of my time working on. But I think your problem is more important than my problem, and my problem is dependent on your problem. (Laughter.)
+
+DAVID KIRTLEY: Yeah, at some scale, your problem – our two problems work together. Yeah, I – I don’t know that we know, frankly, what happens if you have more energy, more low-cost electricity, particularly ones – it has to be low cost. That’s really important. If it just costs a lot more and you have more of it, it doesn’t actually help – help the situation where the essentially effective cost of burning wood to burning coal to fission power, and then to renewables that are – some of the renewables when you have access to good sunlight, solar power can be really low cost, does – you have these stage gates for humanity that you unlock.
+
+I don’t know that we know the answer to that, but I’m excited to find out. That’s for sure.
+
+CHRISTINA WARREN: That was a whirlwind tour of our incredible 2023 guests on Behind The Tech this year. You can check out those full episodes on your favorite podcast platform, and on YouTube. So, be sure to check those out. And if you have anything that you would like to share with us, you can e-mail us anytime at behindthetech@microsoft.com.
+
+Thank you for tuning in, and we will see you in 2024.
+
+KEVIN SCOTT: See you next time.
+
+
+
+
+# Ep-61_Behind_the_Tech_Kevin_Scott_Podcast_with_Lisa_Su
+
+Behind the Tech with Kevin Scott
+Ep 61 Dr. Lisa Su
+
+LISA SU: No offense. Software is very interesting, but at the time, hardware was much more sexy to me, and I had the opportunity to see how you could, you know, build chips, and build, you know, they weren’t the most advanced chips in the world, but to me, it was like amazing. It was amazing that you could build, you know, some transistors on something the size of a coin. You could look at it in the microscope. You could measure it on a test system, and you know, that’s how I got into hardware, and that’s how I got into semiconductors, actually.
+
+KEVIN SCOTT: Hi, everyone. Welcome to Behind the Tech. I’m your host, Kevin Scott, Chief Technology Officer for Microsoft.
+
+In this podcast, we’re going to get behind the tech. We’ll talk with some of the people who have made our modern tech world possible and understand what motivated them to create what they did. So, join me to maybe learn a little bit about the history of computing and get a few behind-the-scenes insights into what’s happening today. Stick around.
+
+[MUSIC]
+
+CHRISTINA WARREN: Hello, and welcome to Behind the Tech. I’m cohost, Christina Warren, Senior Developer Advocate at GitHub.
+
+KEVIN SCOTT: And I’m Kevin Scott.
+
+CHRISTINA WARREN: And today, we are bringing you a conversation with someone who is such an important part of the actual materials that make up our technology and just an incredibly cool person.
+
+KEVIN SCOTT: Yeah. So Lisa is just sort of inspirational, I think, in general, you know, given her career arc, and like the position that she’s in now of, you know, leadership in the technology industry, but I always like talking to semiconductor people. Like, my bias as a computer scientist is low-level system stuff, so I am just a super-big fan of Lisa and her company, and everything that they’re doing. Yeah, like I even have an AMD, like custom-built machine, sitting under my desk, right now, that I’ve been very proud of owning for the past three years.
+
+CHRISTINA WARREN: Yeah, it’s funny,  during the pandemic, when everyone was – I was amongst them, and I built an AMD system, and it was my first AMD system that I’d built in a really long time, but I also helped build a threadripper system for a friend, who claims that they needed more compute than I think they actually did, but it was really fun for me, anyway, and so I’m right there with you. I don’t have the same, you know, passion for low-level languages and system calls like you do, but I’m a huge fan of Lisa Su and AMD, and I’m really looking forward to this interview.
+
+[MUSIC]
+
+KEVIN SCOTT: Dr. Lisa Su is Chair and Chief Executive Officer at AMD, where she’s led the company’s transformation into a high-performance and adaptive computing leader. She’s passionate about working closely with partners to deliver the next generation of computing and AI solutions that can solve the world’s most important challenges.
+
+In 2018, she was elected to the National Academy of Engineering in 2021. She was recognized by the IEEE with its highest semiconductor honor, the Robert N. Noyce medal, and was appointed by President Biden to the President’s Council of Advisors on Science and Technology.
+
+She also serves on the Board of Directors for the semiconductor Industry Association.
+
+Lisa, welcome to Behind the Tech. Thank you so much for joining me today.
+
+LISA SU: Oh, it’s great to be here with you, Kevin. Thanks for having me.
+
+KEVIN SCOTT: Yeah. So we always start with folks from the beginning. So I’m just curious how you got interested in the first place in science and technology, like did it start when you were a kid, with your parents, with – like, what were – how did it begin.
+
+LISA SU: Yeah, absolutely, so you know, Kevin I was born in Taiwan. I actually grew up in New York, and my dad was a mathematician. He was actually statistician, and so, you know, we would sit at the dining room table, and he would, you know, make me do multiplication tables with him so that I had to be decent at math, but I I’ve always really enjoyed, you know, sort of just seeing how things worked and building things, so one of my earliest engineering memories was my brother and I were playing with his remote-controlled car, and it was kind of going down the hallway, and then it just suddenly stopped, and I was like, "Why did it stop?" And so, you know, I opened it up and saw there was a loose wire, and if I put the wire back in, it started working again, and that was just super-interesting, that that’s how things worked, so I think that’s –
+
+KEVIN SCOTT: How old were you?
+
+LISA SU: I don’t know, I was probably 10, or something like that, and my brother was younger, my younger brother, and yeah, I just kind of got curious about how things work.
+
+KEVIN SCOTT: Yeah, I think those are – it’s really interesting, those serendipitous moments when you are young, where you go from, like looking at something as like this inscrutable, almost magical thing that you don’t understand, to being able to, like have some kind of agency over it, like you peer into how the things work, and like you understand something. Like, I think they are just super-interesting moments.
+
+LISA SU: Yes, no, absolutely, because you’re just so proud of thinking, ‘Wow, like I learned something there,’ and that kind of carries with you.
+
+KEVIN SCOTT: Yeah, and so you were a EE, like how – you know, as you’re going through high school, did you know you wanted to be an electrical engineer before you went to college, or did you decide once you got into school?
+
+LISA SU: You know, I don’t think I could say I knew, Kevin. In high school, I was – I have to admit, I was kind of a nerd, so I did things like, you know, the math team, and you know, projects like that, but I happened to get into MIT, and that was my first choice, and so I went to undergrad at MIT, and at MIT, like the – everyone’s an engineer, and you know, much of the starting class is either electrical engineering or computer science, and so I think that helped me kind of go in that direction.
+
+You know, sort of the big, big decision was are you going to be a hardware person or a software person? In other words, are you going to be an electrical engineer or a computer scientist, and that perhaps was what at least all of the kids around me were thinking about, but there was no question I was going to be an engineer, so that was good.
+
+KEVIN SCOTT: And how did you gravitate towards being a hardware person, because – like, I sort of had the same thing where I did – you know, when I was young, like a little bit of electronics and electrical engineering stuff, and a little bit of software stuff, and I – like, clearly gravitated towards software. I used to tell myself that it’s because, like software is inherently better, and like, it’s faster, and yeah, I mean, like that’s the lie you tell yourself when you’re a – you know, a teenager, like in your twenties, but like other people, like have similar beliefs in the – in the other direction. Like, I’m just sort of curious, like how did you know that, like you wanted to be a hardware person?
+
+LISA SU: Well, you know, I had two experiences. I had, you know, experience in software where I was like helping sort of a lab program. One of the things that’s nice about MIT is that they really encourage sort of undergraduate research, so – you know, in addition to the coursework, they encourage you to get sort of side jobs, and I don’t know, I must have got paid five dollars an hour, or something like that, but it allowed you to work in labs with people.
+
+And so I had two experiences working in labs. I had one that was more of a software thing, which – you know, I was helping program whatever, some professor’s experiments. And I had one that was a hardware thing, which was in semiconductors, and I got to do basic grudge work for the semiconductor graduate students, but I was building something, so – you know, I was putting wafers into a big reactive ion etcher. I was running the experiment. I could look at it in the microscope, and that’s how I fell in love with hardware.
+
+I mean no offense. Software is very interesting, but at the time, hardware was much more sexy to me, and I had the opportunity to see how you could, you know, build chips, and build, very, very – they weren’t the most advanced chips in the world, but to me, it was like amazing. It was amazing that you could build, you know, some transistors on something the size of a coin. You could look at it in the microscope. You could measure it on a test system, and you know, that’s how I got into hardware, and that’s how I got into semiconductors, actually.
+
+KEVIN SCOTT: Yeah, like I think that something all of us realize at some point is, if you are in computing, it’s actually both pieces that are very important, and like, we’ll get back to this in a minute when we start talking about the work that we’ve been doing together, like Microsoft and AMD, for so many years. But like, I want to first, like poke on this practical experience that you have because, like one of the themes that we have, talking to computer scientists and engineers is this notion that the abstraction layers that we have built up over the decades sometimes obscure some of the low-level things.
+
+Like I wonder – like I’m not a EE, and so I don’t know whether you can get that experience that you, anymore, in a Material Science program or a EE program at university, where you get that visceral feel for what it’s like to actually make a semiconductor.
+
+LISA SU: Yeah, I think it’s so important, Kevin. I mean, I’m a big believer. I mean, there are people who are, let’s call it, you know, very book smart, and then there’s, you know, sort of like people who are just pragmatic and have had a chance to experience different things, and I’m definitely the latter. You know, I think I learn through experiences, and I think those experiences are so important, right? I remember, you know, sort of the first classes I took as an undergrad, and it was things like, you know, building your own little computer, and yes, you have to build the circuit, but you also have to program it, or as I said, you know, building your first, you know, semiconductor device, and just seeing how you go through each of those steps.
+
+I won’t say that everybody loves those experiences, but I certainly do, and you know, not that school is supposed to be job training. It’s not supposed to be job training, but it’s supposed to help us to think through what do we like to do in life, and it’s kind of stuck with me, with the notion of, it’s so important to see the results of what you’re doing, and you know, I love the fact that I can build products that I can touch and feel, and you know, walk into Best Buy and see those products, or walk into your data center and see those products, so that’s what I enjoy.
+
+KEVIN SCOTT: Well, and there is – there is just this fine thing, I think, about hardware in general, because even when you’re writing a program, you don’t get the same sense as you’re building it. Even if you’re sort of assembling it piece by piece, you don’t get the same sense that you get when you’re, like building your own PC, like where you buy a motherboard and a case and a power supply and a CPU, and you like just sort of are assembling this thing physically, and you, at the end get to have, like have this working physical artifact.
+
+LISA SU: Yeah, so, Kevin, am I encouraging you to come over to the hardware side, or –
+
+KEVIN SCOTT: No, look, I’ve been doing both for a very long time, but – like, I’m thinking right now, actually, so the machine that I’m on right now, taping this, has a – like a – AMD, like 32-core threadripper CPU, and I’m getting – which I, you know, very custom configured. I’m getting ready to do another build, and like, I’m probably going to, you know, hand assemble this next one, because I haven’t built my own PC in a long time.
+
+LISA SU: Oh, Kevin, that’s very exciting. I must send you our latest threadripper because we just kind of got the next generation out there. It’s pretty cool, but – look, I completely agree with you. I mean, the opportunity to kind of build tech and touch tech is super cool, and it’s great for getting students into STEM that I know is something that’s very important to you, and to me as well.
+
+KEVIN SCOTT: Yeah, so you – you’re majoring in electrical engineering at MIT, and then what’s next? You go to grad school? You go straight into the workforce? Like, like how are you making that decision, because like that’s a really interesting time in your career.
+
+LISA SU: Yeah, I was a – what they call a lifer at MIT, so I did my undergraduate, master’s, and PhD at MIT. It wasn’t a super-easy decision, I think you’re right, Kevin, because – you know, at the time, all my friends were graduating, they were getting jobs, you know, they were moving to cool places, but I felt like I wasn’t done learning and there was still more to learn, and I really appreciate sort of my PhD advisor, you know? His name was Dimitri Antoniadis. He was – you know, one of the people who built sort of the very early simulation, you know, capabilities for semiconductors.
+
+And like, I felt like there was more to learn, and so – you know, I decided to get a PhD, and my focus was semiconductor devices, so I was building, you know, a quarter of micron devices, which at the time was very, very advanced. Today we are talking about 2 nanometer, but hey, back then, it was state-of-the-art type things, and we were thinking about, you know, how do we push the envelope on  scaling, because you know, even then, people were talking about whether Moore’s Law was ending.
+
+It obviously didn’t end, so – yeah, so I worked on something called silicon-on-insulator devices, and it was a lot of learning, but it was also, like fun to be able to think that you’re doing something that is, you know, sort of state-of-the-art research as part of your studies.
+
+KEVIN SCOTT: Yeah, so I’d love to get your perspective on what you think the value of your PhD was, because I think a lot of people think that most of the value is that contribution that they’re making to the state of the art, but like, I kind of think that the value is in the sort of discipline of getting a very complicated thing done and synthesizing, like incredibly complicated information, and – you know, just learning how to be a researcher, or like someone doing something incredibly sophisticated around a whole bunch of other people who have this same, like high ambition level for the things that they’re doing, so I’d love to get your perspective on, like, the value of that degree was for you.
+
+LISA SU: Yeah, absolutely, so – now, you have to understand my perspective. Like, I was so impatient, Kevin, as a student, so as soon as I started the PhD program, it was like, "I need to finish as soon as possible," so I was a little bit impatient, but I think the value of a PhD, for me, and as I, you know, advise other people is, it is not job training. It is not – whatever project you do, you know, some are great projects, some are more esoteric projects, but it’s an opportunity to really – for me, it was how to learn to think about solving very difficult problems.
+
+And if you think about – it’s a problem that, you know, nobody else has solved out there, so you can’t go to a book and say, "Hey, this is how to solve it." You actually have to think through, "How do I solve this? How do I contribute something to the industry or to academia, where the answer isn’t clear?” And the process of doing that, over, for me, it was four years, you know, three, four, five years, really gives you the confidence that, you know, you can contribute at the highest level in a certain field.
+
+And you know, that’s what I take away from it. I just think it teaches you how to think, and you know, what we do, what you do, what I do, you know, all day long is, you know, how do we solve very, you know, interesting tough problems, and you know, that time gave me the confidence that, you know, you could do that, and even at the time, it was also very much about a team. I loved working with the other grad students when we worked together on how to solve some of these problems.
+KEVIN SCOTT: Yeah, and I think the thing that you said about – like, they’re very tough problems, and they’re also ones that no one else has solved before, so – like, you can’t go consult someone to say, like, "Hey, how did you do exactly this," or skip ahead to the answer. Like, there’s no skipping ahead, like you’ve just got to sort it out.
+
+LISA SU: Yes.
+
+KEVIN SCOTT: So after MIT, what was your first job?
+
+LISA SU: You know, my first job actually was at Texas Instruments in Dallas, and I wasn’t there super-long. I was there about a little less than a year. I was kind of homesick. You know, I lived – by the way, I live in Texas now, but at the time, it was so far from home for me, so I ended up spending the majority of the early part of my career at IBM in New York, and I joined the – you know, what was TJ Watson Research Center, and then the IBM Microelectronics team.
+
+KEVIN SCOTT: And so were you working on the RISC processors that they were building there?
+
+LISA SU: I was. I was always – you know, I spent my time in their sort of process technology area as we were continuing to look at the next generation technologies, but yeah, the first processor – I’ve been working on processors, like forever. I mean, like, you know, it’s been – I don’t know, now 30 years.
+
+The first processor that I worked on at IBM was actually a Power PC processor that went into PCs. It actually went into some of the PCs, as well as into some of the larger server systems at IBM.
+
+KEVIN SCOTT: Yeah, I remember, like I went to a science and technology Governor’s School, and – like, which had us do a bunch of internships, and I interned at a place that had a Power PC, like one of the very first ones, that I just remember, like what an amazing thing that was.
+
+LISA SU: It really – it was super, super fun. I mean, it was – again, the idea of, you know, sort of RISC processing, you know, for us, it was how do we get the performance and power, and all that, in the right place, so –
+
+KEVIN SCOTT: Yeah, this is sort of an interesting thing. I – like, I don’t know whether you want to talk about this or not, but – you know, we had this big revolution, like I’m guessing early in both of our careers, where like there was all of this innovation on instruction set architectures and – you know, there was like Power PC, and PA-RISC and MIPS, and the deck part, the –like, 21, 164, 264 series.
+
+LISA SU: Yeah, the Alpha stuff.
+
+KEVIN SCOTT: Alpha, yeah, and you know, what ended up happening, just in terms of like where the bulk of the compute in the world went was to processors running this X86 instruction set, which you build them,
+
+LISA SU: We do build them.
+
+KEVIN SCOTT: you know, Intel builds them, and now, like we’ve got this sort of interesting world where you’ve got ARM in a bunch of places, you know, that are RISC construction set machines, and then you’ve got these GPUs, which are like an increasingly large volume of compute, and so it’s sort of interesting. Like a lot of the things happening now feel to me like the things that were happening 30 years ago, 20 years ago, and like I don’t know if you’ve reflected any on that.
+
+LISA SU: Yeah, you know, it’s interesting, I hadn’t actually bridged the parallel between the two. I think what has been the case, and I’m actually curious to get your thoughts on this, is the instruction set, certainly back in those days, when there were so many different ones, and sort of the consolidation, I don’t think it’s been so much about the instruction set.
+
+I mean, people ask me all the time about ARM versus X86, and I’m like, "Look… It’s not about ARM versus X86. They’re both, you know, great instruction sets. It’s really about sort of the – the applications and the ecosystem we’re trying to run on top of it,” and you know, some – you know, there’s a lot of reasons that you want to be at scale, so – you know, if I think about what happened, you know, 20 years ago. It’s just that you had too many instruction sets, and many of them were not at scale, and so it just wasn’t – you know, it didn’t scale, and now you look today and with what we’re doing going forward, the workloads are changing, right?
+
+I mean, that’s what made the GPU so important now as we think through AI. As the workloads change, you need, you know, somewhat different compute, and you know, that’s where the choices get made.
+
+KEVIN SCOTT: Yeah, yeah, look, I think I’m like one of the weird people who cares about instruction sets because I started my career writing, like a lot of assembly language code, and in grad school I was a compiler and computer architecture person and – you know, so having written a software decoder for X86, you know, so I think you care if you’re implementing something at the lowest level of the stack, but like that’s such a tiny, little minority of the development activity. And like, everybody else, like what you want is, like lower power, like high performance and cheap.
+
+LISA SU: Yes!
+
+KEVIN SCOTT: And you know, it’s like those three things, and to your point, like I think scale drives that.
+
+LISA SU: And would you agree, Kevin, that – as you think about where things are right now, the relative benefit of programming at the lowest, lowest level is perhaps less, just because there is so much computing power and that’s why people are moving up the stack, for speed and agility, and all that stuff, or what do you think about the relative tradeoffs of the  lowest-level programming versus
+
+KEVIN SCOTT: I think it’s going to be the same thing. I think there’s going to be this very small minority of folks, and I think it’s just going to get to be a smaller and smaller minority over time who need to deal with the lowest level details of the compute stack, because – you know, they are trying to do something that’s right on the edge of possible, or like, they have to wring every last bit of performance out of the lowest level things. And I think eventually most of that gets abstracted away for most developers.
+
+Like, that’s what you want, it’s what’s always happened.
+
+LISA SU: I completely agree. I mean, that’s certainly everything that we see is – and the technology is changing so fast that, you know, the basic foundation of the compute is getting so fast that – you know, you can sort of make up for whatever – let’s call it loss of abstraction, you know, pretty easily.
+
+KEVIN SCOTT: Yeah, the thing – you know, I do have this concern though, like I mentioned this a few minutes ago. Even though that’s true, you still need this population of engineers who are excited about those low-level details. Like you need to hire them, like – you know, we need to hire them for, like folks building low-level system software, and so – you know, I do worry when – you know, when I look at what some kids are learning in computer science curricula now. Like your abstraction level that you’re operating at is so high, like whether or not you, like, really deeply understand, like the full stack that you’re operating on top of, and then have the opportunity to even get interested in being one of those systems people who is poking around at the low levels, because that doesn’t go away at all.
+
+LISA SU: Yeah, actually, Kevin, I think you’re totally right. I think as we think about, you know, how do you have the best sort of engineers, or you know, sort of the brightest people, you want them to have that breadth of experience. I mean, it’s really important. I mean, you can still specialize, but the breadth of knowing, really, how computers work, and what do you need to do to enable that is, I think, super-important.
+
+You know, one of the things that happens for a lot of the folks that I talk to is, how do we get enough people interested in hardware? Because you know, software is the sexy place, so – and I try to say, "Look …" Everyone is different in their interests, but there is so much that can still be done around optimization of hardware and driving that, so –
+
+KEVIN SCOTT: More now than in the past 20 years. Like, I think this is the most exciting time in hardware that we’ve seen in a few decades.
+
+LISA SU: I completely agree, completely agree.
+
+KEVIN SCOTT: So I go into work every day, and I’m just completely surprised at the things that I’m working on. So you know, when I was in college and grad school, I did – you know, an internship at the National Center for Supercomputing Applications, and wrote a whole bunch of stuff for the Thinking Machines, CM5 supercomputer. I – you know, I had an internship at Silicon Graphics, right after they bought Cray Research, and like working on the Origin 2000, like this big cash-coherent pneumo-machine that they built that was super innovative.
+
+And then I left grad school, and like, precisely none of that mattered for 20 years! And now all of it, like, matters again, like you really do have to think about some of these, like old high-performance computing principles to write some of the software that we’re building today, and computer architecture matters again. Like, it’s awesome.
+
+LISA SU: Yes, it is. It is. And I mean, certainly for some of the stuff that – you know, that you’re doing, and Microsoft’s doing, it’s – you are absolutely pushing the envelope on everything that we think about as it relates to hardware and systems.
+
+KEVIN SCOTT: So let’s go back to your career progression. So you were at IBM, and then at some point – like, was the next step joining AMD? Like, you’ve been there for a while now.
+
+LISA SU: Yeah, yso I was at IBM for 12 – 13 years, you know, did a lot of stuff around our semiconductor R&D, and sort of the next generation processor technologies. And then, you know, I’m a semiconductor person, right? That’s,who I am, through and through, and from an opportunity standpoint, sort of getting to be an influence at a sort of larger scale. So I actually went to Freescale Semiconductor first.
+
+KEVIN SCOTT: Oh, interesting.
+
+LISA SU: Yeah. Yeah, I was at Freescale for five years. I was actually, I had your title. I was CTO at Freescale, as the company was thinking about how to reshape their portfolio and then I ran their networking and multimedia business for a couple of years, and you know, by that time I’d already moved to Austin, so now I’m officially, you know, a Texas person, and then I had the opportunity to come join AMD, and so I joined AMD about 12 years ago, something like that, and it’s been a great ride.
+
+You know, we’ve gone through, you know, a set of things as we reshaped the company, but like I said, I haven’t been far from processors anywhere near my career. Somehow, processors find me, or I find them, so –
+
+KEVIN SCOTT: So, when in your career did you decide that you wanted to lead teams of people, that leadership was a thing that you either enjoyed or believed was necessary to get done what needed to be done.
+
+LISA SU: Yeah, it was probably in my early years at IBM. You know, one of the things that I had to kind of decide is – and that someone asked me – I think my manager asked me, "Hey, do you want to be an IBM fellow, or do you want to be an IBM vice president?" And at the time, I was like, "Huh, that’s an interesting question."
+
+I actually thought that what was most interesting to me, yes, I liked working on my own research, and you know, I had some good ideas, but what was much more fun was seeing teams get together and do things that, you know, frankly, we didn’t think were possible, and – you know, like the early memories of, hey, you’re on a project, you have to ship something to a customer at some given time, and like nothing works. That’s what I enjoyed the most. Like, I enjoyed thinking about: how do I pull this together? How do I pull teams together?
+
+So the answer to that question was, I don’t think I’m smart enough to be an IBM fellow, so I guess I’m going to try to be an IBM vice president, and I had the opportunity to lead small teams that became medium teams, that became larger teams, but that’s actually really what I enjoy the most, Kevin, the technology is super fun, but it is even more, you know, sort of rewarding to see teams come together and do something that, you know, truly is groundbreaking, and that’s what I’ve always enjoyed in my career.
+
+KEVIN SCOTT: And you know, like I want to dig into, like what the career progression was, or – like has been, at AMD, but – you know, I think the whole arc of your career is extraordinary.
+
+LISA SU: Well, thank you.
+
+KEVIN SCOTT: You’re the daughter of immigrants to the United States, and you go from, you know, like, first generation – you know, American, to Chair and CEO of one of the most important semiconductor companies in the world. And like, your path through that was just being technically excellent, like getting a STEM degree, and – you know, leveraging technical excellence to, like get into this, like fantastic leadership position, and like that’s an inspiration for a lot of people, and like, you know, probably particularly for both immigrants and young women who are thinking about their path, and so I wonder, how do you think about – you’re probably going to blush –
+
+LISA SU: You’re making me feel like uncomfortable, Kevin!
+
+KEVIN SCOTT: Yeah, but – whether you like it or not, you are a role model, and so I wonder, you know, how do you think about, like that job. So in addition to being CEO, like you are a role model for folks who aspire to be like you.
+
+LISA SU: Yeah, well, look, thank you for that, Kevin. I think a few things. I mean, first of all, I was – as good as one is, one also needs to be sort of in the right place at the right time, and I think I’ve been somewhat fortunate in the sense that I’ve found the right place at the right time. I mean, AMD, when I joined, you know, many people asked me, "Well, why would you join AMD," at that point in time? And actually, I never thought about why wouldn’t I join AMD.
+
+I mean, look, in the United States, you know, how many companies are building high-performance processors, right? There’s just not that many that are doing that, and I thought this was a place that I could help. I was passionate about what we were doing.
+
+Like, for me, I never said, “I have to be a CEO.” That wasn’t my thing. What I said, in my mind, it was really important for me to work on something that I thought was important. Like, I wanted to be – you know, I love semiconductors. I want to be in the industry, in a place where I can make an impact on the industry, and AMD has been a great platform for that, because I do think that, you know, high-performance computing and, you know, this technology is so foundational for what we have to do, but you know, to your point about, you know, being a role model or helping, like a lot of people helped me get to where I am.
+
+You know, I think the mentors that helped me the most were the ones that told me when I screwed up, frankly. Everyone can tell you how great you are, but it’s much, much better when someone tells you you’ve made a mistake, and so I’ve  appreciated that, and I think my job, or I hope what I can do is also help others feel like, hey, it’s absolutely possible for you to follow your aspirations and dreams. You’ll make some mistakes along the way, but that’s okay.
+
+And so I get an opportunity to meet a lot of women who are earlier in their career, and much of what I encourage them to do is actually be ambitious and feel like you can actually tell somebody what you want to do, because there are plenty of people who want to help, but you know, sometimes people feel, you know, shy, or – you know, "I can’t say that," and I’m like, "Yes, you can." You know, "Yes, you can." You can absolutely do incredible things and people will be glad to help you along the way.
+
+Of course you have to be good, of course you have to work hard. All those things are true, but I think it’s just good to encourage people that, yeah, you can do some – some amazing things.
+
+KEVIN SCOTT: Yeah, I could not agree more with that advice, like telling people that you have permission to be ambitious, and you should advocate for your ambitions, is so, so important. It’s crazy to me how many people don’t do that, or like don’t have a clear sense in their head of what their ambition actually is.
+
+So you have, just in your time at AMD, like seen a pretty incredible, like set of developments in the semiconductor industry, so like, you know, we continue to make just amazing improvements in process technology, you know, like I know, since I’ve been, like a professional computer scientist, which is, a very long time now. People have been talking about the end of Moore’s Law, and yet we – you know, we continue to – I mean, like Dennard Scaling is done, right, but we have been able to figure out how to, like economically get more and more compute, over time, and we have, you know, figured out how to put that compute to use for crazy things, like the whole mobile ecosystem, like what you can do today with PCs, like what you can do with high-performance computing for scientific workloads, and like now all this AI stuff.
+
+So you know, I wonder, you know, over your 12 years, like what you think are the most interesting trends.
+
+LISA SU: Yeah, you’re absolutely right. You know, Moore’s Law, I mean, we’ve been talking about Moore’s Law either slowing down or ending for the longest time. It really hasn’t. It has slowed down, but it has – also, you know, allowed us to kind of think differently about how we put chips together.
+
+By the way, Bob Dennard was like, you know, one of my heroes, as a young engineer, and I think what we’ve learned through this process is – you know, I often say, to my teams and others, that it’s so important to make the right bets on technology because it does take so long for it to, you know, really play out.
+
+You know, so the fact that Moore’s Law has slowed down has meant that there are different ways to put together chips. Like one of the – probably the most important decisions that we’ve made at AMD, and this was back in the 2014 – 2015 timeframe, was we decided that if Moore’s Law is slowing down, then the better way to put together chips is to really break them up in these things called chiplets, and that was like a really important decision.
+
+Like, I remember when we made that decision, and I was like, it was almost a bet the company decision, frankly, because you know, we were trying to get a very, very competitive roadmap out there, but the thought process is: this is the future.
+
+This is the future of how do you put chips together. We have to figure out how to make them smaller because they yield better, they’re much more cost efficient, but the interconnect between them is so important, and so how do you make that happen, and how do you ensure that, from a programming standpoint, you know, it doesn’t affect software too much.
+
+And now, we’ve seen that idea now, on steroids, right? We just, you know, launched our newest AI chip, and by the way, Kevin, thank you so much for being with us at that. You know, it’s like chiplets on steroids, right? It’s like you know, 12 chips stacked on top – you know, sideways, up and down, and all that stuff.
+
+If you had asked me, 20 years ago, as a semiconductor student, or as a semiconductor engineer, I’m like, this stuff is never going to work, I mean, never going to work. Like, it’s too complicated. It requires too much precision for it to work, at a level of like 150 billion transistors, but that’s the beauty of our industry.
+
+It’s like, you know what? We found a way to make it work. Now, I think, as we look forward, that’s what we have to be looking for, is that there are inflection points in technology which enable you to take the next big step, and making those decisions at the right time are the things that I think about, because you know, you do have these fundamental limitations that are there, in terms of physics, but boy, we have incredibly smart people. You give them a problem, and they figure out, oh, there’s a way to get around that problem. It’s just you have to kind of invest in it.
+
+KEVIN SCOTT: Yeah, well, and so for folks who aren’t chip people, like let me see if I can try to explain what you just described, and you can correct me where I get it wrong. So for – when you open up a PC, like – and you see the thing that is the CPU, like that is not the chip. That’s the package that, for the longest kind of time, a single monolithic die set in, so like you would print a bunch of semiconductors on to a single piece of silicon. You would put it inside of that package and like you would very carefully connect the perimeter of that piece of silicon out to the pins or the balls or whatever the connectors were on that package.
+
+And like what you are describing now is like a bunch of innovation is in the packaging technology, and like these components, so chiplets are like little pieces of semiconductors that you place inside of that big package, like there are very complicated ways to interconnect them, and then a separate set of ways to, you know, connect all of that out to the outside of the big package, so they can sit in a motherboard and do its job.
+
+So, how close did I get?
+
+LISA SU: That was perfect, Kevin. Perfect. I think that, to the casual observer, I think they don’t have to care about any of those things. All they have to care about is, you’re going to get more performance at, you know, a better cost point, so we talk all the time about, in computing, you know, we want to ensure that, you know, Moore’s Law is – that you would, you know, really double the performance every couple of years. Just going sort of the normal way, you can’t do that, but using all of these techniques and technologies, you really can extend that performance curve, which just gives people like you, Kevin, much more compute for all the great things that you’re doing and building, so that’s our goal in life is to make sure that the compute does scale, that you do get more, and that enables applications to do lots and lots more.
+
+KEVIN SCOTT: Yeah, God knows we need it. It actually, I was a little bit depressed for a while, with computing, because it seemed like we had lost our imagination for what you could do with dramatically more compute, and like we had sort of gone inward, and like, well, okay, like how can I power optimize compute to get, you know, a certain set of capabilities available on a small battery, you know, and things like – which is, very, very important, but like the thing that’s always really exciting –
+
+LISA SU: It’s not the big iron, right?
+
+KEVIN SCOTT: Yeah, it’s like, what can you do, like if you just, like cost efficiently, had so much more compute? And I think this current generation of generative AI is like one of the answers to that question, and it’s just remarkable, and I don’t think we’re anywhere near the end of the scaling laws for things, so it feels exciting to me, more in the way that the internet did, than mobile, just because, you know, we are so quickly deploying so much compute and have so many people with these very inventive ideas about what they can go do with, like this vastly expanded compute landscape that’s available.
+
+LISA SU: I completely agree. I mean, for the last, you know, sort of 10 years, I mean, we’ve had a lot of computing evolution. It’s been more about form factor, frankly, and you know, we’ve done lots of great things, but I think going forward, this is, to me, like the most exciting time in my career, like absolutely hands down. I would have said a very similar thing. I think, you know, AI is the most, you know, sort of important technology of – you know, the last, forty or fifty years. And it’s because you can see, there’s so much untapped potential. And as much progress we’ve made in what computing can be used for, it’s still like hard to use.
+
+Like, it’s still not quite as accessible as it should be, and generative AI just brings a whole new dimension for how we can use computing, so I completely agree with you, it’s just amazing, what’s in front of us right now.
+
+KEVIN SCOTT: Yeah, the thing that always excites me is when you let people have less constrained imagination. Like, when I was a little kid, and I was reading science fiction books and watching, you know, the first Star Trek series, and you know, all these optimistic science fiction movies and books that were around then, like the computers were incredibly powerful, like they - and this is before, you know, personal computers even existed, like these folks were imagining what a computer could be, and like, maybe some of the reality of, you know, what the computing revolution actually became, in a way, constrained people’s imagination, and like, I think – you know, what’s happened in the past, you know, handful of years has unconstrained people’s imagination again, and sometimes in like weird ways, but I think in mostly in incredibly optimistic ways, and like that’s exciting, because like I don’t know about you, like I’m of the firm belief that my imagination is not enough, like –
+
+LISA SU: Oh, completely.
+
+KEVIN SCOTT: we need everybody imagining.
+
+LISA SU: I completely agree, completely agree.
+
+KEVIN SCOTT: Yeah, so let’s talk a little about, like where you think AI compute is going. So you just announced this really, like what I would call a breakthrough in AMD’s AI compute roadmap with the MI300, which is a very powerful GPU tuned for AI workloads, like we’ve done a lot of work together to try to figure out how to get the most powerful AI workloads working on this system, but like, that’s just one point in time, so obviously, you all, you know, see the same future trajectory that we see, and like you must be thinking all sorts of, like awesome things about what that future looks like for the semiconductor world.
+
+LISA SU: You know, from my perspective, you know, AI is such an empowering technology, and it’s empowering in many dimensions. You know, we talk a lot about the data center from the standpoint of, you know, these large language models, the great work that, you know, Microsoft and OpenAI, and others are doing, and you know, in just training the largest, you know, models in the world. Like, you need lots of compute for that, and that’s where we come in, but I also look at it as – you know, it’s quite a continuum as to where AI is going to impact our lives, and so – you know, we look at it as, in the data center, you need the – it’s called the big iron so that you can train and infer the most complex models.
+
+You have the opportunities at the edge, when you think about all the data that’s at the edge, and then you have the opportunities at the client and kind of reshaping what PCs do, what mobile phones do, and all of that requires AI capability, although it may not necessarily be exactly the same technology, I think they all want to interoperate together.
+
+So it has been a super busy year, several years, from the standpoint of, you know, really extending our roadmap from, let’s call it more general purpose processing, to more of the AI capability. And as we go forward, I think we’re going to see AI in all of our computing products, like whether – you know, data center, edge, client, and it’s a fun place to be, but you know, we’re – we’re super-happy with the work that we’re doing, you know, certainly in Azure, but also on the – on the PC and Windows side, like you know, very excited about, you know, what’s going on with the Windows evolution, and you know, the Copilot capabilities there as well.
+
+KEVIN SCOTT: Yeah, I think one of the interesting things, and again, it just sort of get abstracted away from folks because, you know, you don’t need to think about all of this to make an API call to – you know, Azure OpenAI API service, but – and you all have understood this for quite a while, because you have some of the most powerful supercomputers on the top 500 list for scientific workloads:
+
+When you’re building these big systems, you have to think about everything, so how you get power into the data center, like how you cool things, how you design racks, how you build your networks, and I think that’s the other really exciting piece here. It’s not just about the chips, but it’s about everything you have to put around the chips, and you really have to have partnerships, you know, like the one that we have to think about the full system design, because otherwise, you have one highly performing thing and if everything around it is not equally high performing, then – you know, it just doesn’t work.
+
+LISA SU: Yeah, I think that’s what, you know, we all view as the opportunity, right? The opportunity is, you know, through – you know, deep partnerships like what we have, to really, you know, sort of move computing to the next level of, yes, chips, systems, and then – you know, also just what you’re doing in terms of the model development itself, and you know, bringing those things synergistically together we can build, you know, better overall systems, you know, going forward.
+
+KEVIN SCOTT: Cool. Well, we are just about out of time here, and so the last thing that I ask everyone on the podcast, even though your job is like one of the most demanding in the world right now, and it’s gotten nothing but more demanding over the past year, for sure, but I do want to ask you what you do outside of work, for fun.
+
+LISA SU: Well, I have to say, you’re right. I think work is fun. I think you think work is fun too.
+
+KEVIN SCOTT: Work is! That’s valid, that’s valid.
+
+LISA SU: Work is tremendously fun, but outside of work, I like to play golf, so I have to say, my golf handicap though has definitely gone up in the last few years. I haven’t played enough. And I’m kind of a like a foodie, Kevin, I – you know, we love to have, you know, great food, and a little bit of Bordeaux wine once in a while. It’s just an opportunity to kind of relax and enjoy all the wonderful things in life.
+
+KEVIN SCOTT: Awesome. Well, thank you so much for taking time out of your very busy schedule to do this with us today. It’s been great to hear more about your story. You know, again, I’m so grateful, not just for the partnership, but for everything you’ve done in your career, and the inspiration you are, for like hopefully a generation of young engineers. Like, we need Lisa Sus in the world, for sure.
+
+LISA SU: Well, thank you so much, Kevin. We need many more Kevin Scotts in the world too. It’s really an honor and pleasure to be here with you today, and I look forward to all that we’ll do together.
+
+KEVIN SCOTT: Yeah. Awesome. Thank you.
+
+[Music]
+
+CHRISTINA WARREN: What a fantastic conversation with Lisa Su. There were so many things that stuck out to me. Her background, you know, it’s impressive, just to kind of see her career arc, and all the different places that she’s been, and I loved listening to the two of you kind of reminisce about how the hardware industry, and that you know, the silicon industry has evolved over the last 30 years or so, but one thing that really I think was great for me, as a woman, I think also for – just for people in general to hear was her comment about how important it is for people to ask for what they want their careers to be, and to be open with their ambitions.
+
+What, like a remarkable and kind of simple comment, but also think that I think you made this comment, a lot of people don’t do, and I was just really struck by that.
+
+KEVIN SCOTT: Yeah, I – it is so important, you know, and it’s two parts, I think, like you have to be clear with yourself about what it is you want, and why you want it, but – and then you need to tell people and act on it, you know, and I think this is consistent good advice that a lot of people give. Like Warren Buffett’s advice is, the best investment you can make is in yourself, and it always amazes me, like how self-conscious people feel sometimes about expressing their ambition and asking for help and opportunity, and like things that – I think they’d be really surprised at how open people would be to like getting on the journey with them.
+
+CHRISTINA WARREN: No, I mean, I totally agree, and I think it’s a few things. I think, one, it’s that there is kind of this idea in society that maybe you’re not supposed to do that, right, that you’re supposed to, you know, be more humble, be less outward with your ambitions. I know that’s true, especially for women, which is one of the reasons why I really appreciated what Lisa said, and I appreciate, especially, having people like her as examples to the rest of us, but I think the other thing, to your point about asking for help, I think a lot of us are just afraid to admit we might need help, even though, when someone asks us for help, I think very few of us ever would look at that as anything but wanting to offer that if we can, and certainly not looking upon that request with judgment.
+
+KEVIN SCOTT: Or, or if you make it a judgment at all, like the judgment is like, thank God this person is asking for help, because like – you know, we’re aligned in wanting to get something ambitious done, and if they need help, like please ask for the help as soon as you need it.
+
+CHRISTINA WARREN: No, no, you’re exactly right, and think, even though these things, like make sense, and we hear very successful people say these things, I think that it can hard for us to sometimes take that action on, but again, I  think it’s so great that we have people like Lisa who are examples of this. Her career is so interesting, and what’s been happening in, you know, silicon and computing and GPUs over the last five, six, seven, eight years has been just remarkable. And AMD has been leading the way with that, and – for you as a person who is both into hardware and software, was there a moment when you kind of started to notice, okay, we’re now back to where things are interesting again?
+
+KEVIN SCOTT: Yeah, I really do think it’s been the past two or three years, and I don’t mean to throw any kind of shade, whatsoever, on the mobile revolution, because I – like I was one of the leaders in one of the companies that, like helped with the mobile revolution. I was very excited about it, but there is a thing that we are returning to now that I haven’t seen since the beginning of the internet, where you just have an abundance of compute, all up, and like lots of interesting ideas with this new AI platform about what to go do with it, and you know, it feels really liberating in a sense, like just the things I can imagine doing with it, and then just seeing everybody around me, like having these great ideas, and then having a platform that they can go use to try these ideas out, like it feels very internet-ish to me.
+
+CHRISTINA WARREN: Yeah, I think that I think I agree with you. At first, I was a little bit hesitant because I think I have a stronger affinity towards, like what the mobile revolution meant, but if I’m being honest, a lot of the ideas of the mobile revolution, we were not ready. We didn’t have the compute to really take advantage of what people wanted to do, and I think maybe that’s the difference, whereas, when the internet became a thing, we were at the point where the hardware technology and the software were aligned, and so it felt limitless, and with mobile, it took a few years for mobile chipsets to become powerful and for wireless internet to become powerful enough, but now I think – to your point, I do feel like maybe we are at that correct alignment where we have these massive amounts of compute, thanks to companies like AMD, that people can access from the cloud, you know? Or they can build their own threadripper if they want to be like you, but they have access to the compute, and so we can finally make – the two goals are aligned.
+
+KEVIN SCOTT: Yeah, and it’s just – it’s exciting to see entrepreneurs be entrepreneurs, like it really, really is. Like, I can’t even imagine what I would be doing if I were, you know, like a 20-something-year-old young engineer right now, like it would – it’s exciting for me, as – you know, like an older engineer, later in my career, but like I would just be so happy right now and so energized, you know, to have all of this power to go do crazy things that were hard to imagine just a year ago.
+
+CHRISTINA WARREN: Oh, yeah.
+
+KEVIN SCOTT: And just imagining, like everything that is still ahead of us, it’s so much fun right now.
+
+CHRISTINA WARREN: I completely agree, it’s so much fun, I – and I’m with you. If I were in my early twenties, I think I would definitely – I’d probably be at an AI startup, right, and because there’s so much – exciting things happening, and it – and as you said, it does just kind of feel like one of those moments where the possibilities are limitless and a lot of that is because of the hardware, like hardware is sexy again, and that hadn’t been the case for a long time.
+
+KEVIN SCOTT: Absolutely true, and yeah, and like, to my, you know, compiler nerd/computer architect nerd beginnings, like makes me very happy.
+
+CHRISTINA WARREN: Definitely. Well, that is all we’ve got today. A big thanks to Lisa Su for joining us. If you have anything that you would like to share with us, please email us any time at behindthetech@microsoft.com, and you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. Thanks for listening.
+
+KEVIN SCOTT: See you next time.
+
+END
+
+
+
+
+# Ep-62_Behind_the_Tech_Kevin_Scott_Podcast_with_Xyla_Foxlin
+
+Behind the Tech with Kevin Scott
+Episode 62 -- Xyla Foxlin
+
+XYLA FOXLIN: It’s like the only job in the world that I can think of where I can learn something new every single day, like every single month. And I get to follow whatever whimsy or creative exploration catches my eye. I don’t have to ask a boss about it. I don’t have to justify it, because it’s almost like being curious is my job. And that part is, like, the best.
+
+[MUSIC]
+
+KEVIN SCOTT: Hi, everyone. Welcome to Behind the Tech. I’m Kevin Scott, Chief Technology Officer and EVP of AI at Microsoft.
+Today, tech is part of nearly every aspect of our lives. We’re in the early days of an AI revolution promising to transform our lived experiences as much as any technology ever has. On this podcast, we’ll talk with the folks behind that technology and explore the motivations, passion, and curiosity driving them to create the tech shaping our world. Let’s get started.
+
+[MUSIC]
+
+CHRISTINA WARREN: Hello and welcome to Behind the Tech. I’m cohost, Christina Warren, Senior Developer Advocate at GitHub.
+
+KEVIN SCOTT: And I’m Kevin Scott.
+
+CHRISTINA WARREN: And today, we’re bringing you a conversation with Xyla Foxlin, a super interesting person who’s only five years out of college but is already making a big impact as a maker, and an engineer, and a person helping build pathways into STEM for women and people of color.
+
+KEVIN SCOTT: Yeah, I have been a devoted fan of Xyla’s YouTube content for years now. And I can’t even remember when I became aware of her channel, but, like, she’s just sort of in the mix of all of this maker content that is my favorite thing in the world to watch.
+
+And I love her breadth of interest. She, you know, she’s interested in everything from making rockets, like, hilarious rockets, sometimes. Like, she I think has at least got a couple of videos where she launches a Christmas tree, like, hundreds of feet into the air, like, fully lit and like, just the technological challenge of doing that is super interesting.
+
+But, you know, she does rockets, she does furniture. She does - you know, she’s made videos about making propellers for airplanes. She’s just a really talented maker and does an unbelievably fantastic job, I think, presenting how making is done. And, you know, I think she’s a, like, role model for all of us, honestly.
+
+CHRISTINA WARREN: Yeah, I can’t wait to hear this interview. I can’t wait for this conversation.
+
+[MUSIC]
+
+KEVIN SCOTT: Xyla Foxlin graduated from Case Western Reserve University in 2019 with a BSE in General Engineering and a concentration in Mechatronics and Creative Technology, as well as a minor in studio art. She began YouTubing in college with the channel Beauty and the Bolt as a way to provide public makerspaces access to free tutorial videos.
+
+Xyla was also the founder and CEO of Parihug, a company focused on integrating emotions and technology to create a fuller digital experience. She’s previously worked at Disney Imagineering R&D, and iRobot. She was named as one of Cleveland’s Most Interesting People 2017, Crain’s Cleveland Businesses Notable Women in Tech 2018, and 20 in their 20s in 2016, and was crowned Miss Greater Cleveland 2018 in the Miss America program. Her inventions have been featured in The New York Times, The Verge, Mashable, Google Made with Code, and more.
+
+Xyla, welcome to Behind the Tech. Thank you so much for being here with us today.
+
+XYLA FOXLIN: Thank you for having me.
+
+KEVIN SCOTT: So I’ve been watching your videos for a while now. and hopefully eventually we’ll get into, like, how you are interested in the things you’re – or why you’re interested in the things you’re interested in. But, like, maybe we could go all the way back to the beginning and like, how did you get interested in engineering and making in the first place?
+
+XYLA FOXLIN: Yeah. I think this is what I love so much about the maker movement specifically is I think that when I was a kid, it was sort of like you were interested in engineering or you were interested in art. And it was a little bit gender segregated, but it was also just like those were separate categories. And the maker movement has kind of combined the two.
+
+But I would say as a kid, I was kind of interested in both, but like mediocre at both of them. I liked tinkering. I liked playing with, like, toys that let you create something. And I think also a big part of it was I was an only child where my parents worked like really, really long hours. So I was kind of home alone a lot with just whatever, recycling, like garbage was around the house. And so, I would entertain myself by making things and like building my dollhouses myself instead of buying them or things like that.
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: Which was also sort of part of the immigrant experience.
+
+KEVIN SCOTT: Yeah. And where were your parents from?
+
+XYLA FOXLIN: China.
+
+KEVIN SCOTT: Okay. Yeah. So I want to, like, go back for a second, you know, not to turn this into a therapy session or anything, but you said that you were interested in making things and art, and you felt like you were mediocre at both.
+
+And, like, this is one of those, like, I felt the same thing myself and still do, honestly. And I’ve got a 13-year-old girl and 15-year-old girl and like, they’re constantly, you know, sort of digging into stuff. And like, their first impression is that they feel like they should be better at a thing than they are when they first start. And like, none of us are good at anything when we start. So like, have you struggled with imposter syndrome?
+
+XYLA FOXLIN: Oh, absolutely. I think as an adult, I have come to embrace that being like moderately good at a lot of things is more useful to me than being a true expert at just one thing.
+
+But there’s this story I tell in probably every talk that I give or like, every time I have a chance to, which is it was my freshman year of engineering school, and I had, like been put in charge of this robot part. I was like the only freshman on the team. And I put it together a couple of weeks before the competition. I had done the CAD myself, and no one had checked it, and nothing fit together. It was like the worst design you’ve ever seen. It was supposed to be like, completely sealing the electronics bay of a robot to regolith, which is like this lunar dirt that’s got some weird static properties. And, like, there was holes in it.
+
+And so I had this meltdown on the robotics room floor. It was like two in the morning, I was there by myself. And this grad student walked in, and he just wanted to grab some stuff and get out. And he, like, walked into this crying freshman. And he was like, what happened? Like, what is going on? And I was like, I’m so bad at engineering. Like, I’m not cut out for this.
+
+And he looked at me, and he was like, you played an instrument growing up, right? And I was like, yeah, I’m Chinese. I played the violin. And he said, how many hours a day did you practice your instrument? And I was like, I don’t know, like an hour for 12 years. And he was like, how many hours a day have you practiced building things or engineering, making, any of this? And I said, none. And he said, how can you expect to just walk in and be good at it right away? It’s not a natural skill that you’re born with. It’s something you have to develop.
+
+And that was like probably one of the most pivotal moments of my engineering career. And I wish that had happened to me when I was like ten instead of when I was 18.
+
+KEVIN SCOTT: Yeah, I don’t know what this pressure is that we place on ourselves, that we must be perfect at a thing immediately. And like, that was some sage advice that you got from a grad student, like, really, really, really good advice like that.
+
+XYLA FOXLIN: Right. Especially like a tired grad student who walked in at two in the morning to not talk to people.
+
+KEVIN SCOTT: Yeah. That’s awesome.
+
+Well, so, let’s go back to, you know, when you were a kid. Like, what particular things when you were little did you really like doing? You know, so like, I know some of the things you do now. Like, you make rockets. Like you do a whole bunch of casting and, you know, you make furniture.
+
+XYLA FOXLIN: Yeah.
+
+KEVIN SCOTT: Like, you’ve just got a gazillion things that you do. But like, what was it when you were a kid?
+
+XYLA FOXLIN: Honestly, none of that. I was a pretty stereotypical girly girl, I think. I liked playing dress up.
+
+And one of the things that I think was one of the early ones was I – my friends and I got really into those, like, little magnetic animals that bend. Do you remember those? Do you know what I’m talking about? I don’t even remember what they’re called.
+
+And we ended up – my locker at school became Bendyville, and we built, like, this three story mansion for all of these creatures. And I think I was building the really wacky parts of it, like, you know, the moving staircases and the bathtub that had water in it and stuff like that. But it was definitely a – like, that’s a very, like, dollhouse kind of origin story, I would say.
+
+I got – and I was really into making my own Halloween costumes, and they were always like, really, really elaborate.
+
+And then I had a fifth grade teacher who was like just a – you know those teachers that will stick with you forever?
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: She was one of those. She was so cool. She was like a former wildfire firefighter, and she was a rock climber. And she was just so badass in the eyes of all of us fifth graders. And she was really into engineering, and she really wanted to, like, expose all of her students equally to engineering.
+
+So she applied for a grant for like, Little Lego Robotics Program, the little Lego Mindstorms from the state. And she won it, and she started this like very small, little robotics program. But her class throughout the year was always filled with engineering challenges. And if you like, won enough of them, you’d get a candy bar or something. And so I was like, so dead set on winning the candy bar, and spending so much time on these engineering challenges because I loved them.
+
+And I think in middle school, like middle school is kind of when a lot of girls stop being interested in math and science. There’s like lots of studies on why that is, but I think instilling it in fifth grade, right before I went to middle school and decided I hated math, it was like enough to keep it going. So towards the end of high school, I could like, reach back to those memories and say like, oh, this is something I want to do.
+
+KEVIN SCOTT: Yeah. Which is awesome. I mean, maybe we could talk a little bit about that, like why you think – or like why you know so many young women get discouraged in middle school.
+
+And like, you know, I’ve done a whole bunch of stuff over the years with like gender equity and computer science. And like, I’ve got two girls.
+
+XYLA FOXLIN: I was going to say; they just left middle school, right? But you – you’ve made it through.
+
+KEVIN SCOTT: Yeah. And like my 15-year-old has, without any kind of pushing from us, decided that she’s really excited about medicine and biology. And funny enough, like the thing that she credits her interest in medicine in is like, we, as like very, very bad parents, weren’t paying close enough attention to her network consumption habits. And she, like way too young, binge watched an awful lot of Grey’s Anatomy, which we didn’t watch even as adults. And like we went back and watched and it’s like, oh, wow, this was not appropriate for a 12-year-old to be watching. But like, it convinced her that doctors were cool and like, and that was the thing that she needed to go latch on to this thing.
+
+XYLA FOXLIN: Which is awesome. Yeah. And she’s going to learn about all the adult stuff eventually anyways.
+
+KEVIN SCOTT: Yeah.
+
+But you know, if a kid gets a chance, whatever brings the chance, but if they get the chance to discover that they are interested in and good enough at something where they just want to go put the work in, like you were talking about before, where you just get better and better and better –
+
+XYLA FOXLIN: Yeah.
+
+KEVIN SCOTT: – like that virtuous cycle is sort of the most important thing in the world.
+
+And like the thing that – the thing that is so unfortunate is how often kids don’t even get a chance to get on the trailhead, like, they just don’t – you know, like they don’t have your wonderful fifth grade teacher or, you know, like my bad parenting and Grey’s Anatomy. And like, they just don’t figure out that, like, hey, here’s the hook. And that, you know, hard things are hard, like – but, like, you’ve just got to be interested enough to, like,  go do the work to get good.
+
+XYLA FOXLIN: Yeah, and they have to be in, like, a safe enough environment where they can try things and they can fail. And I think most school systems are not like that. And so, it takes like a family environment or a really special teacher, like you said, to create that environment. And it’s just so hard to do en masse.
+
+KEVIN SCOTT: Yeah. I guess it is with math like hard because the way that we grade mathematics is like, you know, there’s a right and a wrong answer to a problem. And if you get it wrong, like oftentimes you don’t get an awful lot of feedback about what to do to get better. And then you just see the bad score at the end, and it’s like, okay, well, I’m bad at this, which is like wrong.
+
+XYLA FOXLIN: Right. Like it feels very black and white. Until you get up to like, calculus or even pre-calc, where now you’re having – or geometry actually is a great one where, like you start – you could get halfway through proving a theorem or you can kind of get most of the way there, and then it feels like there’s some kind of progress. It’s not like a multiplication problem where you either got it right or you got it wrong. But you have to get through that hump.
+
+KEVIN SCOTT: Yeah, I think, too, with math, like I get frustrated with how we teach it because we sort of very frequently introduce the mathematical concepts, absent any kind of motivation for why this thing is important. And like, that’s not how the mathematical concepts are invented. I mean, there’s some things in, you know, pure mathematics that, you know, get invented just for the sake of the math. But like most math got invented because somebody was trying to solve a problem, and like, they needed a way to model something in the real world or, you know.
+
+XYLA FOXLIN: Right. Yeah.
+
+KEVIN SCOTT: And like, we just don’t do a good job sharing that with kids early. Unless you have an exceptional teacher.
+
+XYLA FOXLIN: Right, right. But even an exceptional teacher is working within the bounds of the fact that they’re like, teaching math class. And then the students are going to leave class and go to English class. And they’re going to leave class and go to like science class. And there’s only so much, at least in my experience, there’s only so much the math and the science teachers can do to make their curriculums match up, especially if you’re trying to meet state regulations and state requirements for testing and stuff.
+
+Yeah, I think even in engineering school, when you think like the whole curriculum is designed to be applied to the real world, the math was still so separate.
+
+KEVIN SCOTT: Yeah. So you got through the gauntlet.
+
+XYLA FOXLIN: I did. Barely.
+
+KEVIN SCOTT: So how did you decide that you were going to go to engineering school or major in engineering when you went to college? Like, what did that decision look like?
+
+XYLA FOXLIN: Oh, it was funny, actually. So I applied to college for, like marketing and psychology, I think, which is what the personality test that we took our – our junior or senior year. I don’t know if your kids have taken this yet. They had us all take an online personality test. And it was like based on your personality, you should be a therapist or you should be in marketing or something like that. And so, that’s what I applied for. I was like, I don’t know.
+
+But I was captain of my school’s robotics team at the time, so I did first robotics, and –
+
+KEVIN SCOTT: That’s awesome.
+
+XYLA FOXLIN: My – the problem was, I was the only girl on the team for a while, and like, girls didn’t really get to build robots at the time. That was sort of just the general culture of first. And so, I had never built on the robot.
+
+And when they were assigning everyone a mentor, they asked everyone, like do you want to be on software, or do you want to be on mechanical? And I said, mechanical. And they were like, cool, you can organize all the bake sales.
+
+KEVIN SCOTT: Ooh.
+
+XYLA FOXLIN: So I didn’t get assigned a mentor. I organized all the bake sales, and I raised a ton of money because like, when I decide to do something, I’m really efficient at it. So I became like, the best fundraising outreach person.
+
+And all of this was like, I was like, maybe if I do a good enough job, they’ll let me work on the robot. And the problem is that no, if you do a really good job at the thing, then they just give you more of the same thing.
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: So then I took over all the outreach programs, which was actually it was really rewarding and fun. And we’d go into schools and teach, like little kids how to work on Lego robotics stuff.
+
+But then my junior year, I became a captain of the team. And at this point, I had never worked on the robot at all. I had done everything else on the team, including all the video editing. This is how I learned to video edit was I had to make all the team’s videos. And so it had like never crossed my mind that I could actually do engineering because I had sort of been like very subconsciously rejected for the last couple of years.
+
+But at the same time, I was really involved in the theater program at my high school, and I did tech. And the tech crew was like the polar opposite of the robotics crew. It was all women.
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: And it was all just girls who wanted to play with power tools and build sets.
+
+And then like, the fact that we actually had to run a show at the end was sort of second to -  we were building multi-story sets, they were all being designed in CAD. It was like this really empowering, amazing group of women. And so that’s how I learned how to actually build stuff was building these sets, and how I learned to use power tools.
+
+And then – I would build the field for the robot. I just wasn’t like building the robot itself.
+
+But my senior year, we’d all applied to college. We’d heard back. It was the spring musical, and we’re like, sitting around in the tech room, and everyone was discussing what they were going to do for college. And someone was like, Xyla, what are you going to do? And I was like, I don’t know. I got into, you know, these two schools. I gotta decide.
+
+And one – and this girl was like, well, one of those schools doesn’t have an engineering program, so why would you go there? And I was like, what do you mean? And she was like, you’re doing engineering, right? Like you have to do engineering because all of us need to live in your basement when we grow up, because we’re all going into theater.
+
+(Laughter.)
+
+But it was like a kind of interesting moment where everyone else at the school saw me as an engineer because I was so involved in robotics and I was building stuff. So like, you know, I probably had the skills. And so it was the tech girls that really talked me into it.
+
+KEVIN SCOTT: That’s super interesting. I mean, super interesting. I mean –
+
+XYLA FOXLIN: They’re all crushing it and none of them live in my basement, for the record.
+
+KEVIN SCOTT: I mean, look, my kids both love theater, and like, I love this whole, you know, like, the, you know, theater techs are kind of it’s like being on a pirate crew, so whatever you got to do to get the thing done. And I love it.
+
+XYLA FOXLIN: So fun.
+
+KEVIN SCOTT: You know, and there are a lot of, like, really famous makers who had that as their path. I mean, Adam Savage was, you know, at a point in his career was like theater tech person. And yeah –
+
+XYLA FOXLIN: You have to think so out of the box because this was – I mean, this was kind of what we always said at Imagineering, but it’s like: To make someone believe in magic, you have to show them something they’ve never seen before, which means that you have to be always at like, the cutting edge of technology.
+
+KEVIN SCOTT: Yeah. I mean, what Imagineering does, I mean, this is a little bit of a tangent, but I think it’s really fantastic because it’s not just like giving people a fantastic experience for the sake of the experience.
+
+Like, you’re sort of showing them something about like a possibility for a world that might be. And I think it’s really inspiring for kids. You know, they just sort of walk into these environments and like, oh my God, like how to – like, I didn’t know this was possible and how do they do it? And like, I want to do this. Like it’s really cool, that inspiration piece of it.
+
+XYLA FOXLIN: Yeah. Yeah. It’s a little bit like, you know, when you’re a really small kid and you are believing in Santa Claus, and then you grow up and you realize Santa Claus is – well, there’s probably not small children listening to the podcast – is maybe not real. And then it’s like your parents.
+
+And I think with Imagineering, it’s a similar thing where it’s kind of like when you’re a really small kid, the whole point is that you believe in the magic and –
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: But I think what makes Imagineering so exceptional at what they do is that as you grow up, the magic doesn’t fade, even when you know it’s not like what it is. It’s just so well executed. And like, the technology is so flawless and seamless, that you can, as an adult, still immerse yourself in that world.
+
+KEVIN SCOTT: Well, it’s also an important thing for all of us to remember. Like, I think we have this in us when we’re little kids that like, we can believe that the magic is real, like we can believe that the impossible is possible. And you still need that as an adult. Like, I’m sure every day, like you’re encountering things that you thought were impossible or everybody around you thought was impossible. It’s like, all right, how do I make a living as a YouTuber? Like, how do I – you know, how do I go like, build things that I’ve never built before? It’s like, all about, like, you have to believe this, you know, slightly irrational thing that you’re going to be able to, like, make a very hard thing work.
+
+XYLA FOXLIN: Yeah, yeah. But now as adults, we have, like the privilege of being the ones that get to fight through it and make it work, which is kind of fun.
+
+KEVIN SCOTT: It is. It’s a lot of fun.
+
+So you get to college. You go to Case Western, which has a really good engineering school. So talk a little bit about that. Like, how did you choose which engineering discipline that you wanted to go into and like, you know, what was that like for you?
+
+XYLA FOXLIN: Yeah. There was a huge number of my friends that went into Case being like, I am here to do biomedical engineering. That’s why I’m at this school, which is very famous for biomedical engineering, and that is what I want to do.
+
+And I was always like, I didn’t even know what BME was until I got here. How on earth did you find this? So I picked mechanical because I wanted to build robots. And that’s – I feel like mechanical is one of the most obvious forms of engineering. Not obvious, but like everyone knows, that’s kind of like the stereotypical engineering, in a way, maybe? If you want to build things.
+
+And then I so I went in actually as mechanical and aerospace engineering because I loved – I’ve always loved airplanes and flight, and I had worked at an airport in high school to like, get my flight hours and do flight training.
+
+So I did MechE Aero and like, pretty quickly realized that I didn’t want to do aero because I actually didn’t care about why the planes flew; I just liked flying the planes.
+
+And so, I switched aero to electrical because I wanted to be able to like, work on an entire robotic system rather than just the mechanical part of it. Because it was kind of the integration of the two that got me really excited.
+
+But I don’t think I declared that until – and I didn’t do a full electrical degree. I did like 75, 80% of a mechanical degree, and then like 20% of an electrical degree, and into a combined degree.
+
+KEVIN SCOTT: Awesome. And so, you know, what was your experience like? I know – I know a bunch of folks who have gone to get MechE degrees or double degrees. Yeah, and like my I’m a computer scientist by training. But like, I know a bunch of folks who go to engineering school and they get trained in a flavor of engineering, which is like you sit in, you know, like you got a bunch of software you’re using and like, you sort of think about what you’re building, but you don’t do as much building as you actually might like.
+
+I have a good friend’s daughter who just, you know, a few years ago graduated with a MechE degree from like, a very good engineering school and turned down lots and lots of jobs that were about, you know, sitting in a cubicle doing CAD work, just because she wanted to work in a machine shop somewhere. Which –
+
+XYLA FOXLIN: Yeah.
+
+KEVIN SCOTT: – you know, has been a great choice for her, given what she enjoys doing.
+
+XYLA FOXLIN: Good.
+
+KEVIN SCOTT: So I don’t know what that’s been –
+
+XYLA FOXLIN: I hope she’s happy.
+
+KEVIN SCOTT: – what – what that was like for you.
+
+XYLA FOXLIN: Yeah. I had a pretty similar experience, where I’ve never been good at school. Like, I was never good at classroom learning. I have to physically do something to really understand it, or I have to apply something to a project, and then I’ll like, really understand why or how something works.
+
+And so, classes in college were a struggle, and I kind of early on in college decided, I mean, I knew I didn’t want to go to grad school. I just wanted to work in industry and be able to like, physically build stuff.
+
+So I was kind of like, all I have to do is pass. I don’t need to get straight A’s because I’m not applying to anything with my grades. I’d rather be applying to things with a killer portfolio and be doing the thing I want to be doing in the first place, because I think college is – the value of college is less about the classes themselves and more the environment that you get to live in for four years or five years. And you get access to like machine shops and labs and student organizations and clubs and competitions that are only available to college students.
+
+So I – my attendance was like maybe mediocre, but I spent a lot of time in the robotics lab or in the makerspace that I worked at, learning that way.
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: So I kind of had to find my own way there.
+
+KEVIN SCOTT: Yeah. Which, you know, I think makes a lot of sense.
+
+So you went to school, you got a great education, and then you’re trying to figure out what to go do.
+
+And like at this point, like in school, you’re making YouTube videos already. You’ve learned how to edit from high school. Like, and you went and worked in industry. So like, I know for a lot of folks, like particularly these days, like it’s a dream that you know, you can go be a full time maker. You get to decide, like what you make. You know, you go create, you know, a YouTube channel or like, you know, you figure out how to build a community around you.
+
+Like, how did that progression go? Like, how did you decide, like, hey, this is where I want to go work, and then eventually, like, you obviously like, left, you know these jobs and like, you became – well, and actually it sounds like twice, like you founded a company. So, like maybe this is the second time you’ve been an entrepreneur.
+
+XYLA FOXLIN: Yeah. It’s a disease. Run away. (Laughter.)
+
+Yeah, I had a really – I think I had a really unconventional college experience in that my sophomore year, I was at a hackathon, MHacks, which used to be like one of the biggest hackathons in the country. I think it might still be. And I built this like, really silly little teddy bear project where, like if you hugged one, it was connected to the internet, and then the other one would like gently vibrate out the hug and vice versa.
+
+And so, we pitched it at the end of MHacks, and this VC from the Bay area, it was like two people who had left the Thiel Fellowship to start their own company, were like, if we give you some money, will you turn this into a company?
+
+And so, we were kind of like, how much money. Will it buy us like an egg for our ramen noodles? And so they gave us $1,000 for free. It wasn’t an investment. It was just like a grant. And they were like, you should finish building this prototype and then, you know, try to turn it into a company.
+
+So we did that. We ended up winning a competition, launched it at the Consumer Electronics Show like later that year. And – and then that just kind of spiraled into this wild startup experience that I’m glad I had, but I’m glad I’m not still doing.
+
+And, and that was the first time I kind of dropped out of college. So at some point when our Kickstarter got funded, I left school so that I could work on manufacturing full time. And then eventually, I shut the company down and went back to school. And in doing that, I got more involved in the makerspace that I had worked at through all of college.
+
+And gender equity has, like always been something that’s really important to me, just because, like I look back at my own life, and I’m kind of sad at all the opportunities that I didn’t have because I looked different than like everyone else who was interested in the things that I was doing.
+
+And the makerspace, when I was a freshman, we were in the basement of an engineering building. It was like one floor, lots of like, really fun toys and tools, but it had received so much grant money, and the end goal was to move it into this seven-story building.
+
+And it’s amazing. It’s a really cool makerspace. It’s called Think Box, and it’s in Cleveland. But we moved into that building my sophomore year, and all of a sudden, like all of the way that we, as teaching assistants or like people who worked at this makerspace could help people change. And it went from I could sit down with a person and really walk them through how to use the tools and how to do their project, into someone comes in, tells me what they’re trying to do, and I would put them in front of a computer with like a document that just had instructions on how to use that machine. And it’s a very different experience.
+
+And the thing that I noticed was – and those documents were very overwritten. They were like very engineer-written. So to use a MakerBot, we had like MakerBot Replicator 2s. It was like a 75-page document. Yeah.
+
+KEVIN SCOTT: Wow.
+
+XYLA FOXLIN: So you can imagine someone walks in, and they want to like 3D print a little desk ornament for their sorority sister, and now they’re facing this 75-page document that’s like borderline unintelligible because it’s just so overwritten.
+
+And the thing that I noticed.
+
+KEVIN SCOTT: That’s a little nutty.
+
+XYLA FOXLIN: Yeah. But there was, like, so much liability and red tape everywhere because we’re also, like funded by like, people. It’s a university, and it’s funded by the state.
+
+And so, I reached out to one of my friends who was a videographer, and I was like, can we try to make video tutorials for all of these machines and see if that helps? Because this – it was a Saturday shift. I remember this shift so well. I had like eight people come in at the same time. And I was, like really trying to bounce between them, but I still had to follow the policy, which was to put them in front of a computer and show them this thing.
+
+And they were like mostly women and girls, like, you know, the range of ages, because it was also open to the public.
+
+And every single woman that I put in front of this document, when I like left and moved on to the next person, just like quietly closed the computer and left the space. And I was like, that sucks because we’ve created this amazing space, but it’s a space where, like women and minorities are kind of like not conditioned to feel welcome already. And they talked themselves into going. They like got their confidence together, and they walked into this scary space. And then they got faced with like this massive document. And it kind of like all of the “I can’t do this” crashed back down on them. And then like, they left before I could chase them down and find them.
+
+And so, I started making video tutorials on how to use the tools in this space because I thought it would help. And a lot of the research I had done said like a lot of girls stop being interested in math in middle school for some reason, because teachers, they’re used to having female teachers in elementary school, and then all of the math teachers in middle school and high school tend to be men. And there’s like some – that doesn’t affect boys in quite the same way for some reason.
+
+But I was like, what if like, these tutorials are being taught by a girl that looks just like them or that’s the same age as them? It’s just another college student being like, hey, this isn’t that hard, you can do it, here’s how. And a five-minute video is so much easier than a 75-page document.
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: So we made like ten of these videos and gave them to the makerspace for free. And we were like, hey, we made you some videos; do you want them? And the woman who had just started running the space said no. And I was like, really? Like, they’re free. You can just use it. Like they can be part of the document. And she was like, “No, someday you’re going to graduate and then there will be no one to maintain the videos. So this is like, not a sustainable path.” So we were kind of irritated, and we were like, fine, we’ll post them on YouTube.
+
+And that’s how Beauty and the Bolt, which was the first channel I worked on, was born. And it was, we just were like, maybe people will find them naturally and be able to use the space. Like, they can watch the video at home before they come in. Even if the videos are not supported by the makerspace, it’s still super helpful.
+
+And we did see – we were in the gym, the friend and I who started it, we were at the gym one time, and we saw a girl on a treadmill, like watching the video. And then the next day, I saw her in the makerspace. I was like, yes, score.
+
+KEVIN SCOTT: That’s awesome.
+
+XYLA FOXLIN: But a couple months later, we got an email from a K-12 school district that was like, hey, like, your videos are really helpful. They’re fully integrated into our curriculum. But we have this one other machine that you don’t have a video for. Is there any chance you have access to this machine, and you could make a tutorial? And we were like, oh, just so happens that we do.
+
+So we made that video and we put it on YouTube, and we got like a couple more of those. And then this K-12 school district hired us to come to their makerspace and make a bunch of their curriculum videos.
+
+And then we did some poking and we were like, oh, we’re listed on like, Harvard’s makerspace website, Cornell’s makerspace website. Everyone was using our videos, except for our own makerspace, which, you know, like just politics. But it was super encouraging to see like, oh, we’re doing work that people actually want.
+
+So it snowballed into a nonprofit. So it was a 501(c)3. And when I graduated, I decided to work on the nonprofit full time for a year, and just like see – see how it went. And yeah.
+
+KEVIN SCOTT: I don’t know whether people fully appreciate how awesome YouTube is as a maker. I feel like anything that you want to figure out how to do, somebody has just been extraordinarily generous and thoughtful with their time and has like, posted something about it.
+
+And I mean, for me at least, like I learn probably ten times faster by watching someone do a thing than by reading a book about how a thing gets done. And, you know, also watching someone do it just is a demonstration that the thing can be done. And so, then I’m just more encouraged, well, like, I’m going to go try this. Like, this doesn’t look that hard.
+
+XYLA FOXLIN: Yeah.
+
+KEVIN SCOTT: And –
+
+XYLA FOXLIN: And sometimes it is.
+
+KEVIN SCOTT: Yeah, and sometimes it’s super hard, and I’m like, I’m way in over my head, like I need to go get some help.
+
+But like, you know, surprisingly, like you can figure a ton of stuff out just by watching other people doing it and then trying to go practice yourself.
+
+And I mean, like I’m an old man, so like you may not even know what this is, but, like, when I was a kid, you know, we lived in rural central Virginia, and we had, you know, three network TV channels and PBS. And on PBS they had the New Yankee Workshop, which was this woodworking show done by this guy named Norm Abram who, like if you’re at my generation, like he’s, you know, the
+
+XYLA FOXLIN: The guy.
+
+KEVIN SCOTT: Yeah, he’s like, you know, youe Jimmy DiResta or, you know, Xyla Foxlin or whoever your YouTube maker hero is. Like he was – it was 30 minutes a week, you got to see Norm go make stuff. And it was just enormously encouraging.
+
+And like, now you’ve got –
+
+XYLA FOXLIN: That’s awesome.
+
+KEVIN SCOTT: – everything everywhere all the time, and it’s awesome.
+
+XYLA FOXLIN: Yeah. Every problem you could possibly want to solve, someone has poured so many hours into it.
+
+KEVIN SCOTT: Yeah. And so, I mean, you know, on the one hand, like, thank you for – for, you know, wanting to do that. And on the other, you know, aside from seeing people, you know, use your content, like you have this intention when you make it, like I want to be helpful to someone in some particular way, like it sounds like.
+
+And so, seeing other people like take your content and, like it’s actually helpful, like must be super rewarding. But like, are there other things as well? Like there must be community. There must be, you know, like obviously there’s income and, you know, self-determination about what you do. But like talk about what this is like as a career.
+
+XYLA FOXLIN: Ooh. It is – it’s like the only job in the world that I can think of where I can learn something new every single day, like every single month. And I get to follow whatever whimsy or creative exploration catches my eye. I don’t have to ask a boss about it. I don’t have to justify it, because it’s almost like being curious is my job. And that part is, like, the best.
+
+There’s obviously, like, it’s a lot of work. Like, editing is a lot of work. Creating videos is a lot of work. But in the end, like, I don’t like sitting at a desk. I don’t like sitting still. I like being out in the shop and actually building stuff, and the freedom, just how much freedom a job like this has is amazing.
+
+KEVIN SCOTT: How do you choose what to work on, because, like, I feel like everybody has, like, a really interesting creative and editorial process. Like, there’s some people, like, you know, Mark Rober, who’s, like, trying to do, you know, like, a few times a year, like, a pretty sensational thing, and, you know, optimizing for like, I’m going to teach you something very complicated, but I’m going to do it in a way where it’s, you know, going to go viral.
+
+Like, there are a bunch of YouTubers right now that I’ve been watching for years. And, like, I almost feel like what I’m watching is like – it seems like two years ago, maybe this was a pandemic thing, or maybe it was a maturity thing, like almost every YouTuber I watched, like, started making content about whatever remodeling project they were doing, because they finally made enough money to buy a house. (Laughter.) And now they’re –
+
+XYLA FOXLIN: (Laughter.) Yep. Luckily, I live in LA, so that’s never going to happen. (Laughter.)
+KEVIN SCOTT: So, like, how do you - how do you pick? And like, you have such a diverse range of things that you’ve done.
+
+XYLA FOXLIN: Yeah, I think it’s pretty random. And this is probably one of the things I struggle with the most, is a lot of times, there’s a project I want to do because I want it, except that I don’t think it’s going to do very well on YouTube. And so, I have to kind of pick and choose, like, can I afford to do something like that right now, or do I really need the income from, like, a banger?
+
+And something that, like, I , one of the things I’ve been thinking about a lot this year, as we kind of go into the new year, is last year, I accidentally put myself in a situation where I had to churn out, like, four videos a month for a couple of months, which was just, like, a perfect recipe for burnout. And it was in, like, a pretty toxic environment.
+
+And I was, like, struggling so hard to keep my head above water. I didn’t have a weekend for months, and I wasn’t proud of any of the things I made, because it was just like, I’ve got to get it done and I’ve got to meet the deadline. Like, get it done, meet the deadline, get it done, meet the deadline.
+
+And so, I was kind of like, as I got more tired, I was dialing the projects back a little bit. So, I almost felt like each project was getting progressively easier because I was like, what can I whip out in two days so that I can, like, get eight hours of sleep in four days?
+
+And now, as I go into the new year, I’m like, all right, I need to go back to one video a month, and it’s a video that I’m really proud of, because in the end, I had an amazing conversation. I went to a wedding of one of my best friends in October, and at some point I got to just, like, talkign shop with the photographer of the wedding.
+
+And so, we’re, like, standing in the corner of this wedding. And I was like, so, you know, “What are your plans for the rest of the weekend when this wedding is over. Are you going to get stuck editing?” And he’s like, “Yeah, I’m actually jumping on a plane to New York, and I’m going to edit these wedding photos on the plane.” And I was like, “Oh, cool, what are you doing in New York?” And he said, “I’m watering my personal garden.”
+
+And I said, “What does that mean?” (Laughter.) And he was like, “I love photography, and I love shooting weddings. because I love, like, being part of, you know, these people’s lives. And it’s really good money as a photographer. But you can’t just keep doing things for other people. You have to go water your personal garden, so that I still love photography.”
+
+And so, he was like, “There’s a photography collective out there. We’re going on a bunch of street walks. We’re going to do, like, graffiti walks. And I’m just going to make art for three days, and then I’m going to come back and shoot, like, an elopement over in Malibu,” or something like that.
+
+KEVIN SCOTT: Awesome.
+
+XYLA FOXLIN: And that was such an amazing conversation that I needed to hear, because this was smack in the middle of my, like, super crazy time. And so, I think it’s really important for creators to also be able to water their personal garden. Not everything we do has to be for sponsors or for agencies or other people.
+
+KEVIN SCOTT: Well, I’m guessing it’s sort of tough to do that. Like, I wholeheartedly, you know, believe that and I, you know, support that in all of the people who work for me. And funny enough, like, the making stuff, like, I’m sitting in the middle of a shop right now. Like, I’ve got a CNC machine
+
+XYLA FOXLIN: I know. I’ve been eyeing it. (Laughter.)
+
+KEVIN SCOTT: And I’ve got a Bambu Carbon 3D printer. Like, but I do this entirely to, you know, like, water my own personal garden. Like, I, you know, I love being a computer scientist. I love being CTO of Microsoft. I love helping other engineers be able to build, you know, super complicated things. And I love seeing, you know, how those things, you know, play in the world at massive scale.
+
+But occasionally, like, I just need to go into my shop and, like, make something with my own two hands. And it takes two hours and then, you know – and I can be just as in love with one of those things.
+
+Like, yesterday, I, - I’m making this sake cabinet right now. So, it’s got Kumiko doors and, you know, it’s got a place for, like, four little sake cups.
+
+XYLA FOXLIN: Cool.
+
+KEVIN SCOTT: And I’m going to – woodturn them, and I’m going to urushi lacquer them. And then I was going to –
+
+XYLA FOXLIN: Oh my god, I cannot wait to see pictures of this.
+
+KEVIN SCOTT: Yeah, well, I’ll post them on Instagram. And then –
+
+XYLA FOXLIN: Okay.
+KEVIN SCOTT: It’s got a spot in this cabinet for a sake flask, and I was going to commission someone to make it. And now I’ve, like, talked myself into like, oh, I’m going to slip cast this and, like, you know, fire it and glaze it myself.
+
+XYLA FOXLIN: (Laughter.) Amazing.
+KEVIN SCOTT: Yeah. So, I went out and bought a whole bunch of, you know, tools for slip casting and then, like, you know, they were sitting in my shop and I needed to make a place to store them. And so, a thing that I went and did yesterday is I made some stupid little box that was, you know – and like, I –
+
+XYLA FOXLIN: The stupid little boxes can fill your cup.
+
+KEVIN SCOTT: Yeah, I took the effort of, like, you know, doing box joints and, you know, like, it was – it’s just a silly little thing. And I walked over and, like, touched this thing, like, six times during the course of the day. Like, it’s the millionth box I’ve ever made. But I was like, oh, like, isn’t this box nice? (Laughter.)
+
+XYLA FOXLIN: (Laughter.) The human brain is so simple.
+
+KEVIN SCOTT: Yeah, it is, but like, I’m guessing a lot of what you do to water your own personal garden looks a lot like what you do to make money. And so, like, there must be an enormous amount of pressure for you to think that you have to turn everything that you make and do into a video, which has to be, like, oppressive at some level.
+
+XYLA FOXLIN: It is, and I think it’s also one of those things that’s really hard to talk about, because I have a dream job. Like, I can’t complain about it. But it is a really hard thing where, like, the thing I love to do the most, I now have contractual obligations, which means that, like, if I’m sick, I have to go do it anyway, if I’m tired or something’s happening.
+
+But, you know, it’s so funny you brought up the box thing, because I did the exact same thing yesterday, where I’ve been procrastinating getting my laser cutter set up in the new – I just moved – been procrastinating getting the laser cutter set up in the new house.
+
+And finally, yesterday, I got it set up so that I could make – this new place has a lemon tree, and I’m, like, pawning lemons off on everyone that I know. So, I just made, like, a - a laser cut cardboard, you know, like, box –
+
+KEVIN SCOTT: Awesome.
+
+XYLA FOXLIN: Lemon box that has lemons all over it. And I’m having a big party for Chinese New Year this weekend. So, everyone who comes to the party gets to get, like, a little lemon box that has a bunch of lemons in it. And it’s such a silly, tiny thing, but, like, not filming things feels so good sometimes, just doing things for the sake of doing them. But I think it’s also important.
+
+KEVIN SCOTT: Well, and not having –
+
+XYLA FOXLIN: I’m sorry.
+
+KEVIN SCOTT: And not having a deadline.
+
+XYLA FOXLIN: Yeah, yeah.
+KEVIN SCOTT: Like, this thing will get done when I decide it gets done. (Laughter.)
+
+XYLA FOXLIN: Yeah, and it’s funny how much little, tiny projects that don’t take very long can still fill this, like, monkey brain part of us that just needs to start and finish something, and feel accomplished, and like, use your hands, design something, and build it. It’s such a therapeutic process.
+
+KEVIN SCOTT: Yeah, I completely agree. I really wish - I think more people would, like, have better mental health if they could figure out, like, some way to exercise the, you know, the creative impulse that is in all of us.
+
+XYLA FOXLIN: Yes.
+
+KEVIN SCOTT: And, like, a whole lot of people, just for whatever reason, like, they don’t have an outlet. They don’t feel like they’ve got an outlet. And everybody, I mean, I - everyone in my family, like, did something with their hands. You know, like, my mom, who was a tax preparer, like, just crafted all the time, crocheted, sewed, like made little things to sell at craft fairs. You know, my dad and my granddad were construction workers, but, you know, they worked on cars and made furniture in their shop.
+
+So, like, everybody constantly, like, had this - you know, like, they just made things. And I think it made them happier than just being in this mode, where all they did was consume things that other people made.
+
+XYLA FOXLIN: Yeah, and it’s, I think, especially important right now, where we’re, like, so addicted to our little glowing screens, to be able to just put all of that aside. And, like, I personally find woodworking to be, like, exceptional at this because it’s a tree. It used to be a tree. And when you work with wood, you have to think about the way that the tree lived, and the way, like, where it came from, and what its properties are and how to work with it and not against it.
+
+And, like, any time that I’m not working, pretty much, I’m outside, like, camping, climbing, backpacking, canoeing somewhere. And so, it’s like, this beautiful blend of the two things.
+
+KEVIN SCOTT: Yeah. Well, and then it becomes this artifact and, like, it’s in your life and you - I mean, like, I watched the video you just posted recently about the about the  table that you made. And so, like, you know, the tables, people are going to come in, they’ll see it. Like, you can tell him you made it. Like, there’s a story around it.
+
+Like, you can – like, for the things that I make that are, like, in my environment, like, I’m just constantly you know, looking at them. (Laughter.) And like, it doesn’t bring back the full feeling that you get when you make it. But, like, I can remember a little bit of the good feeling that I had when I made it.
+
+XYLA FOXLIN: Yeah, yes, yes, especially, there’s some things that are, like, really good at this. I think, like, instruments are like this, furniture is like this, things that you use. It’s actually funny, I talk a lot about how the biggest kindness that you could do if I make you something is like, beat the crap out of it - break it, because things are meant to be used.
+
+And, like, I built a sailboat earlier last year for a youth sailing program, and, like, there is no way that sailboat is ever going to look the way that it looks the day I delivered it. It’s being sailed every day by, like, 12 year olds. (Laughter.) But that’s the – that’s what it should be. That’s the way, like, homemade objects should be treated.
+
+KEVIN SCOTT: So, what are you excited about in the future, like, either, you know, with the maker community, like, things you’re excited about learning? Like, what – what’s interesting?
+
+XYLA FOXLIN: Ooh, that’s a good question. I think the well, one of the things, like, very selfishly, one of the small things I’m excited about is I have a new workshop. So, I just moved. And so, now I’m kind of, like, nesting in my new space. I built a brand new workbench. I built - I’m going to build a rolling clamp rack, so that I can take my clamps with me everywhere.
+
+KEVIN SCOTT: Nice.
+
+XYLA FOXLIN: So, like, again, it’s all these tiny, little things that kind of, like, feed your personal garden. But in the broader scheme of life, I think I’m really excited to get to know that all of the new people coming into the community. And I think, like, it’s the - the community is why we do a lot of this, in a way. It’s like, I think I - the core of why I like to make things is because I used to just love making things for people as, like, gifts or - and getting to know people who have the same interests as you.
+
+And for a lot of ‘22, I had long COVID for a little while. So, I was, like, pretty recluse and a homebody. And now I’m finally getting back out there, and I’m, like, going to more events and meeting more people, and that’s exciting.
+
+KEVIN SCOTT: That’s awesome. So, we’re almost out of time, like, maybe two last questions for you. So, who is your favorite YouTuber?
+
+XYLA FOXLIN: Ooh.
+
+KEVIN SCOTT: Or maybe you can’t answer this, because you’re a YouTuber, and, like, this will cheese, like, a bunch of new friends off.
+
+XYLA FOXLIN: I’m trying to think. Well, okay, so, like, my cousin has a dance YouTube channel. He’s a dancer. So, I’m like - you know, he’s family and I love him a lot. So, that’s my safe answer, is my cousin, because he’s my cousin and I love him.
+
+As far as, like, people I look up to, I don’t know, I think everyone is different. There’s like, the different veins of watching YouTube. Like, there are people outside of my space that I watch to get inspired in, like, music or in dance or in, like, a million other things. And then there’s people in my space that I watch, because I enjoy their content, and also because they’re running their business in a way that I admire a lot and want to replicate to some extent for myself.
+
+And then there are the favorite YouTubers in that, like, they are the people that when I was just getting started, were really nice to me and, like, kind of took me under their wing. And they didn’t care that I had no subscribers. They just, like, were genuine and good people. But I think putting people into those boxes is a scary prospect. (Laughter.)
+
+KEVIN SCOTT: Yeah, I – I have all of these YouTubers – you’re – you’re one of them. Like, I – like, I subscribe to you.
+
+XYLA FOXLIN: Oh, thank you.
+
+KEVIN SCOTT: And so, every time one of your videos pops up, I watch it. And then I’ve got, like, all of these sort of topical channels that I watch. So, like, I’m trying to figure out, like, slip casting right now. And so, like, they’re just these, like, very topical people that I - you know, like, this guy, VanTiki, who, like, makes these incredible videos about slip casting tiki mugs.
+
+XYLA FOXLIN: Oh, my god, I love the, like, super specific channels like that.
+
+KEVIN SCOTT: And he’s so good. Like, I don’t understand how this guy doesn’t have, like, a bazillion views on his videos. Like, they’re so amazing, and, like, just such good, helpful content if you’re trying to - like, I’m not making tiki mugs, but, you know, like, I, it’s the single most helpful thing I found in trying to figure out how to slip cast this sake flask I’m intent on making.
+
+XYLA FOXLIN: Oh, my gosh, that’s so cool. I feel like I’m going to get off of this recording and start falling down the slip casting rabbit hole. (Laughter.) There’s a part of me that keeps wanting to put a kiln in my backyard. Like, I really want a kiln for some reason, even though I’ve never done ceramics.
+
+KEVIN SCOTT: Kilns are fun.
+
+XYLA FOXLIN: Kilns are fun. (Laughter.)
+
+KEVIN SCOTT: Yeah. I mean, so maybe this is a question. How on god’s earth, as expansive as your interests are and as limited as your space must be, how do you figure out what goes in the shop and what doesn’t? Do you have a system?
+
+XYLA FOXLIN: I sort of have a system, but I - it’s mostly chaos. I will say, this is not directly answering the question, but I think the answer is actually, you build a community of people who have all of the things in your interests. And I love going over to, like, other people’s shops and learning from them at the thing that they’re an expert in. This is, like, one of my favorite things to do.
+
+And I - I feel like I - everywhere I go, I kind of, like, adopt, like, an older neighbor who’s got 50 years of woodworking experience or, you know, like, an older jewelry maker who’s been doing this for a really long time. And - and then I just go over and use their stuff. And then it doesn’t have to clutter my space, and I get to hang out with someone really cool and really interesting. So, that’s more how I manage it.
+
+And then, like, my own shop is very woodworking and composites heavy, because that’s kind of the thing that I do. In every video, I’m either working with, like, carbon, fiberglass or wood. And so, I’m sort of the person that people can come to when they need that.
+
+KEVIN SCOTT: Yeah.
+
+XYLA FOXLIN: So, I think it’s like a community cycle that we’re all just giving and taking from each other.
+
+KEVIN SCOTT: Yeah, and I really respect - I’ve done a little bit with fiberglass, but never anything with carbon fiber. And so, like, I really respect –
+
+XYLA FOXLIN: You should give it a try. It’s itchy, though.
+
+KEVIN SCOTT: (Laughter.) Yeah. I don’t know, like, sometimes, like, I convince myself of things like that. Oh, it’s going to be itchy. And then I don’t do it, and then, you know - and then I try it, and it’s not as bad as I thought. And then I’m like, why did I wait so long? (Laughter.)
+
+XYLA FOXLIN: Yeah, yeah. I think, like, composites are really not as hard as people paint them out to be. And a pro tip is if you wear a nitrile glove under a work glove, then the dust will get into the work glove and kind of get stopped before the nitrile glove.
+
+KEVIN SCOTT: That’s smart.
+
+XYLA FOXLIN: That helps a lot.
+
+KEVIN SCOTT: Because, like, I had everybody and their cousin when I first decided that I was going to do urushi lacquerware. They’d be like, “Oh, no, like, you shouldn’t do that. Like, it’s - you’re going to, like, break out,” because, so for folks who don’t know, like, urushi is this ancient Chinese and Japanese technique for making lacquered, you know, vessels. And it’s a different sort of lacquer than what we’re used to because, you know, it cures actually, only in humid environments, but, like, it cures – it’s, like, unbelievable once it’s cured.
+
+It’s beautiful. It’s water resistant. It’s acid resistant, it’s food safe. It’s, like, all of these things. You know, there are lacquerware pieces that are hundreds and hundreds and hundreds of years old, you know. And, like, very, very often, like, they are, like, the substrate is wood. And so, like, it protects the wood underneath from rot for, like, you know, centuries.
+
+XYLA FOXLIN: Forever, yeah.
+KEVIN SCOTT: But urushiol, the compound that’s in this stuff, is the same compound that’s in poison oak and poison ivy. And so, if you get it on you, and you are not one of the 10% of the population that’s immune to contact dermatitis from urushiol, like, you’re going to have a rash. (Laughter.) But, you know, like, you wear gloves and you’ll be fine. (Laughter.)
+
+XYLA FOXLIN: Yeah, yeah. Yeah, and that’s, I feel like, that’s the attitude you should have with all of these chemicals anyway. Like, you can develop sensitivities to epoxy, to wood, to carbon – like, all of this stuff. So, it’s just, you have to do it right off the bat.
+
+KEVIN SCOTT: Cool. Well, this is probably a strange question for you, but I ask it for everyone that’s on the podcast. So, outside of work, what do you do for fun?
+
+XYLA FOXLIN: Oh, I do so many things. I actually - this is my top anti-burnout tip, is when you get burned out, or you’re starting to get burned out, like, pick up a new hobby. And I kind of recommend hobbies that you kind of know you’re going to be good at right off the bat. And that amount - like, putting in work and improving at something is such an important feeling to combat burnout.
+
+And so, I’ve collected some very strange hobbies over the years. I’m really - right now, I’m really into climbing, rock climbing. I do a lot of salsa dancing, swing dancing, camping, going outside.
+
+KEVIN SCOTT: You’re a pilot.
+
+XYLA FOXLIN: And then, oh yeah, I’m a pilot. I have a Cessna 140 that I fly around, which for some reason, my brain kind of clumps into going outside, because it’s always, like, out - adventures out to backcountry strips and stuff. But yeah –
+
+KEVIN SCOTT: Yeah, well, those are good hobbies, like super good.
+
+XYLA FOXLIN: Yeah.
+KEVIN SCOTT: So, thank you so much for being on the podcast today, and thank you for doing what you do. I think you are an inspiration to tons of people. And like, certainly, what you’re doing is getting folks to do more with their hands, and to be more creative and to feel confident that they can do things that they might otherwise not be confident that they can do, which is an awesome thing to do for the world. So, thank you for that.
+
+XYLA FOXLIN: Thank you so much. Thank you for having me. It was super lovely getting to know you.
+
+KEVIN SCOTT: Awesome.
+
+CHRISTINA WARREN: Well, that was a fantastic conversation with Xyla Foxlin. So, there’s so many things there. I think you nailed it at the beginning. She really is somebody who I think is, like, an inspiration for all of us, and so many people can learn things from her. But I was really struck by, I think, the fact that - and I really appreciated her being kind of honest about this, about the fact that other people around her saw her as an engineer before she even did.
+
+KEVIN SCOTT: Yeah.
+
+CHRISTINA WARREN: And she’s so clearly an engineer in everything that she does. But I really thought that it was cool to kind of hear about the fact that it was, like, her theater tech girls, who were the ones who were really kind of pushing her and seeing the things that everybody else, in my opinion, probably should have seen in her, and that, you know, I’m glad that she was able to see in herself to get her to take that step and study engineering in college.
+
+How important do you think it is for people, and not just, you know, girls and people of color, but I think for everyone, to have people who are willing to kind of see them and see what potential they have, even if we don’t see it in ourselves?
+
+KEVIN SCOTT: Yeah, I think it’s critical. You know, we talked about it a little bit in the show and like, honestly, this is the whole point of this podcast, right, is all of us are capable of something amazing. And it’s so awful, I think, when we can’t see those amazing things in ourselves, like, where the barrier to us, you know, doing something that we may potentially be great at that, like, everyone around us is going to benefit from. And is going to bring us personal joy, is because you just can’t see yourself doing the thing.
+
+And it’s one of the reasons why I love what she does, because, you know, on multiple different dimensions, like, she’s trying to encourage people to do a bunch of these things that, you know, you may not think I can make a rocket, or I can make a piece of furniture, or I can make a sailboat, or I can - you know, like, all of the things that she has, you know, just relatively courageously decided that she’s going to do, whether she, at the outset, knows exactly how to do it or not.
+
+Like, that’s sort of how you get better at anything, is, like, you’ve got to start trying somewhere. And like, I think she’s just an incredible inspiration to get a whole bunch of people to start trying.
+
+And a big part of that, I think – she described this about her makerspace experience. Like, a lot of people, when they approach a thing that’s different and new, that has a reputation for being hard and, like, sometimes, like, the reputation for a thing being hard has got, like, a gender or, you know, some other sort of stigma attached to it, the reality is, is, like, none of that stuff matters at all, like, in reality.
+
+CHRISTINA WARREN: Right.
+
+KEVIN SCOTT: And just seeing her being able to overcome these obstacles, and, like, that’s another thing I really admire about her is, like, she just - she doesn’t show that everything is easy and, you know, magical. Like, she shows the hard stuff. And that’s part of being a maker, is like, you make mistakes and like, things are difficult. And like, you have to, you know, try a bunch of times before you get something right. And, you know, just sort of even showing that I think is inspiring.
+
+CHRISTINA WARREN: I completely agree. I think that we don’t focus enough on it being okay to fail. I think so many of us are focused so much, you know, like she was when she was, you know, telling the anecdote about trying to do her first kind of project in college, and the grad student telling her, you know, “Why would you expect to be perfect at this when you’ve never done this before?”
+
+But many of us, I think, have those expectations, that if we aren’t just immediately doing something exactly as it should be done from the jump, then, you know, A, we’ll never get better, or, B, it isn’t worth trying. And it is, even if you’re not successful ever. It’s worth trying, it’s worth learning from.
+
+I also think what’s so great about what she does for other people as an inspiration is her sense of curiosity, which she mentioned. And she thinks, you know, said, like, curiosity is kind of, like, what she does as her career. And I feel that same way about a lot of the things that I do.
+
+And so, I love that, but that sort of thing is infectious. And that’s the sort of thing, I think, when you see people who are curious and are willing to experiment with things, that’s something that can spur on that same curiosity in others, which can then lead them to do really great things.
+
+KEVIN SCOTT: Yeah, I could not agree more. I mean, and again, like, one of the things that I love about what she does is, like, she’s encouraging people to indulge that curiosity. We’re all curious and, like, way too frequently, you get pushed to suppress the curiosity, which is terrible. Like, just be curious. Like, indulge your curiosity.
+
+CHRISTINA WARREN: I couldn’t agree more. Indulge your curiosity, that should be, like, our - our motto for our podcast.
+
+KEVIN SCOTT: Yeah.
+
+CHRISTINA WARREN: All right. That is all the time that we have for today. A huge thanks to Xyla Foxlin for joining us. And if you have anything that you would like to share with us, please email us anytime at BehindtheTech@microsoft.com. And you can follow Behind the Tech on your favorite podcast platform, or you can check out our full video episodes on YouTube. Thanks for listening.
+
+KEVIN SCOTT: See you next time.
+
+END
+
+
