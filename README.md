@@ -25,12 +25,8 @@ model downloads, and no external database:
 - **"Semantic" search** is TF-IDF + cosine similarity (`scikit-learn`), not
   a downloaded embedding model.
 - **Keyword search** is classic BM25 (`rank_bm25`).
-- **Answer generation** is extractive by default (it quotes/paraphrases the
-  retrieved graph facts and passages, clearly labeled `[extractive]`). If a
-  local [Ollama](https://ollama.com) server happens to be running at
-  `localhost:11434`, it's used instead for a more fluent answer — this is
-  entirely optional and auto-detected; the pipeline works identically
-  without it.
+- **Answer generation** is extractive (it quotes the retrieved graph facts
+  and passages, clearly labeled `[extractive]`).
 
 ## Architecture
 
@@ -57,7 +53,7 @@ model downloads, and no external database:
                        |
                        v
                  generator.py
-      extractive by default, optional local Ollama if reachable
+      extractive answers from retrieved facts and passages
 ```
 
 ## Global search (communities + map-reduce)
@@ -70,7 +66,7 @@ hierarchy of graph communities used to answer corpus-wide questions:
    choice; Louvain is its predecessor and needs no extra dependency.
 2. **Bottom-up summaries**: leaf communities are summarized from their
    relations and source sentences; higher levels from their children's
-   summaries. Ollama writes them if reachable, else an extractive summary.
+   summaries. Summaries are extractive.
 3. **Map-reduce answering** (`global_search.py`): each community summary at
    the chosen level yields a partial answer with a 0-100 helpfulness score
    (map); the best ones are packed into a budget and merged (reduce).
@@ -78,8 +74,7 @@ hierarchy of graph communities used to answer corpus-wide questions:
 `pipeline.ask_baseline()` is a conventional vector RAG baseline (top-k
 TF-IDF chunks, no graph), and `scripts/evaluate.py` compares the two on
 global questions: entity coverage, community diversity, context size,
-latency, and optionally an LLM-as-judge head-to-head on comprehensiveness,
-diversity, empowerment and directness (`--judge`, needs Ollama).
+and latency.
 
 ## Routing logic
 
@@ -106,9 +101,8 @@ diversity, empowerment and directness (`--judge`, needs Ollama).
 - **TF-IDF instead of embeddings**: no model download, fully deterministic,
   good enough for keyword-adjacent semantic matching on a small corpus.
   A real embedding model would generalize better to paraphrases.
-- **Extractive generation by default**: guarantees the demo always produces
-  an answer with zero setup. Point it at a running Ollama server for
-  actual free-text synthesis.
+- **Extractive generation**: guarantees the demo always produces an answer
+  with zero setup, at the cost of fluency (answers quote source sentences).
 
 ## Project layout
 
@@ -121,10 +115,9 @@ graphrag/
   keyword_store.py   # BM25 chunk search
   router.py          # vector | graph | hybrid classification
   retriever.py       # reciprocal-rank-fusion text search + graph lookups
-  generator.py       # context formatting + extractive/Ollama answer synthesis
+  generator.py       # context formatting + extractive answer synthesis
   communities.py     # hierarchical community detection + bottom-up summaries
   global_search.py   # map-reduce global answering over community summaries
-  llm.py             # optional local Ollama helper
   pipeline.py        # GraphRAGPipeline: build/save/load/ask/ask_baseline
 scripts/
   build_index.py     # CLI: ingest a file, persist the index
@@ -156,7 +149,7 @@ python scripts/ask.py --index data/index "What are the main themes in this corpu
 python scripts/ask.py --index data/index --route baseline "What are the main themes in this corpus?"
 
 # Compare GraphRAG global search with the vector RAG baseline
-python scripts/evaluate.py --input data/sample_corpus.txt --no-ollama
+python scripts/evaluate.py --input data/sample_corpus.txt
 ```
 
 Or from Python:

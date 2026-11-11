@@ -13,7 +13,7 @@ SAMPLE_PATH = Path(__file__).resolve().parent.parent / "data" / "sample_corpus.t
 
 @pytest.fixture(scope="module")
 def pipeline() -> GraphRAGPipeline:
-    return GraphRAGPipeline().build_from_file(SAMPLE_PATH, use_ollama=False)
+    return GraphRAGPipeline().build_from_file(SAMPLE_PATH)
 
 
 def test_build_produces_chunks(pipeline: GraphRAGPipeline) -> None:
@@ -52,15 +52,15 @@ def test_router_picks_vector_for_generic_query(pipeline: GraphRAGPipeline) -> No
     assert decision.matched_entities == []
 
 
-def test_ask_returns_non_empty_answer_without_ollama(pipeline: GraphRAGPipeline) -> None:
-    result = pipeline.ask("How is Nova Labs related to Aiko Tanaka?", use_ollama=False)
+def test_ask_returns_non_empty_answer_extractive(pipeline: GraphRAGPipeline) -> None:
+    result = pipeline.ask("How is Nova Labs related to Aiko Tanaka?")
     assert result["backend"] == "extractive"
     assert result["answer"].strip()
     assert result["route"] == "graph"
 
 
 def test_ask_hybrid_route_includes_graph_and_text(pipeline: GraphRAGPipeline) -> None:
-    result = pipeline.ask("Tell me about Project Kestrel", use_ollama=False)
+    result = pipeline.ask("Tell me about Project Kestrel")
     assert result["route"] == "hybrid"
     assert result["graph_facts"] or result["text_hits"]
 
@@ -69,7 +69,7 @@ def test_save_and_load_round_trip(pipeline: GraphRAGPipeline, tmp_path: Path) ->
     out_dir = tmp_path / "index"
     pipeline.save(out_dir)
     reloaded = GraphRAGPipeline.load(out_dir)
-    result = reloaded.ask("How is Nova Labs related to Aiko Tanaka?", use_ollama=False)
+    result = reloaded.ask("How is Nova Labs related to Aiko Tanaka?")
     assert result["answer"].strip()
 
 
@@ -91,14 +91,14 @@ def test_router_picks_global_for_sensemaking_query(pipeline: GraphRAGPipeline) -
 
 
 def test_global_answer_uses_map_reduce(pipeline: GraphRAGPipeline) -> None:
-    result = pipeline.ask("What are the main themes in this corpus?", use_ollama=False)
+    result = pipeline.ask("What are the main themes in this corpus?")
     assert result["route"] == "global"
     assert result["partial_answers"]
     assert result["answer"].strip()
 
 
 def test_baseline_uses_only_text_chunks(pipeline: GraphRAGPipeline) -> None:
-    result = pipeline.ask_baseline("Who invested in Nova Labs?", use_ollama=False)
+    result = pipeline.ask_baseline("Who invested in Nova Labs?")
     assert result["route"] == "baseline"
     assert result["text_hits"]
 

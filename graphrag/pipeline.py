@@ -24,26 +24,23 @@ class GraphRAGPipeline:
         self.community_store = CommunityStore()
         self.retriever: HybridRetriever | None = None
 
-    def _build_from_chunks(self, chunks: list[Chunk], use_ollama: bool = True) -> "GraphRAGPipeline":
+    def _build_from_chunks(self, chunks: list[Chunk]) -> "GraphRAGPipeline":
         self.chunks = chunks
         extraction = extract(chunks)
         self.graph_store.build(extraction)
-        self.community_store.build(self.graph_store, use_ollama=use_ollama)
+        self.community_store.build(self.graph_store)
         self.vector_store.build(chunks)
         self.keyword_store.build(chunks)
         self.retriever = HybridRetriever(self.vector_store, self.keyword_store, self.graph_store)
         return self
 
-    def build_from_text(self, text: str, source: str = "text", use_ollama: bool = True) -> "GraphRAGPipeline":
-        return self._build_from_chunks(ingest_text(text, source=source), use_ollama=use_ollama)
+    def build_from_text(self, text: str, source: str = "text") -> "GraphRAGPipeline":
+        return self._build_from_chunks(ingest_text(text, source=source))
 
-    def build_from_file(self, path: str | Path, use_ollama: bool = True) -> "GraphRAGPipeline":
-        return self._build_from_chunks(ingest(path), use_ollama=use_ollama)
+    def build_from_file(self, path: str | Path) -> "GraphRAGPipeline":
+        return self._build_from_chunks(ingest(path))
 
-    def ask(
-        self, query: str, top_k: int = 5, use_ollama: bool = True, route: str | None = None,
-        level: int | None = None,
-    ) -> dict:
+    def ask(self, query: str, top_k: int = 5, route: str | None = None, level: int | None = None) -> dict:
         """Answer a query; `route` forces a strategy instead of the router's choice."""
         if self.retriever is None:
             raise RuntimeError("Pipeline has not been built or loaded yet.")
@@ -51,7 +48,7 @@ class GraphRAGPipeline:
         if route is not None and route != decision.route:
             decision = RoutingDecision(route, decision.matched_entities, f"route forced to {route}")
         if decision.route == "global":
-            generation = global_answer(query, self.community_store, level=level, use_ollama=use_ollama)
+            generation = global_answer(query, self.community_store, level=level)
             return {
                 "query": query,
                 "route": "global",
@@ -66,7 +63,7 @@ class GraphRAGPipeline:
                 "backend": generation["backend"],
             }
         retrieval = self.retriever.retrieve(query, decision, top_k=top_k)
-        generation = generator.generate_answer(query, retrieval, use_ollama=use_ollama)
+        generation = generator.generate_answer(query, retrieval)
         return {
             "query": query,
             "route": decision.route,
@@ -81,7 +78,7 @@ class GraphRAGPipeline:
             "backend": generation["backend"],
         }
 
-    def ask_baseline(self, query: str, top_k: int = 5, use_ollama: bool = True) -> dict:
+    def ask_baseline(self, query: str, top_k: int = 5) -> dict:
         """Conventional vector RAG baseline: top-k TF-IDF chunks only, no graph."""
         if self.retriever is None:
             raise RuntimeError("Pipeline has not been built or loaded yet.")
@@ -91,7 +88,7 @@ class GraphRAGPipeline:
             reason="vector RAG baseline",
             text_hits=[TextResult(h.chunk_id, h.text, h.score) for h in hits],
         )
-        generation = generator.generate_answer(query, retrieval, use_ollama=use_ollama)
+        generation = generator.generate_answer(query, retrieval)
         return {
             "query": query,
             "route": "baseline",

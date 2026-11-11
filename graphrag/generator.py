@@ -2,13 +2,10 @@
 
 Primary path is a clearly-labeled extractive answer built purely from
 retrieved text + graph facts, so the pipeline works with zero external
-services or API keys. If a local Ollama server happens to be running, it
-is used instead for a more fluent answer -- this is optional and the
-pipeline degrades gracefully if it's absent.
+services or API keys.
 """
 from __future__ import annotations
 
-from .llm import try_ollama
 from .retriever import RetrievalResult
 
 
@@ -57,23 +54,5 @@ def _extractive_answer(result: RetrievalResult) -> str:
     return "\n\n".join(parts)
 
 
-def generate_answer(
-    query: str,
-    result: RetrievalResult,
-    use_ollama: bool = True,
-    model: str = "llama3.2",
-    timeout: float = 2.0,
-) -> dict:
-    context = build_context(result)
-
-    if use_ollama:
-        prompt = (
-            "Answer the question using ONLY the context below. "
-            "If the context is insufficient, say so explicitly.\n\n"
-            f"Context:\n{context}\n\nQuestion: {query}\nAnswer:"
-        )
-        llm_answer = try_ollama(prompt, model=model, timeout=timeout)
-        if llm_answer:
-            return {"answer": llm_answer, "backend": "ollama", "context": context}
-
-    return {"answer": _extractive_answer(result), "backend": "extractive", "context": context}
+def generate_answer(query: str, result: RetrievalResult) -> dict:
+    return {"answer": _extractive_answer(result), "backend": "extractive", "context": build_context(result)}

@@ -12,9 +12,8 @@ needed; Leiden mainly adds a guarantee that communities are well-connected.
 
 Summaries are bottom-up: a leaf (level 0) community is summarized from its
 own entities, relations and source sentences; a higher-level community is
-summarized from the summaries of the sub-communities it contains. If a local
-Ollama server is reachable it writes the summaries, otherwise a structured
-extractive summary is built.
+summarized from the summaries of the sub-communities it contains. Summaries
+are extractive: key entities plus the source sentences behind their relations.
 """
 from __future__ import annotations
 
@@ -26,7 +25,6 @@ from pathlib import Path
 import networkx as nx
 
 from .graph_store import GraphStore
-from .llm import try_ollama
 
 
 @dataclass
@@ -60,7 +58,7 @@ class CommunityStore:
     def at_level(self, level: int) -> list[Community]:
         return [c for c in self.communities.values() if c.level == level]
 
-    def build(self, graph_store: GraphStore, use_ollama: bool = True, seed: int = 42) -> "CommunityStore":
+    def build(self, graph_store: GraphStore, seed: int = 42) -> "CommunityStore":
         self.communities = {}
         undirected = nx.Graph(graph_store.graph.to_undirected())
         undirected.remove_edges_from(nx.selfloop_edges(undirected))
@@ -78,10 +76,10 @@ class CommunityStore:
 
         for level in self.levels:  # bottom-up: children are summarized before parents
             for community in self.at_level(level):
-                self._summarize(community, graph_store, use_ollama)
+                self._summarize(community, graph_store)
         return self
 
-    def _summarize(self, community: Community, graph_store: GraphStore, use_ollama: bool) -> None:
+    def _summarize(self, community: Community, graph_store: GraphStore) -> None:
         graph = graph_store.graph
         node_set = set(community.nodes)
         edges = [
@@ -97,32 +95,6 @@ class CommunityStore:
         community.key_entities = names[:8]
         community.rank = float(len(edges))
         community.title = ", ".join(names[:3]) + (" and others" if len(names) > 3 else "")
-
-        if community.children:
-            child_reports = [self.communities[c] for c in community.children]
-            child_reports.sort(key=lambda c: c.rank, reverse=True)
-            source = "\n".join(f"- {c.title}: {c.summary}" for c in child_reports)
-        else:
-            relations = [
-                f"- {graph.nodes[u]['name']} --[{data['predicate']}]--> {graph.nodes[v]['name']}"
-                for u, v, data in edges[:20]
-            ]
-            sentences = list(dict.fromkeys(data["sentence"] for _, _, data in edges))[:8]
-            source = "Relations:\n" + "\n".join(relations) + "\nEvidence:\n" + "\n".join(
-                f"- {s}" for s in sentences
-            )
-
-        if use_ollama:
-            prompt = (
-                "You are writing a report about one community of related entities in a knowledge graph. "
-                "Using ONLY the information below, write a concise summary (3-5 sentences) describing "
-                "the main entities, how they are connected, and the key facts about them.\n\n"
-                f"Entities: {', '.join(names[:15])}\n\n{source}\n\nSummary:"
-            )
-            llm_summary = try_ollama(prompt, timeout=30.0)
-            if llm_summary:
-                community.summary = llm_summary
-                return
 
         community.summary = self._extractive_summary(community, edges, graph)
 

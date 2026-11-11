@@ -16,7 +16,6 @@ from graphrag import GraphRAGPipeline  # noqa: E402
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ask a question against a persisted GraphRAG index.")
     parser.add_argument("--index", required=True, help="Directory containing a persisted index")
-    parser.add_argument("--no-ollama", action="store_true", help="Skip trying a local Ollama server")
     parser.add_argument("--route", choices=["vector", "graph", "hybrid", "global", "baseline"],
                         help="Force a retrieval strategy instead of automatic routing")
     parser.add_argument("--level", type=int, default=None, help="Community level for global search")
@@ -25,15 +24,14 @@ def main() -> None:
 
     pipeline = GraphRAGPipeline.load(args.index)
     if args.route == "baseline":
-        result = pipeline.ask_baseline(args.question, use_ollama=not args.no_ollama)
+        result = pipeline.ask_baseline(args.question)
         result.update(reason="vector RAG baseline", matched_entities=[], graph_facts=[])
     else:
-        result = pipeline.ask(args.question, use_ollama=not args.no_ollama, route=args.route, level=args.level)
+        result = pipeline.ask(args.question, route=args.route, level=args.level)
 
     print(f"Route: {result['route']}  ({result['reason']})")
     if result.get("partial_answers"):
-        print(f"
-Community level {result['community_level']} partial answers (id, title, score):")
+        print(f"\nCommunity level {result['community_level']} partial answers (id, title, score):")
         for community_id, title, score in result["partial_answers"]:
             print(f"  - {community_id} {title}: {score}")
     if result["matched_entities"]:
