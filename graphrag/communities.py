@@ -89,11 +89,16 @@ class CommunityStore:
                 self.communities[community.community_id] = community
             previous = current
 
+        if llm is not None:
+            print(f"Writing community summaries for {len(self.levels)} levels...", flush=True)
         for level in self.levels:  # bottom-up: children are summarized before parents
-            for community in self.at_level(level):
+            communities = self.at_level(level)
+            for number, community in enumerate(communities, 1):
                 self._summarize(community, graph_store, llm, min_llm_size)
+                if llm is not None:  # overwrite one line in place: "level 0: 37/167"
+                    print(f"\r  level {level}: {number}/{len(communities)} communities", end="", flush=True)
             if llm is not None:
-                print(f"  summarized level {level} ({len(self.at_level(level))} communities)", flush=True)
+                print(" - done", flush=True)
         return self
 
     def _summarize(self, community: Community, graph_store: GraphStore, llm, min_llm_size: int) -> None:

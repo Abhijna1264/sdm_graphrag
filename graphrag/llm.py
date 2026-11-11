@@ -46,6 +46,7 @@ class GeminiClient:
         self.min_interval = 60.0 / rpm
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.embed_tokens_per_minute = 25000  # free-tier limit is 30k; keep headroom
         self._last_call = 0.0
         self.calls = 0  # real API requests made (cache hits excluded)
         self.cache_hits = 0
@@ -57,6 +58,7 @@ class GeminiClient:
         return self.cache_dir / f"{digest}.json"
 
     def _post(self, url: str, body: dict) -> dict:
+        last_error = "no response"
         for attempt in range(8):
             wait = self.min_interval - (time.monotonic() - self._last_call)
             if wait > 0:
@@ -66,12 +68,14 @@ class GeminiClient:
                 response = requests.post(
                     url, json=body, headers={"x-goog-api-key": self.api_key}, timeout=120
                 )
-            except requests.RequestException:
+            except requests.RequestException as exc:
+                last_error = str(exc)
                 time.sleep(5 * 2 ** attempt)
                 continue
             self.calls += 1
             if response.status_code == 200:
                 return response.json()
+            last_error = f"{response.status_code}: {response.text[:300]}"
             if response.status_code == 429:
                 text = response.text
                 if "PerDay" in text or "per day" in text.lower():
@@ -86,15 +90,20 @@ class GeminiClient:
                 time.sleep(5 * 2 ** attempt)
                 continue
             raise RuntimeError(f"Gemini API error {response.status_code}: {response.text[:500]}")
-        raise RuntimeError("Gemini API kept failing after retries.")
+        raise RuntimeError(f"Gemini API kept failing after retries. Last error: {last_error}")
 
     # -- public API -------------------------------------------------------
 
-    def generate(self, prompt: str, json_output: bool = False, temperature: float = 0.0) -> str:
+    def generate(
+        self, prompt: str, json_output: bool = False, temperature: float = 0.0, attempt: int = 0
+    ) -> str:
+        """`attempt` > 0 requests a fresh answer instead of the cached one."""
         config = {"temperature": temperature}
         if json_output:
             config["responseMimeType"] = "application/json"
         payload = {"model": self.model, "prompt": prompt, "config": config}
+        if attempt:
+            payload["attempt"] = attempt
         path = self._cache_path("generate", payload)
         if path.exists():
             self.cache_hits += 1
@@ -112,15 +121,12 @@ class GeminiClient:
         return text
 
     def generate_json(self, prompt: str) -> dict | list | None:
-        text = self.generate(prompt, json_output=True)
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            match = re.search(r"[\[{].*[\]}]", text, re.S)
-            try:
-                return json.loads(match.group()) if match else None
-            except json.JSONDecodeError:
-                return None
+        """Parse a JSON reply, repairing common model slips; ask again once if unreadable."""
+        for attempt in range(2):
+            parsed = _parse_json(self.generate(prompt, json_output=True, attempt=attempt))
+            if parsed is not None:
+                return parsed
+        return None
 
     def embed(self, texts: list[str], task: str = "RETRIEVAL_DOCUMENT") -> list[list[float]]:
         vectors: list[list[float] | None] = [None] * len(texts)
@@ -133,8 +139,22 @@ class GeminiClient:
             else:
                 missing.append(i)
 
-        for start in range(0, len(missing), 100):  # batchEmbedContents takes up to 100
-            batch = missing[start : start + 100]
+        # Free tier: 30k embedding tokens per minute, so send token-bounded
+        # batches (~4 chars per token) and wait a minute between them.
+        batches: list[list[int]] = []
+        tokens = self.embed_tokens_per_minute
+        for i in missing:
+            size = len(texts[i]) // 4 + 1
+            if tokens + size > self.embed_tokens_per_minute or len(batches[-1]) >= 100:
+                batches.append([])
+                tokens = 0
+            batches[-1].append(i)
+            tokens += size
+
+        for number, batch in enumerate(batches):
+            if number:
+                print(f"  embedding batch {number + 1}/{len(batches)} (waiting 60s for the per-minute limit)", flush=True)
+                time.sleep(61)
             data = self._post(
                 f"{API_ROOT}/{self.embed_model}:batchEmbedContents",
                 {
@@ -153,6 +173,26 @@ class GeminiClient:
                 path = self._cache_path("embed", {"model": self.embed_model, "task": task, "text": texts[i]})
                 path.write_text(json.dumps(item["values"]), encoding="utf-8")
         return vectors  # type: ignore[return-value]
+
+
+def _parse_json(text: str) -> dict | list | None:
+    candidates = [text]
+    match = re.search(r"[\[{].*[\]}]", text, re.S)
+    if match:
+        candidates.append(match.group())
+    for candidate in candidates:
+        for fixed in (candidate, _repair_json(candidate)):
+            try:
+                return json.loads(fixed)
+            except json.JSONDecodeError:
+                continue
+    return None
+
+
+def _repair_json(text: str) -> str:
+    """Re-quote object keys the model wrote as `key":` or `key:` (a common Gemini slip);
+    only keys at the start of a line, so string values are left alone."""
+    return re.sub(r'^(\s*)"?([A-Za-z_]+)"?\s*:', r'\1"\2":', text, flags=re.M)
 
 
 def _windows_user_env(name: str) -> str | None:

@@ -54,6 +54,7 @@ class GraphRAGPipeline:
         self.vector_store.build(chunks)
         self.keyword_store.build(chunks)
         if self.llm is not None:
+            print("Embedding chunks for the vector RAG baseline...", flush=True)
             self.embedding_store = EmbeddingStore().build(chunks, self.llm)
         self.retriever = HybridRetriever(self.vector_store, self.keyword_store, self.graph_store)
         return self

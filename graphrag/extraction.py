@@ -184,6 +184,7 @@ def llm_extract(chunks: list[Chunk], llm) -> ExtractionResult:
     for number, chunk in enumerate(chunks, 1):
         data = llm.generate_json(_LLM_EXTRACTION_PROMPT.format(text=chunk.text))
         if not isinstance(data, dict):
+            print(f"  chunk {number}/{len(chunks)}: skipped (unreadable reply)", flush=True)
             continue
         for entity in data.get("entities") or []:
             if not isinstance(entity, dict) or not entity.get("name"):
