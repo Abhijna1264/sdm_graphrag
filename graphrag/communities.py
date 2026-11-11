@@ -12,8 +12,13 @@ needed; Leiden mainly adds a guarantee that communities are well-connected.
 
 Summaries are bottom-up: a leaf (level 0) community is summarized from its
 own entities, relations and source sentences; a higher-level community is
-summarized from the summaries of the sub-communities it contains. Summaries
-are extractive: key entities plus the source sentences behind their relations.
+summarized from the summaries of the sub-communities it contains.
+
+With a Gemini client the summaries are LLM-written reports (title + summary);
+without one they are extractive (key entities plus the source sentences behind
+their relations). To save free-tier calls, communities smaller than
+`min_llm_size` stay extractive, and a parent identical to its only child
+reuses the child's report.
 """
 from __future__ import annotations
 
@@ -23,6 +28,14 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import networkx as nx
+
+_SUMMARY_PROMPT = """You are writing a report about one community of related entities in a
+knowledge graph built from a document collection. Using ONLY the information below, return
+JSON {{"title": short descriptive title (max 8 words), "summary": 4-6 sentences describing
+the main entities, how they are connected, and the most important facts}}.
+
+{source}
+"""
 
 from .graph_store import GraphStore
 
@@ -58,7 +71,9 @@ class CommunityStore:
     def at_level(self, level: int) -> list[Community]:
         return [c for c in self.communities.values() if c.level == level]
 
-    def build(self, graph_store: GraphStore, seed: int = 42) -> "CommunityStore":
+    def build(
+        self, graph_store: GraphStore, llm=None, seed: int = 42, min_llm_size: int = 3
+    ) -> "CommunityStore":
         self.communities = {}
         undirected = nx.Graph(graph_store.graph.to_undirected())
         undirected.remove_edges_from(nx.selfloop_edges(undirected))
@@ -76,10 +91,12 @@ class CommunityStore:
 
         for level in self.levels:  # bottom-up: children are summarized before parents
             for community in self.at_level(level):
-                self._summarize(community, graph_store)
+                self._summarize(community, graph_store, llm, min_llm_size)
+            if llm is not None:
+                print(f"  summarized level {level} ({len(self.at_level(level))} communities)", flush=True)
         return self
 
-    def _summarize(self, community: Community, graph_store: GraphStore) -> None:
+    def _summarize(self, community: Community, graph_store: GraphStore, llm, min_llm_size: int) -> None:
         graph = graph_store.graph
         node_set = set(community.nodes)
         edges = [
@@ -96,7 +113,34 @@ class CommunityStore:
         community.rank = float(len(edges))
         community.title = ", ".join(names[:3]) + (" and others" if len(names) > 3 else "")
 
+        if len(community.children) == 1:
+            child = self.communities[community.children[0]]
+            if set(child.nodes) == node_set:
+                community.title, community.summary = child.title, child.summary
+                return
+        if llm is not None and len(community.nodes) >= min_llm_size:
+            report = llm.generate_json(_SUMMARY_PROMPT.format(source=self._llm_source(community, edges, graph)))
+            if isinstance(report, dict) and report.get("summary"):
+                community.title = str(report.get("title") or community.title)
+                community.summary = str(report["summary"])
+                return
         community.summary = self._extractive_summary(community, edges, graph)
+
+    def _llm_source(self, community: Community, edges, graph, max_chars: int = 12000) -> str:
+        if community.children:
+            children = sorted((self.communities[c] for c in community.children), key=lambda c: c.rank, reverse=True)
+            text = "Sub-community reports:\n" + "\n".join(f"- {c.title}: {c.summary}" for c in children)
+        else:
+            entities = [
+                f"- {graph.nodes[n]['name']} ({graph.nodes[n].get('type', '')}): {graph.nodes[n].get('description', '')}"
+                for n in community.nodes
+            ]
+            relations = list(dict.fromkeys(
+                f"- {graph.nodes[u]['name']} --[{d['predicate']}]--> {graph.nodes[v]['name']}: {d['sentence']}"
+                for u, v, d in edges
+            ))
+            text = "Entities:\n" + "\n".join(entities) + "\n\nRelationships:\n" + "\n".join(relations)
+        return text[:max_chars]  # keeps the prompt bounded for very large communities
 
     def _extractive_summary(self, community: Community, edges, graph) -> str:
         if community.children:

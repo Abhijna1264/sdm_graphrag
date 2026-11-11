@@ -96,3 +96,15 @@ def ingest(path: str | Path, max_sentences: int = 6, overlap_sentences: int = 1)
 
 def ingest_text(text: str, source: str = "text", max_sentences: int = 6, overlap_sentences: int = 1) -> list[Chunk]:
     return chunk_text(text, source=source, max_sentences=max_sentences, overlap_sentences=overlap_sentences)
+
+
+def ingest_path(path: str | Path, max_sentences: int = 6, overlap_sentences: int = 1) -> list[Chunk]:
+    """Ingest one file, or every .txt/.pdf file in a directory (one source per file)."""
+    path = Path(path)
+    if not path.is_dir():
+        return ingest(path, max_sentences, overlap_sentences)
+    chunks: list[Chunk] = []
+    for file in sorted(path.iterdir()):
+        if file.suffix.lower() in (".txt", ".pdf"):
+            chunks.extend(ingest(file, max_sentences, overlap_sentences))
+    return chunks

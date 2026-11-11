@@ -13,7 +13,7 @@ SAMPLE_PATH = Path(__file__).resolve().parent.parent / "data" / "sample_corpus.t
 
 @pytest.fixture(scope="module")
 def pipeline() -> GraphRAGPipeline:
-    return GraphRAGPipeline().build_from_file(SAMPLE_PATH)
+    return GraphRAGPipeline(llm=None).build_from_file(SAMPLE_PATH)
 
 
 def test_build_produces_chunks(pipeline: GraphRAGPipeline) -> None:
@@ -68,7 +68,7 @@ def test_ask_hybrid_route_includes_graph_and_text(pipeline: GraphRAGPipeline) ->
 def test_save_and_load_round_trip(pipeline: GraphRAGPipeline, tmp_path: Path) -> None:
     out_dir = tmp_path / "index"
     pipeline.save(out_dir)
-    reloaded = GraphRAGPipeline.load(out_dir)
+    reloaded = GraphRAGPipeline.load(out_dir, llm=None)
     result = reloaded.ask("How is Nova Labs related to Aiko Tanaka?")
     assert result["answer"].strip()
 
@@ -105,5 +105,5 @@ def test_baseline_uses_only_text_chunks(pipeline: GraphRAGPipeline) -> None:
 
 def test_communities_survive_save_and_load(pipeline: GraphRAGPipeline, tmp_path: Path) -> None:
     pipeline.save(tmp_path / "index")
-    reloaded = GraphRAGPipeline.load(tmp_path / "index")
+    reloaded = GraphRAGPipeline.load(tmp_path / "index", llm=None)
     assert len(reloaded.community_store) == len(pipeline.community_store)

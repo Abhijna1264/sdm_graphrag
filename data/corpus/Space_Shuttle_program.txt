@@ -1,0 +1,44 @@
+Space Shuttle program
+The Space Shuttle program was the fourth human spaceflight program carried out by the U.S. National Aeronautics and Space Administration (NASA), which accomplished routine transportation for Earth-to-orbit crew and cargo from 1981 to 2011. Its official program name was carried over from the 1969 plan for the Space Transportation System (STS) of reusable spacecraft. Only the shuttle and supporting rockets were funded for development; a proposed nuclear lunar shuttle in the plan was canceled in 1972. It flew 135 missions and carried 355 astronauts from 16 countries, many on multiple trips. 
+The Space Shuttle, composed of an orbiter launched with two reusable solid rocket boosters and a disposable external fuel tank, carried up to eight astronauts and up to 50,000 lb (23,000 kg) of payload into low Earth orbit (LEO). When its mission was complete, the orbiter would reenter the Earth's atmosphere and land like a glider at either the Kennedy Space Center or Edwards Air Force Base.
+The Shuttle is the only winged crewed spacecraft to have achieved orbit and landing, and the first reusable crewed space vehicle that made multiple flights into orbit. Its missions involved carrying large payloads to various orbits including the International Space Station (ISS), providing crew rotation for the space station, and performing service missions on the Hubble Space Telescope. The orbiter also recovered satellites and other payloads (e.g., from the ISS) from orbit and returned them to Earth, though its use in this capacity was rare. Each vehicle was designed with a projected lifespan of 100 launches, or 10 years' operational life. Original selling points on the shuttles were over 150 launches over a 15-year operational span with a 'launch per month' expected at the peak of the program, but extensive delays in the development of the International Space Station never created such a peak demand for frequent flights.
+Various shuttle concepts had been explored since the late 1960s. The program formally commenced in 1972, becoming the sole focus of NASA's human spaceflight operations after the Apollo, Skylab, and Apollo–Soyuz programs in 1975. The Shuttle was originally conceived of and presented to the public in 1972 as a 'Space Truck' which would, among other things, be used to build a United States space station in low Earth orbit during the 1980s and then be replaced by a new vehicle by the early 1990s. The stalled plans for a U.S. space station evolved into the International Space Station and were formally initiated in 1983 by President Ronald Reagan, but the ISS suffered from long delays, design changes and cost over-runs and forced the service life of the Space Shuttle to be extended several times until 2011 when it was finally retired—serving twice as long as it was originally designed to do. In 2004, according to President George W. Bush's Vision for Space Exploration, use of the Space Shuttle was to be focused almost exclusively on completing assembly of the ISS, which was far behind schedule at that point.
+The first experimental orbiter, Enterprise, was a high-altitude glider, launched from the back of a specially modified Boeing 747, only for initial atmospheric landing tests (ALT). Enterprise's first test flight was on February 18, 1977, only five years after the Shuttle program was formally initiated; leading to the launch of the first space-worthy shuttle Columbia on April 12, 1981, on STS-1. The Space Shuttle program finished with its last mission, STS-135 flown by Atlantis, in July 2011, retiring the final Shuttle in the fleet. The Space Shuttle program formally ended on August 31, 2011.
+All Space Shuttle missions were launched from the Kennedy Space Center (KSC) in Florida. Some civilian and military circumpolar Space Shuttle missions were planned for Vandenberg AFB in California. However, the use of Vandenberg AFB for Space Shuttle missions was canceled after the Challenger disaster in 1986. The weather criteria used for launch included, but were not limited to: precipitation, temperatures, cloud cover, lightning forecast, wind, and humidity. The Shuttle was not launched under conditions where it could have been struck by lightning.
+The first fully functional orbiter was Columbia (designated OV-102), built in Palmdale, California. It was delivered to Kennedy Space Center (KSC) on March 25, 1979, and was first launched on April 12, 1981—the 20th anniversary of Yuri Gagarin's space flight—with a crew of two.
+Challenger (OV-099) was delivered to KSC in July 1982, Discovery (OV-103) in November 1983, Atlantis (OV-104) in April 1985 and Endeavour (OV-105) in May 1991. Challenger was originally built and used as a Structural Test Article (STA-099), but was converted to a complete orbiter when this was found to be less expensive than converting Enterprise from its Approach and Landing Test configuration into a spaceworthy vehicle.
+On April 24, 1990, Discovery carried the Hubble Space Telescope into space during STS-31.
+In the course of 135 missions flown, two orbiters (Columbia and Challenger) suffered catastrophic accidents, with the loss of all crew members, totaling 14 astronauts.
+The accidents led to national level inquiries, detailed analysis of why the accidents occurred, and significant pauses where changes were made before the Shuttles returned to flight. After the Challenger disaster in January 1986, there was a delay of 32 months before the next Shuttle launch. A similar delay of 29 months occurred after the Columbia disaster in February 2003.
+The longest Shuttle mission was STS-80 lasting 17 days, 15 hours. The final flight of the Space Shuttle program was STS-135 on July 8, 2011.
+Since the Shuttle's retirement in 2011, many of its original duties are performed by an assortment of government and private vessels. The European ATV Automated Transfer Vehicle supplied the ISS between 2008 and 2015. Classified military missions are being flown by the US Air Force's uncrewed spaceplane, the X-37B. By 2012, cargo to the International Space Station was already being delivered commercially under NASA's Commercial Resupply Services by SpaceX's partially reusable Dragon spacecraft, followed by Orbital Sciences' Cygnus spacecraft in late 2013. Crew service to the ISS is currently provided by the Russian Soyuz and, since 2020, the SpaceX Dragon 2 crew capsule, launched on the company's reusable Falcon 9 rocket as part of NASA's Commercial Crew Development program. Boeing's Starliner capsule is scheduled to start ISS crew service from 2025. For missions beyond low Earth orbit, NASA is building the Space Launch System and the Orion spacecraft, part of the Artemis program.
+Space Shuttle missions have included:
+Spacelab missions Including:
+Science
+Astronomy
+Crystal growth
+Space physics
+Construction of the International Space Station (ISS)
+Crew rotation and servicing of Mir and the International Space Station (ISS)
+Servicing missions, such as to repair the Hubble Space Telescope (HST) and orbiting satellites
+Human experiments in low Earth orbit (LEO)
+Carried to low Earth orbit (LEO):
+The Hubble Space Telescope (HST)
+Components of the International Space Station (ISS)
+Supplies in Spacehab modules or Multi-Purpose Logistics Modules
+The Long Duration Exposure Facility
+The Upper Atmosphere Research Satellite
+The Compton Gamma Ray Observatory
+The Earth Radiation Budget Satellite
+The Mir Shuttle Docking Node
+Carried satellites with a booster, such as the Payload Assist Module (PAM-D) or the Inertial Upper Stage (IUS), to the point where the booster sends the satellite to:
+A higher Earth orbit; these have included:
+Chandra X-ray Observatory
+The first six TDRS satellites
+Two DSCS-III (Defense Satellite Communications System) communications satellites in one mission
+A Defense Support Program satellite
+An interplanetary mission; these have included:
+Magellan
+Galileo
+Ulysses
+Early during development of the Space Shuttle, NASA had estimated that the program would cost $7.

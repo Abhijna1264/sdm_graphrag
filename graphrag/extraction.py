@@ -1,8 +1,7 @@
-"""Lightweight, fully offline entity + relation extraction.
+"""Entity + relation extraction: Gemini-based (`llm_extract`) or offline regex (`extract`).
 
-No ML model or LLM call is used here on purpose (see README "Design
-tradeoffs"): entities are detected via capitalized-phrase regex matching,
-and relations are the cleaned-up text span between two entities that
+The offline path uses no model at all (see README "Design tradeoffs"):
+entities are detected via capitalized-phrase regex matching, and relations are the cleaned-up text span between two entities that
 co-occur in the same sentence. This is intentionally simple and
 inspectable rather than state-of-the-art NER/RE.
 """
@@ -157,4 +156,63 @@ def extract(chunks: list[Chunk]) -> ExtractionResult:
             if entry["type"] == "ENTITY" and mention.entity_type != "ENTITY":
                 entry["type"] = mention.entity_type
         result.triples.extend(triples)
+    return result
+
+
+_LLM_EXTRACTION_PROMPT = """Extract a knowledge graph from the text below.
+
+Return JSON with two lists:
+  "entities": [{{"name": str, "type": one of PERSON, ORGANIZATION, MISSION, SPACECRAFT, LOCATION, EVENT, CONCEPT, OTHER, "description": one sentence about the entity from this text}}]
+  "relationships": [{{"source": entity name, "target": entity name, "relation": short verb phrase (max 5 words), "description": one sentence explaining the relationship}}]
+
+Rules: use full canonical names (e.g. "Neil Armstrong", not "Armstrong"); only include
+entities that are specific named things; every relationship's source and target must
+appear in "entities"; extract at most 25 entities and 30 relationships.
+
+Text:
+{text}
+"""
+
+
+def _canonical(name: str) -> str:
+    return re.sub(r"\s+", " ", str(name)).strip(" .,;:\"'")
+
+
+def llm_extract(chunks: list[Chunk], llm) -> ExtractionResult:
+    """Entity/relation extraction with Gemini, one call per chunk (cached)."""
+    result = ExtractionResult()
+    for number, chunk in enumerate(chunks, 1):
+        data = llm.generate_json(_LLM_EXTRACTION_PROMPT.format(text=chunk.text))
+        if not isinstance(data, dict):
+            continue
+        for entity in data.get("entities") or []:
+            if not isinstance(entity, dict) or not entity.get("name"):
+                continue
+            name = _canonical(entity["name"])
+            if len(name) < 2:
+                continue
+            entry = result.entities.setdefault(
+                name.lower(),
+                {"name": name, "type": str(entity.get("type") or "OTHER").upper(), "mentions": 0, "description": ""},
+            )
+            entry["mentions"] += 1
+            description = str(entity.get("description") or "").strip()
+            if description and description not in entry["description"]:
+                entry["description"] = (entry["description"] + " " + description).strip()
+        for rel in data.get("relationships") or []:
+            if not isinstance(rel, dict) or not rel.get("source") or not rel.get("target"):
+                continue
+            subject, obj = _canonical(rel["source"]), _canonical(rel["target"])
+            if not subject or not obj or subject.lower() == obj.lower():
+                continue
+            result.triples.append(
+                Triple(
+                    subject=subject,
+                    predicate=str(rel.get("relation") or "related to").strip().lower(),
+                    obj=obj,
+                    sentence=str(rel.get("description") or "").strip() or f"{subject} is related to {obj}.",
+                    chunk_id=chunk.chunk_id,
+                )
+            )
+        print(f"  extracted chunk {number}/{len(chunks)}", flush=True)
     return result

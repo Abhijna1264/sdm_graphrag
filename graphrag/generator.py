@@ -1,8 +1,9 @@
 """Answer synthesis.
 
-Primary path is a clearly-labeled extractive answer built purely from
-retrieved text + graph facts, so the pipeline works with zero external
-services or API keys.
+With a Gemini client the answer is written by the LLM from the retrieved
+context only. Without one, a clearly-labeled extractive answer is built
+purely from retrieved text + graph facts, so the pipeline still works with
+no API key.
 """
 from __future__ import annotations
 
@@ -54,5 +55,20 @@ def _extractive_answer(result: RetrievalResult) -> str:
     return "\n\n".join(parts)
 
 
-def generate_answer(query: str, result: RetrievalResult) -> dict:
-    return {"answer": _extractive_answer(result), "backend": "extractive", "context": build_context(result)}
+_ANSWER_PROMPT = """Answer the question using ONLY the context below. If the context is
+insufficient, say so explicitly.
+
+Context:
+{context}
+
+Question: {query}
+Answer:"""
+
+
+def generate_answer(query: str, result: RetrievalResult, llm=None) -> dict:
+    context = build_context(result)
+    if llm is not None and context:
+        answer = llm.generate(_ANSWER_PROMPT.format(context=context, query=query)).strip()
+        if answer:
+            return {"answer": answer, "backend": "gemini", "context": context}
+    return {"answer": _extractive_answer(result), "backend": "extractive", "context": context}

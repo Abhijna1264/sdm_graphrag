@@ -30,13 +30,16 @@ class GraphStore:
 
     def build(self, extraction: ExtractionResult) -> "GraphStore":
         for key, entry in extraction.entities.items():
-            self.graph.add_node(key, name=entry["name"], type=entry["type"], mentions=entry["mentions"])
+            self.graph.add_node(
+                key, name=entry["name"], type=entry["type"], mentions=entry["mentions"],
+                description=entry.get("description", ""),
+            )
 
         for triple in extraction.triples:
             sub_key, obj_key = triple.subject.lower(), triple.obj.lower()
             for key, name in ((sub_key, triple.subject), (obj_key, triple.obj)):
                 if key not in self.graph:
-                    self.graph.add_node(key, name=name, type="ENTITY", mentions=1)
+                    self.graph.add_node(key, name=name, type="ENTITY", mentions=1, description="")
             self.graph.add_edge(
                 sub_key,
                 obj_key,
