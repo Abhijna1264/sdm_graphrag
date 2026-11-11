@@ -83,7 +83,7 @@ setx GEMINI_API_KEY "your-key"
 ```
 
 Open a new terminal afterwards. Optional settings: `GEMINI_MODEL` (default
-`gemini-2.5-flash-lite`), `GEMINI_EMBED_MODEL` (default
+`gemini-3.5-flash-lite`), `GEMINI_EMBED_MODEL` (default
 `gemini-embedding-001`), `GEMINI_RPM` (default 10).
 
 ## Usage

@@ -22,7 +22,7 @@ from pathlib import Path
 import requests
 
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta/models"
-DEFAULT_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_MODEL = "gemini-3.5-flash-lite"
 DEFAULT_EMBED_MODEL = "gemini-embedding-001"
 CACHE_DIR = Path(__file__).resolve().parent.parent / ".cache" / "gemini"
 
@@ -155,8 +155,27 @@ class GeminiClient:
         return vectors  # type: ignore[return-value]
 
 
+def _windows_user_env(name: str) -> str | None:
+    """Read a variable saved with `setx`. Terminals opened inside an app that was
+    already running (VS Code, etc.) don't inherit it until that app restarts."""
+    if os.name != "nt":
+        return None
+    import winreg
+
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as key:
+            value, _ = winreg.QueryValueEx(key, name)
+    except OSError:
+        return None
+    return str(value).strip() or None
+
+
 def get_llm() -> GeminiClient | None:
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    api_key = (
+        os.environ.get("GEMINI_API_KEY")
+        or os.environ.get("GOOGLE_API_KEY")
+        or _windows_user_env("GEMINI_API_KEY")
+    )
     if not api_key:
         return None
     return GeminiClient(
